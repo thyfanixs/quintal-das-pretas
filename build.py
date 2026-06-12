@@ -70,9 +70,10 @@ def layout(titulo, descricao, ativo, conteudo):
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{titulo} · {SITE_NOME}</title>
   <meta name="description" content="{descricao}" />
+  <link rel="icon" type="image/svg+xml" href="assets/img/logo-selo.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800;900&family=Mulish:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,900&family=Mulish:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
@@ -82,10 +83,10 @@ def layout(titulo, descricao, ativo, conteudo):
   <header class="cabecalho">
     <div class="container cabecalho-inner">
       <a class="marca" href="index.html" aria-label="{SITE_NOME} — página inicial">
-        <span class="marca-selo" aria-hidden="true">Q</span>
+        <img class="marca-selo" src="assets/img/logo-selo.svg" alt="" width="56" height="56" />
         <span class="marca-texto">
           <span class="marca-titulo">Quintal das Pretas</span>
-          <span class="marca-sub">Cultura · Ancestralidade · Arte</span>
+          <span class="marca-sub">Ponto de Cultura</span>
         </span>
       </a>
       <button class="nav-toggle" aria-expanded="false" aria-controls="nav-principal" aria-label="Abrir menu">☰</button>
@@ -106,7 +107,13 @@ def layout(titulo, descricao, ativo, conteudo):
     <div class="container">
       <div class="rodape-grid">
         <div>
-          <h4>Quintal das Pretas</h4>
+          <div class="rodape-marca">
+            <img src="assets/img/logo-selo.svg" alt="" width="48" height="48" />
+            <div>
+              <strong>Quintal das Pretas</strong>
+              <span>Ponto de Cultura</span>
+            </div>
+          </div>
           <p>Espaço de cultura, ancestralidade e arte no interior de Minas Gerais
           — entre Pedro Leopoldo e Matozinhos. {LOREM_CURTO}</p>
         </div>
@@ -204,7 +211,7 @@ def page_home():
       <div class="container">
         <h2>Esse quintal é nosso</h2>
         <p>{LOREM_CURTO}</p>
-        <a class="btn btn-terra" href="apoie.html">Quero apoiar</a>
+        <a class="btn btn-terra btn-cta" href="apoie.html">Quero apoiar</a>
       </div>
     </section>
 """
@@ -535,7 +542,7 @@ def page_projetos():
       <div class="container">
         <h2>Some-se a um projeto</h2>
         <p>{LOREM_CURTO}</p>
-        <a class="btn btn-terra" href="apoie.html">Quero apoiar</a>
+        <a class="btn btn-terra btn-cta" href="apoie.html">Quero apoiar</a>
       </div>
     </section>
 """
@@ -585,7 +592,8 @@ def page_apoie():
             <strong>Doação via PIX</strong><br />
             <span class="pix-chave">contato@quintaldaspretas.com.br</span>
           </div>
-          <a class="btn btn-primario" href="#">Copiar chave PIX</a>
+          <button type="button" class="btn btn-primario" id="copiar-pix"
+                  data-pix="contato@quintaldaspretas.com.br">Copiar chave PIX</button>
         </div>
       </div>
     </section>
@@ -594,7 +602,7 @@ def page_apoie():
       <div class="container">
         <h2>Seu apoio sustenta a cultura</h2>
         <p>{LOREM_CURTO}</p>
-        <a class="btn btn-terra" href="contato.html">Falar com a equipe</a>
+        <a class="btn btn-terra btn-cta" href="contato.html">Falar com a equipe</a>
       </div>
     </section>
 """

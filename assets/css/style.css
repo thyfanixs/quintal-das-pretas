@@ -6,13 +6,16 @@
 /* ---------- Tokens ---------- */
 :root {
   /* Paleta terrosa e quente */
+  --laranja:          #e0852e;   /* laranja da logo */
+  --laranja-escuro:   #c56a1a;
+  --marrom:           #56341e;   /* marrom da logo (tronco/raízes) */
   --terracota:        #b5532a;
   --terracota-escuro: #8a3d1e;
   --mostarda:         #e0a526;
   --ouro:             #c9881a;
   --verde-folha:      #4a6b3a;
   --verde-escuro:     #2f4626;
-  --preto-quente:     #1e1813;
+  --preto-quente:     #2a1c12;
   --linho:            #f4e9d6;
   --areia:            #ead9be;
   --argila-clara:     #ddc7a6;
@@ -25,7 +28,7 @@
   --status-naoiniciou: #9c8f78;
 
   /* Tipografia */
-  --fonte-titulo: "Playfair Display", Georgia, "Times New Roman", serif;
+  --fonte-titulo: "Fraunces", "Playfair Display", Georgia, "Times New Roman", serif;
   --fonte-corpo:  "Mulish", "Nunito Sans", system-ui, -apple-system, Segoe UI, sans-serif;
 
   /* Medidas */
@@ -121,30 +124,25 @@ h1, h2, h3, h4 {
 .marca { display: flex; align-items: center; gap: .7rem; }
 .marca:hover { text-decoration: none; }
 .marca-selo {
-  width: 46px; height: 46px; flex: none;
-  border-radius: 50%;
-  background:
-    radial-gradient(circle at 35% 30%, var(--mostarda), var(--terracota) 70%);
-  display: grid; place-items: center;
-  color: var(--branco-quente);
-  font-family: var(--fonte-titulo);
-  font-weight: 700;
-  font-size: 1.15rem;
-  box-shadow: inset 0 0 0 3px rgba(251,246,236,.35);
+  width: 52px; height: 52px; flex: none;
+  filter: drop-shadow(0 3px 5px rgba(86,52,30,.3));
+  transition: transform .4s cubic-bezier(.2,.8,.3,1.2);
 }
-.marca-texto { display: flex; flex-direction: column; line-height: 1.05; }
+.marca:hover .marca-selo { transform: rotate(-6deg) scale(1.06); }
+.marca-texto { display: flex; flex-direction: column; line-height: 1.02; }
 .marca-titulo {
   font-family: var(--fonte-titulo);
-  font-weight: 800;
-  font-size: 1.18rem;
-  color: var(--preto-quente);
+  font-weight: 700;
+  font-size: 1.32rem;
+  color: var(--laranja-escuro);
   letter-spacing: .2px;
 }
 .marca-sub {
-  font-size: .68rem;
-  letter-spacing: .22em;
+  font-size: .66rem;
+  letter-spacing: .26em;
   text-transform: uppercase;
-  color: var(--verde-folha);
+  font-weight: 800;
+  color: var(--marrom);
 }
 
 .nav-toggle {
@@ -233,25 +231,57 @@ h1, h2, h3, h4 {
 
 /* ---------- Botões ---------- */
 .btn {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
   display: inline-flex; align-items: center; gap: .5rem;
   font-family: var(--fonte-corpo);
   font-weight: 800;
   font-size: .96rem;
-  padding: .8rem 1.4rem;
+  padding: .8rem 1.5rem;
   border-radius: 999px;
   border: 2px solid transparent;
   cursor: pointer;
-  transition: transform var(--transicao), background var(--transicao), color var(--transicao);
+  box-shadow: 0 4px 0 0 rgba(86,52,30,.16);
+  transition: transform .2s ease, box-shadow .25s ease, background .25s ease, color .25s ease;
 }
-.btn:hover { text-decoration: none; transform: translateY(-2px); }
+/* varredura de luz no hover */
+.btn::after {
+  content: "";
+  position: absolute; inset: 0; z-index: -1;
+  background: linear-gradient(120deg, transparent 20%, rgba(255,255,255,.45) 50%, transparent 80%);
+  transform: translateX(-130%);
+  transition: transform .6s ease;
+}
+.btn:hover {
+  text-decoration: none;
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 10px 22px -8px rgba(86,52,30,.5);
+}
+.btn:hover::after { transform: translateX(130%); }
+.btn:active { transform: translateY(-1px) scale(.99); }
+
 .btn-primario { background: var(--mostarda); color: var(--preto-quente); }
 .btn-primario:hover { background: var(--ouro); }
-.btn-secundario { background: transparent; color: var(--branco-quente); border-color: var(--mostarda); }
+.btn-secundario { background: transparent; color: var(--branco-quente); border-color: var(--mostarda); box-shadow: none; }
 .btn-secundario:hover { background: rgba(224,165,38,.18); }
 .btn-terra { background: var(--terracota); color: var(--branco-quente); }
 .btn-terra:hover { background: var(--terracota-escuro); }
 .btn-verde { background: var(--verde-folha); color: var(--branco-quente); }
 .btn-verde:hover { background: var(--verde-escuro); }
+.btn-laranja { background: var(--laranja); color: #fff; }
+.btn-laranja:hover { background: var(--laranja-escuro); }
+
+/* CTA com pulso de axé (atenção suave) */
+.btn-cta { animation: pulso-axe 2.6s ease-in-out infinite; }
+@keyframes pulso-axe {
+  0%, 100% { box-shadow: 0 4px 0 0 rgba(86,52,30,.16), 0 0 0 0 rgba(224,133,46,.5); }
+  50%      { box-shadow: 0 4px 0 0 rgba(86,52,30,.16), 0 0 0 12px rgba(224,133,46,0); }
+}
+
+/* seta que desliza em links de cartão */
+.card a, .card-corpo a { transition: gap .2s ease, color .2s ease; }
+.card:hover a { color: var(--laranja-escuro); }
 
 /* ---------- Seções ---------- */
 .secao { padding-block: clamp(2.6rem, 7vw, 4.5rem); }
@@ -532,4 +562,36 @@ h1, h2, h3, h4 {
   .evento { grid-template-columns: 90px 1fr; }
   .evento .btn { grid-column: 1 / -1; justify-content: center; }
   .evento-data { border-right: none; border-bottom: 2px dashed var(--argila-clara); padding: 0 0 .6rem; }
+}
+
+/* ---------- Marca no rodapé ---------- */
+.rodape-marca { display: flex; align-items: center; gap: .7rem; margin-bottom: .9rem; }
+.rodape-marca img { width: 48px; height: 48px; }
+.rodape-marca strong { display: block; color: var(--branco-quente); font-family: var(--fonte-titulo); font-size: 1.15rem; }
+.rodape-marca span { font-size: .68rem; letter-spacing: .24em; text-transform: uppercase; color: var(--mostarda); }
+
+/* ---------- Revelação ao rolar (aplicada via JS) ---------- */
+.reveal { opacity: 0; transform: translateY(28px); transition: opacity .7s ease, transform .7s cubic-bezier(.2,.7,.3,1); }
+.reveal.visivel { opacity: 1; transform: none; }
+/* leve escalonamento entre cartões/itens de um mesmo grid */
+.reveal:nth-child(2) { transition-delay: .08s; }
+.reveal:nth-child(3) { transition-delay: .16s; }
+.reveal:nth-child(4) { transition-delay: .24s; }
+
+/* grafismo com leve deslize contínuo (decorativo) */
+.grafismo { background-position: 0 0; animation: desliza-grafismo 24s linear infinite; }
+@keyframes desliza-grafismo { to { background-position: 56px 0; } }
+
+/* selo do hero com flutuação sutil — reservado p/ uso futuro */
+@keyframes flutua { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+
+/* ---------- Acessibilidade: reduzir movimento ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal { opacity: 1; transform: none; }
 }

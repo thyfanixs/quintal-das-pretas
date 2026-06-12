@@ -37,4 +37,47 @@
   /* ----- Ano dinâmico no rodapé ----- */
   var ano = document.querySelectorAll(".js-ano");
   ano.forEach(function (el) { el.textContent = new Date().getFullYear(); });
+
+  /* ----- Copiar chave PIX ----- */
+  var btnPix = document.getElementById("copiar-pix");
+  if (btnPix) {
+    btnPix.addEventListener("click", function () {
+      var chave = btnPix.getAttribute("data-pix") || "";
+      var feito = function () {
+        var original = btnPix.textContent;
+        btnPix.textContent = "Chave copiada! ✓";
+        setTimeout(function () { btnPix.textContent = original; }, 2200);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(chave).then(feito, feito);
+      } else {
+        feito();
+      }
+    });
+  }
+
+  /* ----- Revelação suave ao rolar ----- */
+  var prefereReduzir = window.matchMedia &&
+    window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  var alvos = document.querySelectorAll(
+    ".secao .secao-titulo, .secao .secao-intro, .card, .valor-card, " +
+    ".apoio-card, .evento, .destaque-30, .pix-box, .foto-ph, .form-grid, .contato-info"
+  );
+
+  if (!prefereReduzir && "IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function (entradas, obs) {
+      entradas.forEach(function (e) {
+        if (e.isIntersecting) {
+          e.target.classList.add("visivel");
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+
+    alvos.forEach(function (el) {
+      el.classList.add("reveal");
+      io.observe(el);
+    });
+  }
 })();

@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Emblema Quintal das Pretas: árvore com folhas grafadas dentro de um círculo">
+  <defs>
+    <clipPath id="circ"><circle cx="60" cy="52" r="50"/></clipPath>
+  </defs>
+  <!-- círculo de fundo (sol/axé) -->
+  <circle cx="60" cy="52" r="50" fill="#e0852e"/>
+  <g clip-path="url(#circ)">
+    <!-- raízes + tronco -->
+    <g fill="none" stroke="#56341e" stroke-width="4.2" stroke-linecap="round">
+      <path d="M60 104 L60 58"/>
+      <path d="M60 100 Q48 104 40 112"/>
+      <path d="M60 100 Q72 104 80 112"/>
+      <path d="M60 102 Q56 108 50 114"/>
+      <path d="M60 102 Q64 108 70 114"/>
+      <!-- galhos -->
+      <path d="M60 64 Q46 58 38 47"/>
+      <path d="M60 70 Q74 62 82 50"/>
+      <path d="M60 58 Q60 46 60 36"/>
+      <path d="M52 55 Q44 50 40 42" stroke-width="3.2"/>
+      <path d="M68 60 Q76 54 80 47" stroke-width="3.2"/>
+    </g>
+  </g>
+  <!-- folhas grafadas -->
+  <g fill="#56341e">
+    <!-- cada folha: corpo + nervura clara + grafismo -->
+    <g transform="translate(60 30) rotate(0)">
+      <path d="M0 0 C7 -5 7 -16 0 -22 C-7 -16 -7 -5 0 0 Z"/>
+      <path d="M0 -2 L0 -19" stroke="#e0852e" stroke-width="1.2" fill="none"/>
+      <circle cx="-2.6" cy="-9" r="1" fill="#e0852e"/>
+      <circle cx="2.6" cy="-13" r="1" fill="#e0852e"/>
+    </g>
+    <g transform="translate(40 40) rotate(-42)">
+      <path d="M0 0 C7 -5 7 -16 0 -22 C-7 -16 -7 -5 0 0 Z"/>
+      <path d="M-3 -6 L3 -10 M-3 -11 L3 -15" stroke="#e0852e" stroke-width="1.1" fill="none"/>
+    </g>
+    <g transform="translate(80 43) rotate(40)">
+      <path d="M0 0 C7 -5 7 -16 0 -22 C-7 -16 -7 -5 0 0 Z"/>
+      <path d="M0 -2 L0 -19" stroke="#e0852e" stroke-width="1.2" fill="none"/>
+      <circle cx="0" cy="-8" r="1.1" fill="#e0852e"/>
+      <circle cx="0" cy="-13" r="1.1" fill="#e0852e"/>
+    </g>
+    <g transform="translate(36 30) rotate(-66)">
+      <path d="M0 0 C6 -4 6 -14 0 -19 C-6 -14 -6 -4 0 0 Z"/>
+      <path d="M0 -2 L0 -16" stroke="#e0852e" stroke-width="1.1" fill="none"/>
+    </g>
+    <g transform="translate(84 32) rotate(62)">
+      <path d="M0 0 C6 -4 6 -14 0 -19 C-6 -14 -6 -4 0 0 Z"/>
+      <path d="M-2.6 -7 L2.6 -11" stroke="#e0852e" stroke-width="1.1" fill="none"/>
+    </g>
+    <g transform="translate(49 24) rotate(-22)">
+      <path d="M0 0 C6 -4 6 -14 0 -19 C-6 -14 -6 -4 0 0 Z"/>
+      <path d="M0 -2 L0 -16" stroke="#e0852e" stroke-width="1.1" fill="none"/>
+      <circle cx="-2.2" cy="-9" r=".9" fill="#e0852e"/>
+    </g>
+    <g transform="translate(71 25) rotate(24)">
+      <path d="M0 0 C6 -4 6 -14 0 -19 C-6 -14 -6 -4 0 0 Z"/>
+      <path d="M0 -2 L0 -16" stroke="#e0852e" stroke-width="1.1" fill="none"/>
+      <circle cx="2.2" cy="-9" r=".9" fill="#e0852e"/>
+    </g>
+    <g transform="translate(30 46) rotate(-82)">
+      <path d="M0 0 C5 -3 5 -12 0 -16 C-5 -12 -5 -3 0 0 Z"/>
+      <path d="M0 -2 L0 -13" stroke="#e0852e" stroke-width="1" fill="none"/>
+    </g>
+    <g transform="translate(90 50) rotate(82)">
+      <path d="M0 0 C5 -3 5 -12 0 -16 C-5 -12 -5 -3 0 0 Z"/>
+      <path d="M0 -2 L0 -13" stroke="#e0852e" stroke-width="1" fill="none"/>
+    </g>
+  </g>
+</svg>
