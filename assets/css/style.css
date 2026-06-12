@@ -124,7 +124,7 @@ h1, h2, h3, h4 {
 .marca { display: flex; align-items: center; gap: .7rem; }
 .marca:hover { text-decoration: none; }
 .marca-selo {
-  width: 52px; height: 52px; flex: none;
+  width: 52px; height: auto; flex: none;
   filter: drop-shadow(0 3px 5px rgba(86,52,30,.3));
   transition: transform .4s cubic-bezier(.2,.8,.3,1.2);
 }
@@ -566,7 +566,7 @@ h1, h2, h3, h4 {
 
 /* ---------- Marca no rodapé ---------- */
 .rodape-marca { display: flex; align-items: center; gap: .7rem; margin-bottom: .9rem; }
-.rodape-marca img { width: 48px; height: 48px; }
+.rodape-marca img { width: 46px; height: auto; }
 .rodape-marca strong { display: block; color: var(--branco-quente); font-family: var(--fonte-titulo); font-size: 1.15rem; }
 .rodape-marca span { font-size: .68rem; letter-spacing: .24em; text-transform: uppercase; color: var(--mostarda); }
 

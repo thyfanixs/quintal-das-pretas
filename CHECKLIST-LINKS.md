@@ -3,7 +3,7 @@
 > Gerado por `check_links.py`. ✅ = ok · ❌ = quebrado · 🌐 = externo (conferir manualmente)
 
 ## agenda.html
-- ✅ `assets/img/logo-selo.svg`
+- ✅ `assets/img/emblema.svg`
 - 🌐 `https://fonts.googleapis.com` — externo (placeholder, conferir)
 - 🌐 `https://fonts.gstatic.com` — externo (placeholder, conferir)
 - 🌐 `https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,900&family=Mulish:wght@400;500;600;700;800&display=swap` — externo (placeholder, conferir)
@@ -28,7 +28,7 @@
 - ✅ `assets/js/main.js`
 
 ## apoie.html
-- ✅ `assets/img/logo-selo.svg`
+- ✅ `assets/img/emblema.svg`
 - 🌐 `https://fonts.googleapis.com` — externo (placeholder, conferir)
 - 🌐 `https://fonts.gstatic.com` — externo (placeholder, conferir)
 - 🌐 `https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,900&family=Mulish:wght@400;500;600;700;800&display=swap` — externo (placeholder, conferir)
@@ -48,7 +48,7 @@
 - ✅ `assets/js/main.js`
 
 ## cia-pe-de-pano.html
-- ✅ `assets/img/logo-selo.svg`
+- ✅ `assets/img/emblema.svg`
 - 🌐 `https://fonts.googleapis.com` — externo (placeholder, conferir)
 - 🌐 `https://fonts.gstatic.com` — externo (placeholder, conferir)
 - 🌐 `https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,900&family=Mulish:wght@400;500;600;700;800&display=swap` — externo (placeholder, conferir)
@@ -68,7 +68,7 @@
 - ✅ `assets/js/main.js`
 
 ## contato.html
-- ✅ `assets/img/logo-selo.svg`
+- ✅ `assets/img/emblema.svg`
 - 🌐 `https://fonts.googleapis.com` — externo (placeholder, conferir)
 - 🌐 `https://fonts.gstatic.com` — externo (placeholder, conferir)
 - 🌐 `https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,900&family=Mulish:wght@400;500;600;700;800&display=swap` — externo (placeholder, conferir)
@@ -88,7 +88,7 @@
 - ✅ `assets/js/main.js`
 
 ## index.html
-- ✅ `assets/img/logo-selo.svg`
+- ✅ `assets/img/emblema.svg`
 - 🌐 `https://fonts.googleapis.com` — externo (placeholder, conferir)
 - 🌐 `https://fonts.gstatic.com` — externo (placeholder, conferir)
 - 🌐 `https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,900&family=Mulish:wght@400;500;600;700;800&display=swap` — externo (placeholder, conferir)
@@ -108,7 +108,7 @@
 - ✅ `assets/js/main.js`
 
 ## noticias.html
-- ✅ `assets/img/logo-selo.svg`
+- ✅ `assets/img/emblema.svg`
 - 🌐 `https://fonts.googleapis.com` — externo (placeholder, conferir)
 - 🌐 `https://fonts.gstatic.com` — externo (placeholder, conferir)
 - 🌐 `https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,900&family=Mulish:wght@400;500;600;700;800&display=swap` — externo (placeholder, conferir)
@@ -135,7 +135,7 @@
 - ✅ `assets/js/main.js`
 
 ## projetos.html
-- ✅ `assets/img/logo-selo.svg`
+- ✅ `assets/img/emblema.svg`
 - 🌐 `https://fonts.googleapis.com` — externo (placeholder, conferir)
 - 🌐 `https://fonts.gstatic.com` — externo (placeholder, conferir)
 - 🌐 `https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,900&family=Mulish:wght@400;500;600;700;800&display=swap` — externo (placeholder, conferir)
@@ -162,7 +162,7 @@
 - ✅ `assets/js/main.js`
 
 ## quem-somos.html
-- ✅ `assets/img/logo-selo.svg`
+- ✅ `assets/img/emblema.svg`
 - 🌐 `https://fonts.googleapis.com` — externo (placeholder, conferir)
 - 🌐 `https://fonts.gstatic.com` — externo (placeholder, conferir)
 - 🌐 `https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,900&family=Mulish:wght@400;500;600;700;800&display=swap` — externo (placeholder, conferir)

@@ -9,11 +9,15 @@
 ---
 
 ## 0. Identidade & ativos da marca
-- 🟥 ⬜ **Arquivo oficial da logo** (vetor `.svg`/`.ai`/`.eps` ou `.png` em alta) — hoje o
-  cabeçalho usa uma **recriação em SVG** inspirada na logo enviada. Substituir pela oficial.
-- ⬜ Versão da logo **horizontal** e **só o selo** (para favicon/redes), fundo claro e escuro.
-- ⬜ Confirmar **cores oficiais** (hex) da identidade, se houver manual de marca.
-- ⬜ Confirmar **slogan/assinatura**: usamos "Ponto de Cultura" sob o nome — está correto?
+- ✅ **Logo oficial recebida** (`assets/img/logo-principal.svg`). A árvore foi recolorida nas
+  cores da marca (marrom no círculo laranja) e gerou o emblema do site (`assets/img/emblema.svg`),
+  usado no cabeçalho, rodapé e favicon.
+- ⬜ Observação: o SVG enviado tem **a árvore + "Ponto de Cultura"**, mas **não** traz o wordmark
+  "Quintal das Pretas" — por isso o nome aparece em tipografia (fonte Fraunces). Se tiver o
+  **logotipo completo em vetor colorido** (árvore + nome), me envie para usar a arte exata.
+- ⬜ Confirmar **cores oficiais** (hex) da identidade, se houver manual de marca (uso laranja
+  `#e0852e` e marrom `#56341e`).
+- ⬜ Versão **horizontal** e **só o selo** em alta, se houver, para redes sociais.
 
 ## 1. Quem Somos
 - 🟥 ⬜ Texto da **história** do Quintal das Pretas.
