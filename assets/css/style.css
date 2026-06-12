@@ -133,9 +133,10 @@ h1, h2, h3, h4 {
 .marca-titulo {
   font-family: var(--fonte-titulo);
   font-weight: 700;
-  font-size: 1.32rem;
+  font-size: 1.28rem;
   color: var(--laranja-escuro);
   letter-spacing: .2px;
+  white-space: nowrap;
 }
 .marca-sub {
   font-size: .66rem;
@@ -232,7 +233,6 @@ h1, h2, h3, h4 {
 /* ---------- Botões ---------- */
 .btn {
   position: relative;
-  isolation: isolate;
   overflow: hidden;
   display: inline-flex; align-items: center; gap: .5rem;
   font-family: var(--fonte-corpo);
@@ -248,8 +248,9 @@ h1, h2, h3, h4 {
 /* varredura de luz no hover */
 .btn::after {
   content: "";
-  position: absolute; inset: 0; z-index: -1;
-  background: linear-gradient(120deg, transparent 20%, rgba(255,255,255,.45) 50%, transparent 80%);
+  position: absolute; inset: 0;
+  pointer-events: none;
+  background: linear-gradient(120deg, transparent 30%, rgba(255,255,255,.4) 50%, transparent 70%);
   transform: translateX(-130%);
   transition: transform .6s ease;
 }
@@ -570,13 +571,16 @@ h1, h2, h3, h4 {
 .rodape-marca strong { display: block; color: var(--branco-quente); font-family: var(--fonte-titulo); font-size: 1.15rem; }
 .rodape-marca span { font-size: .68rem; letter-spacing: .24em; text-transform: uppercase; color: var(--mostarda); }
 
-/* ---------- Revelação ao rolar (aplicada via JS) ---------- */
-.reveal { opacity: 0; transform: translateY(28px); transition: opacity .7s ease, transform .7s cubic-bezier(.2,.7,.3,1); }
-.reveal.visivel { opacity: 1; transform: none; }
+/* ---------- Revelação ao rolar (progressive enhancement) ----------
+   O estado oculto SÓ é aplicado quando o JS adiciona .anima ao <html>.
+   Sem JS, ou se algo falhar, o conteúdo fica 100% visível. */
+.reveal { transition: opacity .7s ease, transform .7s cubic-bezier(.2,.7,.3,1); }
+html.anima .reveal { opacity: 0; transform: translateY(26px); }
+html.anima .reveal.visivel { opacity: 1; transform: none; }
 /* leve escalonamento entre cartões/itens de um mesmo grid */
-.reveal:nth-child(2) { transition-delay: .08s; }
-.reveal:nth-child(3) { transition-delay: .16s; }
-.reveal:nth-child(4) { transition-delay: .24s; }
+html.anima .reveal:nth-child(2) { transition-delay: .08s; }
+html.anima .reveal:nth-child(3) { transition-delay: .16s; }
+html.anima .reveal:nth-child(4) { transition-delay: .24s; }
 
 /* grafismo com leve deslize contínuo (decorativo) */
 .grafismo { background-position: 0 0; animation: desliza-grafismo 24s linear infinite; }
