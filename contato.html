@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contato · Quintal das Pretas</title>
+  <meta name="description" content="Fale com o Quintal das Pretas: formulário, e-mail, redes sociais e localização." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800;900&family=Mulish:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <a href="#conteudo" class="sr-only">Pular para o conteúdo</a>
+  <div class="grafismo" aria-hidden="true"></div>
+
+  <header class="cabecalho">
+    <div class="container cabecalho-inner">
+      <a class="marca" href="index.html" aria-label="Quintal das Pretas — página inicial">
+        <span class="marca-selo" aria-hidden="true">Q</span>
+        <span class="marca-texto">
+          <span class="marca-titulo">Quintal das Pretas</span>
+          <span class="marca-sub">Cultura · Ancestralidade · Arte</span>
+        </span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-principal" aria-label="Abrir menu">☰</button>
+      <nav class="nav-principal" id="nav-principal" aria-label="Navegação principal">
+        <ul>
+<li><a href="quem-somos.html">Quem Somos</a></li>
+<li><a href="cia-pe-de-pano.html">Cia Pé de Pano</a></li>
+<li><a href="agenda.html">Agenda</a></li>
+<li><a href="noticias.html">Notícias</a></li>
+<li><a href="projetos.html">Projetos</a></li>
+<li><a href="apoie.html">Apoie</a></li>
+<li><a href="contato.html" class="ativo" aria-current="page">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+
+    <section class="page-hero">
+      <div class="container">
+        <p class="kicker">Contato</p>
+        <h1>Vamos conversar</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
+      </div>
+    </section>
+
+    <section class="secao linho">
+      <div class="container">
+        <div class="split" style="align-items:start">
+          <div>
+            <span class="olho">Envie uma mensagem</span>
+            <h2 class="secao-titulo">Fale com o quintal</h2>
+            <form id="form-contato" class="form-grid" novalidate>
+              <div class="campo">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" required autocomplete="name" />
+              </div>
+              <div class="campo">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" required autocomplete="email" />
+              </div>
+              <div class="campo">
+                <label for="assunto">Assunto</label>
+                <input type="text" id="assunto" name="assunto" required />
+              </div>
+              <div class="campo">
+                <label for="mensagem">Mensagem</label>
+                <textarea id="mensagem" name="mensagem" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-terra">Enviar mensagem</button>
+              <p id="form-aviso" role="status" hidden
+                 style="background:var(--areia);padding:.8rem 1rem;border-radius:10px;font-weight:700;"></p>
+            </form>
+          </div>
+
+          <div class="contato-info">
+            <span class="olho">Outros canais</span>
+            <h2 class="secao-titulo">Onde nos encontrar</h2>
+            <div class="info-item">
+              <span class="icone" aria-hidden="true">✉️</span>
+              <div><strong>E-mail institucional</strong><br />
+                <a href="mailto:contato@quintaldaspretas.com.br">contato@quintaldaspretas.com.br</a></div>
+            </div>
+            <div class="info-item">
+              <span class="icone" aria-hidden="true">📍</span>
+              <div><strong>Região</strong><br />Pedro Leopoldo e Matozinhos — Minas Gerais</div>
+            </div>
+            <div class="info-item">
+              <span class="icone" aria-hidden="true">🔗</span>
+              <div><strong>Redes sociais</strong><br />
+                <span class="redes">
+                  <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
+                  <a href="https://youtube.com" target="_blank" rel="noopener">YouTube</a>
+                </span>
+              </div>
+            </div>
+            <div class="mapa-ph" role="img" aria-label="Placeholder de mapa de localização da região de Pedro Leopoldo e Matozinhos">
+              🗺️ Mapa de localização<br />(integração futura — Google Maps)
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="grafismo" aria-hidden="true"></div>
+  <footer class="rodape">
+    <div class="container">
+      <div class="rodape-grid">
+        <div>
+          <h4>Quintal das Pretas</h4>
+          <p>Espaço de cultura, ancestralidade e arte no interior de Minas Gerais
+          — entre Pedro Leopoldo e Matozinhos. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis nisl eget urna luctus tincidunt non a sapien.</p>
+        </div>
+        <div>
+          <h4>Navegue</h4>
+          <ul>
+            <li><a href="quem-somos.html">Quem Somos</a></li>
+            <li><a href="cia-pe-de-pano.html">Cia Pé de Pano</a></li>
+            <li><a href="agenda.html">Agenda</a></li>
+            <li><a href="projetos.html">Projetos</a></li>
+            <li><a href="apoie.html">Apoie</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Conecte-se</h4>
+          <ul>
+            <li><a href="contato.html">Fale conosco</a></li>
+            <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="https://youtube.com" target="_blank" rel="noopener">YouTube</a></li>
+            <li><a href="mailto:contato@quintaldaspretas.com.br">contato@quintaldaspretas.com.br</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="rodape-bottom">
+        <span>© <span class="js-ano">2026</span> Quintal das Pretas. Todos os direitos reservados.</span>
+        <span>Feito com axé no interior de Minas Gerais.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
