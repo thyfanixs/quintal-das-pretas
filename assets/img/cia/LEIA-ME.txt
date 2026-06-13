@@ -1,0 +1,15 @@
+GALERIA DA CIA PÉ DE PANO
+=========================
+
+Coloque aqui as fotos dos espetáculos (baixadas do Google Drive).
+
+- Formatos aceitos: .jpg .jpeg .png .webp .avif
+- O nome do arquivo vira a LEGENDA na galeria.
+  Ex.: "Auto-de-Natal-2024.jpg"  ->  "Auto de Natal 2024"
+- Para a ORDEM, use prefixos numéricos: 01-..., 02-..., 03-...
+- Recomendado: ~1600px no lado maior, comprimidas para web (< 400 KB cada).
+
+Depois de adicionar as fotos, rode:  python3 build.py
+(ou me avise que eu regenero e publico).
+
+Se a pasta ficar só com este arquivo, a galeria mostra placeholders.

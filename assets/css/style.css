@@ -339,6 +339,8 @@ h1, h2, h3, h4 {
   transition: transform var(--transicao), box-shadow var(--transicao);
 }
 .card:hover { transform: translateY(-4px); box-shadow: var(--sombra-quente); }
+figure.card { margin: 0; }
+.card > img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; }
 .card-corpo { padding: 1.3rem 1.4rem 1.5rem; display: flex; flex-direction: column; gap: .55rem; flex: 1; }
 .card-corpo h3 { font-size: 1.25rem; }
 .card-data { font-size: .8rem; color: var(--verde-folha); font-weight: 700; text-transform: uppercase; letter-spacing: .08em; }

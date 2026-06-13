@@ -13,6 +13,7 @@ placeholders, conforme o briefing.
 """
 
 import os
+import re
 
 BASE = os.path.dirname(os.path.abspath(__file__))
 
@@ -305,10 +306,38 @@ def page_quem_somos():
 # ---------------------------------------------------------------------------
 # CIA PÉ DE PANO
 # ---------------------------------------------------------------------------
+def galeria_cia():
+    """Monta a galeria da Cia a partir de assets/img/cia/.
+    Basta colocar as fotos (.jpg/.jpeg/.png/.webp) nessa pasta e rodar build.py.
+    O nome do arquivo vira a legenda (troque _ por espaço). Sem fotos -> placeholders."""
+    pasta = os.path.join(BASE, "assets", "img", "cia")
+    exts = (".jpg", ".jpeg", ".png", ".webp", ".avif")
+    fotos = []
+    if os.path.isdir(pasta):
+        fotos = sorted(
+            f for f in os.listdir(pasta)
+            if f.lower().endswith(exts) and not f.startswith(".")
+        )
+    if not fotos:
+        return "\n".join(foto_ph(f"Espetáculo {i}", "", "🎭") for i in range(1, 7))
+
+    itens = []
+    for nome in fotos:
+        base = os.path.splitext(nome)[0]
+        base = re.sub(r"^\d+[\s._-]+", "", base)           # remove prefixo de ordem (01-, 02_ ...)
+        base = base.replace("_", " ").replace("-", " ").strip()
+        legenda = base[:1].upper() + base[1:] if base else "Espetáculo"
+        itens.append(
+            f'<figure class="card">'
+            f'<img src="assets/img/cia/{nome}" alt="Cia Pé de Pano — {legenda}" loading="lazy" />'
+            f'<figcaption class="card-corpo"><h3>{legenda}</h3></figcaption>'
+            f'</figure>'
+        )
+    return "\n".join(itens)
+
+
 def page_cia():
-    galeria = "\n".join(
-        foto_ph(f"Espetáculo {i}", "", "🎭") for i in range(1, 7)
-    )
+    galeria = galeria_cia()
     marcos = [
         ("1995", "Fundação da companhia", LOREM_CURTO),
         ("2005", "Primeira turnê pelo interior", LOREM_CURTO),
