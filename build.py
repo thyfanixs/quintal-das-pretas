@@ -64,10 +64,12 @@ def nav_html(ativo):
 
 def layout(titulo, descricao, ativo, conteudo):
     return f"""<!DOCTYPE html>
+<!-- Página gerada por build.py — não editar à mão (rode: python3 build.py) -->
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self'" />
   <title>{titulo} · {SITE_NOME}</title>
   <meta name="description" content="{descricao}" />
   <link rel="icon" type="image/svg+xml" href="assets/img/emblema.svg" />
