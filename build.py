@@ -520,61 +520,176 @@ def page_noticias():
 # PROJETOS
 # ---------------------------------------------------------------------------
 def page_projetos():
-    # (titulo, financiamento, status_label, classe_tag)
-    grupos = [
-        ("Ativos / Em andamento", "grupo-ativo", "tag-ativo", "Ativo · Em andamento", [
-            ("Videocast Papo de Quintal", None),
-        ]),
-        ("No início", "grupo-inicio", "tag-inicio", "No início", [
-            ("Cia Pé de Pano — 30 anos de teatro no interior de Minas Gerais", "FEC/2025"),
-        ]),
-        ("Em conclusão", "grupo-conclusao", "tag-conclusao", "Finalizando · Fase de conclusão", [
-            ("Quintal Aprendiz", None),
-        ]),
-        ("Ainda não iniciados", "grupo-naoiniciou", "tag-naoiniciou", "Ainda não iniciou", [
-            ("Territórios do Axé — a Ancestralidade Viva em Pedro Leopoldo", "MINC"),
-            ("Arte da Terra: Formação Artística no Quintal das Pretas", "FUNARTE"),
-            ("Manutenção de Programação Artística", "Prefeitura de Matozinhos"),
-            ("Escola Livre de Teatro", None),
-        ]),
+    STATUS = {
+        "ativo":      ("grupo-ativo", "tag-ativo", "Ativo · Em andamento"),
+        "inicio":     ("grupo-inicio", "tag-inicio", "No início"),
+        "conclusao":  ("grupo-conclusao", "tag-conclusao", "Em andamento · Fase de conclusão"),
+        "naoiniciou": ("grupo-naoiniciou", "tag-naoiniciou", "Ainda não iniciou"),
+    }
+    GRUPOS = [
+        ("ativo", "Ativos / Em andamento"),
+        ("inicio", "No início"),
+        ("conclusao", "Em andamento / Fase de conclusão"),
+        ("naoiniciou", "Ainda não iniciados"),
     ]
 
-    def card_projeto(titulo, financiamento, status_label, classe_tag):
-        fin = ""
-        if financiamento:
-            fin = (
-                f'<span class="tag tag-financiamento">Financiamento: {financiamento}</span>'
+    projetos = [
+        {
+            "titulo": "Videocast Papo de Quintal",
+            "status": "ativo",
+            "financiamento": "PNAB — Política Nacional Aldir Blanc (Matozinhos)",
+            "paragrafos": [
+                "O Papo de Quintal nasceu de uma ideia concebida em 2021 pelo Quintal das "
+                "Pretas, com o propósito de criar um espaço de diálogo, escuta e valorização "
+                "das histórias, saberes e trajetórias que fortalecem a identidade e a memória "
+                "da comunidade. Apresentado pela personagem Repórter Edileuza, o videocast foi "
+                "pensado como um ambiente acolhedor e divertido para compartilhar experiências "
+                "inspiradoras e promover reflexões sobre cultura, ancestralidade, cidadania e "
+                "transformação social. O nome do videocast foi uma sugestão da atriz Polly "
+                "Andreys e a personagem Edileuza foi criada em 2005 pela atriz Ita Ferreira.",
+                "A sua primeira temporada foi produzida institucionalmente no final de 2024, "
+                "por meio de recursos da Política Nacional Aldir Blanc (PNAB), através do "
+                "município de Matozinhos. Composta por cinco episódios, a temporada destacou "
+                "histórias de vida, desafios e conquistas de mulheres pretas atuantes em "
+                "diferentes profissões, evidenciando suas contribuições para a sociedade e "
+                "inspirando novas gerações.",
+                "Mais do que um programa de entrevistas, o Papo de Quintal é um espaço de "
+                "encontro entre memórias, experiências e perspectivas diversas, reafirmando o "
+                "compromisso do Quintal das Pretas com a valorização das vozes negras, a "
+                "promoção da diversidade e o fortalecimento da cultura local e regional.",
+            ],
+        },
+        {
+            "titulo": "Manutenção de Atividades Artístico-Culturais",
+            "status": "inicio",
+            "financiamento": "Edital FEC 12/2025 — FAOP / SECULT-MG",
+            "paragrafos": [
+                "O recurso foi adquirido via edital FEC 12/2025 para manutenção e ampliação da "
+                "programação artística oferecida gratuitamente à comunidade no Ponto de Cultura "
+                "Quintal das Pretas. Também, para iniciar a campanha de modernização do local "
+                "com a elaboração dos projetos arquitetônicos e técnicos para oferecer melhorias "
+                "no espaço com mais segurança e acessibilidade para os beneficiários.",
+            ],
+            "ficha": [
+                ("Termo de Compromisso", "FAOP/FOMENTO nº 128632284/2025"),
+                ("Edital", "FEC 12/2025 — FAOP-FEC 12/2025 (Manutenção de Atividades "
+                           "Artístico-Culturais de Organizações da Sociedade Civil)"),
+                ("Partes", "Associação Quintal das Pretas e SECULT, por intermédio da "
+                           "Fundação de Arte de Ouro Preto (FAOP)"),
+                ("Valor", "R$ 100.000,00"),
+                ("Assinatura", "03/12/2025"),
+                ("Vigência", "12 meses"),
+            ],
+        },
+        {
+            "titulo": "Projeto Quintal Aprendiz",
+            "status": "conclusao",
+            "financiamento": "Lei Federal 13.019/2014 — Termos de Fomento 52, 53 e 54/2025 "
+                             "(Sec. Mun. de Cultura, Esporte, Turismo e Lazer) · R$ 42.000,00",
+            "paragrafos": [
+                "O Projeto Quintal Aprendiz é uma iniciativa do Quintal das Pretas que, desde "
+                "agosto de 2025, oferece gratuitamente à comunidade oficinas, palestras, rodas "
+                "de conversa, eventos culturais e apresentações artísticas, promovendo o acesso "
+                "à cultura, à formação cidadã e ao fortalecimento dos vínculos comunitários. As "
+                "atividades atendem moradores do entorno do Ponto de Cultura, estudantes e "
+                "escolas locais, ampliando oportunidades de aprendizado, convivência e "
+                "valorização das identidades culturais.",
+                "O projeto integra um conjunto de ações desenvolvidas em parceria com os "
+                "projetos “Apoio à Estruturação da Cia Pé de Pano” e “Apoio e Estruturação do "
+                "Quintal das Pretas e da Cia Pé de Pano”, estes para aquisição de materiais para "
+                "as oficinas, instrumentos e material de apoio, fortalecendo a atuação cultural, "
+                "educativa e artística da instituição no município de Matozinhos.",
+                "As iniciativas foram viabilizadas por meio de recursos decorrentes do Processo "
+                "de Exceção de Chamamento Público nº 08/EI52/25, da Secretaria Municipal de "
+                "Cultura, Esporte, Turismo e Lazer, sob a regência da Lei Federal nº 13.019/2014 "
+                "e suas alterações, bem como do Decreto Municipal nº 3.006/2016. O investimento "
+                "total de R$ 42.000,00 foi distribuído entre os Termos de Fomento nº 52/2025, "
+                "53/2025 e 54/2025, garantindo a realização das atividades e contribuindo para o "
+                "fortalecimento das ações culturais permanentes desenvolvidas pelo Quintal das "
+                "Pretas e pela Cia. Pé de Pano.",
+            ],
+        },
+        {
+            "titulo": "Territórios do Axé — a Ancestralidade Viva em Pedro Leopoldo",
+            "status": "naoiniciou", "financiamento": "MINC", "aguardando": True,
+        },
+        {
+            "titulo": "Arte da Terra: Formação Artística no Quintal das Pretas",
+            "status": "naoiniciou", "financiamento": "FUNARTE", "aguardando": True,
+        },
+        {
+            "titulo": "Manutenção de Programação Artística",
+            "status": "naoiniciou", "financiamento": "Prefeitura de Matozinhos", "aguardando": True,
+        },
+        {
+            "titulo": "Escola Livre de Teatro",
+            "status": "naoiniciou", "financiamento": None, "em_breve": True,
+        },
+    ]
+
+    def tags_html(p):
+        _, classe_tag, status_label = STATUS[p["status"]]
+        fin = (f'<span class="tag tag-financiamento">Financiamento: {p["financiamento"]}</span>'
+               if p.get("financiamento") else "")
+        return (f'<div class="projeto-tags"><span class="tag {classe_tag}">{status_label}</span>'
+                f'{fin}</div>')
+
+    def bloco_detalhado(p):
+        paras = "\n".join(f"<p>{par}</p>" for par in p["paragrafos"])
+        ficha = ""
+        if p.get("ficha"):
+            linhas = "\n".join(
+                f"<div><dt>{rot}</dt><dd>{val}</dd></div>" for rot, val in p["ficha"]
             )
-        return f"""<article class="card projeto-card">
-          {foto_ph("Imagem do projeto", "largo", "🌱")}
+            ficha = f'<dl class="ficha">\n{linhas}\n</dl>'
+        return f"""<article class="projeto-detalhe card">
           <div class="card-corpo">
-            <div class="projeto-tags">
-              <span class="tag {classe_tag}">{status_label}</span>
-              {fin}
-            </div>
-            <h3>{titulo}</h3>
-            <p class="card-resumo">{LOREM_CURTO}</p>
-            <a href="#">Saiba mais →</a>
+            {tags_html(p)}
+            <h3>{p["titulo"]}</h3>
+            {paras}
+            {ficha}
+          </div>
+        </article>"""
+
+    def card_compacto(p):
+        if p.get("aguardando"):
+            nota = ("Informações detalhadas serão divulgadas após a assinatura dos termos. "
+                    "Em breve, novidades.")
+        elif p.get("em_breve"):
+            nota = "Projeto em planejamento. Em breve, mais informações."
+        else:
+            nota = ""
+        return f"""<article class="card projeto-card">
+          <div class="card-corpo">
+            {tags_html(p)}
+            <h3>{p["titulo"]}</h3>
+            <p class="card-resumo">{nota}</p>
           </div>
         </article>"""
 
     secoes = []
-    for nome, classe_grupo, classe_tag, status_label, projetos in grupos:
-        cards = "\n".join(
-            card_projeto(t, f, status_label, classe_tag) for t, f in projetos
-        )
+    for status, nome in GRUPOS:
+        do_grupo = [p for p in projetos if p["status"] == status]
+        if not do_grupo:
+            continue
+        classe_grupo = STATUS[status][0]
+        detalhados = [p for p in do_grupo if p.get("paragrafos")]
+        compactos = [p for p in do_grupo if not p.get("paragrafos")]
+        partes = [bloco_detalhado(p) for p in detalhados]
+        if compactos:
+            cards = "\n".join(card_compacto(p) for p in compactos)
+            partes.append(f'<div class="grid grid-3">\n{cards}\n</div>')
+        corpo = "\n".join(partes)
         secoes.append(f"""<div class="status-grupo {classe_grupo}">
           <h2>{nome}</h2>
-          <div class="grid grid-3">
-{cards}
-          </div>
+{corpo}
         </div>""")
     secoes_html = "\n".join(secoes)
 
     conteudo = page_hero(
         "Projetos",
         "O que cultivamos hoje",
-        LOREM_MEDIO,
+        "Conheça os projetos do Quintal das Pretas, organizados pela fase atual de cada um.",
     ) + f"""
     <section class="secao linho">
       <div class="container">
@@ -592,14 +707,16 @@ def page_projetos():
     <section class="faixa-cta">
       <div class="container">
         <h2>Some-se a um projeto</h2>
-        <p>{LOREM_CURTO}</p>
+        <p>Apoie a continuidade e a ampliação dessas ações culturais, gratuitas e abertas
+        à comunidade.</p>
         <a class="btn btn-terra btn-cta" href="apoie.html">Quero apoiar</a>
       </div>
     </section>
 """
     return layout(
         "Projetos",
-        "Projetos do Quintal das Pretas, organizados por status: Territórios do Axé, Arte da Terra, Papo de Quintal e mais.",
+        "Projetos do Quintal das Pretas: Papo de Quintal, Quintal Aprendiz, Manutenção de "
+        "Atividades Artístico-Culturais (FEC), Territórios do Axé e mais.",
         "projetos.html",
         conteudo,
     )

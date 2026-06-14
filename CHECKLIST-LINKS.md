@@ -206,13 +206,6 @@
 - ✅ `projetos.html`
 - ✅ `apoie.html`
 - ✅ `contato.html`
-- ⚠️ `#` — botão placeholder (destino a definir)
-- ⚠️ `#` — botão placeholder (destino a definir)
-- ⚠️ `#` — botão placeholder (destino a definir)
-- ⚠️ `#` — botão placeholder (destino a definir)
-- ⚠️ `#` — botão placeholder (destino a definir)
-- ⚠️ `#` — botão placeholder (destino a definir)
-- ⚠️ `#` — botão placeholder (destino a definir)
 - 🌐 `https://instagram.com` — externo (placeholder, conferir)
 - 🌐 `https://youtube.com` — externo (placeholder, conferir)
 - ✉️ `mailto:contato@quintaldaspretas.com.br`
@@ -242,7 +235,7 @@
 
 - Links internos/assets/âncoras válidos: **149**
 - Quebrados: **0**
-- Botões placeholder `#` (destino a definir): **14** (noticias.html: 7, projetos.html: 7)
+- Botões placeholder `#` (destino a definir): **7** (noticias.html: 7)
 - Recursos externos OK (Google Fonts): **3**
 - Redes sociais a definir (URL real): **3** (https://github.com/thyfanixs/quintal-das-pretas/edit/main/data/eventos.json, https://instagram.com, https://youtube.com)
 - E-mails: mailto:contato@quintaldaspretas.com.br

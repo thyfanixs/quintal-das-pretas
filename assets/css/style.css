@@ -466,6 +466,38 @@ figure.card { margin: 0; }
 .projeto-card .financiamento { font-size: .82rem; color: #4a3d2f; }
 .projeto-card .financiamento strong { color: var(--verde-escuro); }
 
+/* Projeto detalhado (texto completo) */
+.projeto-detalhe { margin-bottom: 1.5rem; border-left: 6px solid var(--cor-status, var(--mostarda)); break-inside: avoid; }
+.grupo-ativo .projeto-detalhe      { --cor-status: var(--status-ativo); }
+.grupo-inicio .projeto-detalhe     { --cor-status: var(--status-inicio); }
+.grupo-conclusao .projeto-detalhe  { --cor-status: var(--status-conclusao); }
+.projeto-detalhe .card-corpo { display: block; padding: 1.6rem 1.8rem; }
+.projeto-detalhe .card-corpo > * + * { margin-top: .85rem; }
+.projeto-detalhe h3 { font-size: 1.5rem; }
+.projeto-detalhe p { color: #43382b; }
+
+/* Ficha técnica (extrato do termo) */
+.ficha {
+  margin-top: .6rem;
+  display: grid; gap: .1rem;
+  background: var(--areia);
+  border-radius: 10px;
+  padding: 1rem 1.2rem;
+}
+.ficha > div {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: .8rem;
+  padding: .45rem 0;
+  border-bottom: 1px solid rgba(138,61,30,.14);
+}
+.ficha > div:last-child { border-bottom: none; }
+.ficha dt { font-weight: 800; color: var(--verde-escuro); font-size: .9rem; }
+.ficha dd { margin: 0; font-size: .92rem; color: #43382b; }
+@media (max-width: 600px) {
+  .ficha > div { grid-template-columns: 1fr; gap: .1rem; }
+}
+
 /* ---------- Apoie ---------- */
 .apoio-card {
   background: var(--branco-quente);
