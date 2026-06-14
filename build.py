@@ -430,46 +430,36 @@ def page_cia():
 # AGENDA
 # ---------------------------------------------------------------------------
 def page_agenda():
-    eventos = [
-        ("12", "JUL", "Espetáculo: Lorem Ipsum em Cena", "Praça de Pedro Leopoldo (MG)"),
-        ("19", "JUL", "Roda de Conversa: Papo de Quintal", "Sede do Quintal das Pretas"),
-        ("03", "AGO", "Oficina de Teatro Comunitário", "Centro Cultural de Matozinhos (MG)"),
-        ("16", "AGO", "Estreia: Territórios do Axé", "Pedro Leopoldo (MG)"),
-        ("07", "SET", "Sarau Ancestral", "Quintal das Pretas"),
-    ]
-    itens = "\n".join(
-        f"""<li class="evento">
-          <div class="evento-data">
-            <span class="evento-dia">{dia}</span>
-            <span class="evento-mes">{mes}</span>
-          </div>
-          <div class="evento-corpo">
-            <h3>{nome}</h3>
-            <p class="evento-local">{local}</p>
-          </div>
-          <a class="btn btn-terra" href="#">Mais Informações / Ingressos</a>
-        </li>"""
-        for dia, mes, nome, local in eventos
-    )
+    intro = ("Acompanhe aqui a agenda do Ponto de Cultura Quintal das Pretas, da Cia Pé "
+             "de Pano e os compromissos institucionais de seus representantes. Este espaço "
+             "reúne nossa programação artística, ações formativas, encontros, apresentações, "
+             "participações em eventos e atividades que fortalecem a cultura, a memória, a "
+             "identidade de nossa comunidade e as nossas parcerias institucionais. Fique por "
+             "dentro e caminhe conosco nessa trajetória de arte, educação e transformação social.")
     conteudo = page_hero(
         "Agenda",
-        "O que acontece no quintal",
-        LOREM_MEDIO,
+        "Caminhe conosco",
+        "Programação artística, ações formativas, encontros e compromissos institucionais "
+        "do Quintal das Pretas e da Cia Pé de Pano.",
     ) + f"""
     <section class="secao linho">
       <div class="container">
-        <span class="olho">Próximos eventos</span>
-        <h2 class="secao-titulo">Linha do tempo</h2>
-        <p class="secao-intro">{LOREM_CURTO}</p>
-        <ul class="timeline">
-{itens}
-        </ul>
+        <span class="olho">Nossa programação</span>
+        <h2 class="secao-titulo">Próximos eventos</h2>
+        <p class="secao-intro">{intro}</p>
+
+        <!-- A lista é montada automaticamente a partir de data/eventos.json.
+             Para adicionar um evento, edite esse arquivo (veja data/COMO-ADICIONAR-EVENTOS.md). -->
+        <ul class="timeline" id="agenda-lista" data-fonte="data/eventos.json" hidden></ul>
+        <p class="secao-intro" id="agenda-status">Carregando agenda…</p>
+        <noscript><p class="secao-intro">Ative o JavaScript para ver a programação,
+        ou acompanhe nossos eventos pelas redes sociais.</p></noscript>
       </div>
     </section>
 """
     return layout(
         "Agenda",
-        "Agenda de espetáculos, oficinas e encontros do Quintal das Pretas.",
+        "Agenda de espetáculos, oficinas, encontros e compromissos do Quintal das Pretas e da Cia Pé de Pano.",
         "agenda.html",
         conteudo,
     )

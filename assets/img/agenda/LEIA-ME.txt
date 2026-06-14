@@ -1,0 +1,4 @@
+Coloque aqui as imagens dos eventos da Agenda (.jpg/.png/.webp).
+Depois, referencie o arquivo no campo "imagem" de data/eventos.json, ex.:
+  "imagem": "assets/img/agenda/chico-rei.jpg"
+Recomendado: ~1200px no lado maior, comprimida (< 300 KB).

@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self'" />
   <title>Agenda · Quintal das Pretas</title>
-  <meta name="description" content="Agenda de espetáculos, oficinas e encontros do Quintal das Pretas." />
+  <meta name="description" content="Agenda de espetáculos, oficinas, encontros e compromissos do Quintal das Pretas e da Cia Pé de Pano." />
   <link rel="icon" type="image/svg+xml" href="assets/img/emblema.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -46,73 +46,23 @@
     <section class="page-hero">
       <div class="container">
         <p class="kicker">Agenda</p>
-        <h1>O que acontece no quintal</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
+        <h1>Caminhe conosco</h1>
+        <p>Programação artística, ações formativas, encontros e compromissos institucionais do Quintal das Pretas e da Cia Pé de Pano.</p>
       </div>
     </section>
 
     <section class="secao linho">
       <div class="container">
-        <span class="olho">Próximos eventos</span>
-        <h2 class="secao-titulo">Linha do tempo</h2>
-        <p class="secao-intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis nisl eget urna luctus tincidunt non a sapien.</p>
-        <ul class="timeline">
-<li class="evento">
-          <div class="evento-data">
-            <span class="evento-dia">12</span>
-            <span class="evento-mes">JUL</span>
-          </div>
-          <div class="evento-corpo">
-            <h3>Espetáculo: Lorem Ipsum em Cena</h3>
-            <p class="evento-local">Praça de Pedro Leopoldo (MG)</p>
-          </div>
-          <a class="btn btn-terra" href="#">Mais Informações / Ingressos</a>
-        </li>
-<li class="evento">
-          <div class="evento-data">
-            <span class="evento-dia">19</span>
-            <span class="evento-mes">JUL</span>
-          </div>
-          <div class="evento-corpo">
-            <h3>Roda de Conversa: Papo de Quintal</h3>
-            <p class="evento-local">Sede do Quintal das Pretas</p>
-          </div>
-          <a class="btn btn-terra" href="#">Mais Informações / Ingressos</a>
-        </li>
-<li class="evento">
-          <div class="evento-data">
-            <span class="evento-dia">03</span>
-            <span class="evento-mes">AGO</span>
-          </div>
-          <div class="evento-corpo">
-            <h3>Oficina de Teatro Comunitário</h3>
-            <p class="evento-local">Centro Cultural de Matozinhos (MG)</p>
-          </div>
-          <a class="btn btn-terra" href="#">Mais Informações / Ingressos</a>
-        </li>
-<li class="evento">
-          <div class="evento-data">
-            <span class="evento-dia">16</span>
-            <span class="evento-mes">AGO</span>
-          </div>
-          <div class="evento-corpo">
-            <h3>Estreia: Territórios do Axé</h3>
-            <p class="evento-local">Pedro Leopoldo (MG)</p>
-          </div>
-          <a class="btn btn-terra" href="#">Mais Informações / Ingressos</a>
-        </li>
-<li class="evento">
-          <div class="evento-data">
-            <span class="evento-dia">07</span>
-            <span class="evento-mes">SET</span>
-          </div>
-          <div class="evento-corpo">
-            <h3>Sarau Ancestral</h3>
-            <p class="evento-local">Quintal das Pretas</p>
-          </div>
-          <a class="btn btn-terra" href="#">Mais Informações / Ingressos</a>
-        </li>
-        </ul>
+        <span class="olho">Nossa programação</span>
+        <h2 class="secao-titulo">Próximos eventos</h2>
+        <p class="secao-intro">Acompanhe aqui a agenda do Ponto de Cultura Quintal das Pretas, da Cia Pé de Pano e os compromissos institucionais de seus representantes. Este espaço reúne nossa programação artística, ações formativas, encontros, apresentações, participações em eventos e atividades que fortalecem a cultura, a memória, a identidade de nossa comunidade e as nossas parcerias institucionais. Fique por dentro e caminhe conosco nessa trajetória de arte, educação e transformação social.</p>
+
+        <!-- A lista é montada automaticamente a partir de data/eventos.json.
+             Para adicionar um evento, edite esse arquivo (veja data/COMO-ADICIONAR-EVENTOS.md). -->
+        <ul class="timeline" id="agenda-lista" data-fonte="data/eventos.json" hidden></ul>
+        <p class="secao-intro" id="agenda-status">Carregando agenda…</p>
+        <noscript><p class="secao-intro">Ative o JavaScript para ver a programação,
+        ou acompanhe nossos eventos pelas redes sociais.</p></noscript>
       </div>
     </section>
 

@@ -19,6 +19,71 @@
     });
   }
 
+  /* ----- Agenda dinâmica (lê data/eventos.json; sem rebuild) ----- */
+  var listaAgenda = document.getElementById("agenda-lista");
+  if (listaAgenda) {
+    var statusAg = document.getElementById("agenda-status");
+    var MESES = ["JAN", "FEV", "MAR", "ABR", "MAI", "JUN",
+                 "JUL", "AGO", "SET", "OUT", "NOV", "DEZ"];
+    var fonte = listaAgenda.getAttribute("data-fonte") || "data/eventos.json";
+
+    var escAg = function (s) {
+      return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
+        return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+      });
+    };
+    var parseDataAg = function (iso) {
+      var m = /^(\d{4})-(\d{2})-(\d{2})/.exec(iso || "");
+      return m ? new Date(+m[1], +m[2] - 1, +m[3]) : null;
+    };
+    var linkSeguro = function (u) {
+      // só permite http(s) ou caminho relativo/absoluto do próprio site
+      return /^(https?:\/\/|\/|[\w./-]+$)/i.test(u || "") && !/^javascript:/i.test(u || "");
+    };
+
+    fetch(fonte, { cache: "no-store" })
+      .then(function (r) { if (!r.ok) throw new Error("http"); return r.json(); })
+      .then(function (eventos) {
+        if (!Array.isArray(eventos)) eventos = [];
+        var hoje = new Date(); hoje.setHours(0, 0, 0, 0);
+        var proximos = eventos
+          .map(function (e) { e._d = parseDataAg(e.data); return e; })
+          .filter(function (e) { return e._d && e._d >= hoje; })
+          .sort(function (a, b) { return a._d - b._d; });
+
+        if (!proximos.length) {
+          if (statusAg) statusAg.textContent =
+            "Em breve, novos eventos. Acompanhe nossas redes sociais!";
+          return;
+        }
+        listaAgenda.innerHTML = proximos.map(function (e) {
+          var dia = ("0" + e._d.getDate()).slice(-2);
+          var mes = MESES[e._d.getMonth()];
+          var img = e.imagem
+            ? '<img class="evento-img" src="' + escAg(e.imagem) + '" alt="' +
+              escAg(e.titulo || "Evento") + '" loading="lazy" />' : "";
+          var local = e.local ? '<p class="evento-local">' + escAg(e.local) + "</p>" : "";
+          var desc = e.descricao ? '<p class="card-resumo">' + escAg(e.descricao) + "</p>" : "";
+          var btn = (e.link && linkSeguro(e.link))
+            ? '<a class="btn btn-terra" href="' + escAg(e.link) +
+              '" target="_blank" rel="noopener">Mais informações / Ingressos</a>' : "";
+          return '<li class="evento">' +
+            '<div class="evento-data"><span class="evento-dia">' + dia +
+            '</span><span class="evento-mes">' + mes + "</span></div>" +
+            img +
+            '<div class="evento-corpo"><h3>' + escAg(e.titulo || "Evento") + "</h3>" +
+            local + desc + btn + "</div>" +
+            "</li>";
+        }).join("");
+        listaAgenda.hidden = false;
+        if (statusAg) statusAg.hidden = true;
+      })
+      .catch(function () {
+        if (statusAg) statusAg.textContent =
+          "Não foi possível carregar a agenda agora. Tente novamente mais tarde.";
+      });
+  }
+
   /* ----- Formulário de contato (placeholder, sem back-end) ----- */
   var form = document.getElementById("form-contato");
   if (form) {

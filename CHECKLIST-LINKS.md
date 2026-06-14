@@ -17,11 +17,6 @@
 - ✅ `projetos.html`
 - ✅ `apoie.html`
 - ✅ `contato.html`
-- ⚠️ `#` — botão placeholder (destino a definir)
-- ⚠️ `#` — botão placeholder (destino a definir)
-- ⚠️ `#` — botão placeholder (destino a definir)
-- ⚠️ `#` — botão placeholder (destino a definir)
-- ⚠️ `#` — botão placeholder (destino a definir)
 - 🌐 `https://instagram.com` — externo (placeholder, conferir)
 - 🌐 `https://youtube.com` — externo (placeholder, conferir)
 - ✉️ `mailto:contato@quintaldaspretas.com.br`
@@ -226,7 +221,7 @@
 
 - Links internos/assets/âncoras válidos: **137**
 - Quebrados: **0**
-- Botões placeholder `#` (destino a definir): **19** (agenda.html: 5, noticias.html: 7, projetos.html: 7)
+- Botões placeholder `#` (destino a definir): **14** (noticias.html: 7, projetos.html: 7)
 - Recursos externos OK (Google Fonts): **3**
 - Redes sociais a definir (URL real): **2** (https://instagram.com, https://youtube.com)
 - E-mails: mailto:contato@quintaldaspretas.com.br

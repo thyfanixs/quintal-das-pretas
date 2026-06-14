@@ -389,8 +389,7 @@ figure.card { margin: 0; }
 /* ---------- Agenda (linha do tempo) ---------- */
 .timeline { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 1.2rem; }
 .evento {
-  display: grid;
-  grid-template-columns: 120px 1fr auto;
+  display: flex;
   gap: 1.4rem;
   align-items: center;
   background: var(--branco-quente);
@@ -400,15 +399,26 @@ figure.card { margin: 0; }
   padding: 1.2rem 1.5rem;
 }
 .evento-data {
+  flex: none;
+  width: 84px;
   text-align: center;
   border-right: 2px dashed var(--argila-clara);
   padding-right: 1.2rem;
 }
+.evento-img {
+  flex: none;
+  width: 170px;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.evento-corpo { flex: 1; min-width: 0; }
 .evento-dia { font-family: var(--fonte-titulo); font-size: 2.2rem; font-weight: 800; color: var(--terracota); line-height: 1; }
 .evento-mes { text-transform: uppercase; letter-spacing: .18em; font-size: .74rem; font-weight: 800; color: var(--verde-folha); }
 .evento-corpo h3 { font-size: 1.2rem; }
 .evento-local { color: #4a3d2f; font-size: .92rem; }
 .evento-local::before { content: "📍 "; }
+.evento-corpo .btn { margin-top: .8rem; }
 
 /* ---------- Projetos ---------- */
 .status-grupo { margin-bottom: 2.6rem; }
@@ -569,9 +579,13 @@ figure.card { margin: 0; }
 @media (max-width: 760px) {
   .grid-2, .grid-3, .split { grid-template-columns: 1fr; }
   .rodape-grid { grid-template-columns: 1fr; }
-  .evento { grid-template-columns: 90px 1fr; }
-  .evento .btn { grid-column: 1 / -1; justify-content: center; }
-  .evento-data { border-right: none; border-bottom: 2px dashed var(--argila-clara); padding: 0 0 .6rem; }
+  .evento { flex-wrap: wrap; }
+  .evento-data {
+    width: auto; border-right: none; border-bottom: 2px dashed var(--argila-clara);
+    padding: 0 0 .6rem; display: flex; gap: .5rem; align-items: baseline;
+  }
+  .evento-img { width: 100%; aspect-ratio: 16 / 9; }
+  .evento-corpo { flex-basis: 100%; }
 }
 
 /* ---------- Marca no rodapé ---------- */
