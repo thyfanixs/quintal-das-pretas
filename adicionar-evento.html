@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<!-- Página gerada por build.py — não editar à mão (rode: python3 build.py) -->
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self'" />
+  <title>Área da equipe · Quintal das Pretas</title>
+  <meta name="description" content="Ferramenta interna para gerar eventos da agenda." />
+  <link rel="icon" type="image/svg+xml" href="assets/img/emblema.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,900&family=Mulish:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <a href="#conteudo" class="sr-only">Pular para o conteúdo</a>
+  <div class="grafismo" aria-hidden="true"></div>
+
+  <header class="cabecalho">
+    <div class="container cabecalho-inner">
+      <a class="marca" href="index.html" aria-label="Quintal das Pretas — página inicial">
+        <img class="marca-selo" src="assets/img/emblema.svg" alt="" width="52" height="60" />
+        <span class="marca-texto">
+          <span class="marca-titulo">Quintal das Pretas</span>
+          <span class="marca-sub">Ponto de Cultura</span>
+        </span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-principal" aria-label="Abrir menu">☰</button>
+      <nav class="nav-principal" id="nav-principal" aria-label="Navegação principal">
+        <ul>
+<li><a href="quem-somos.html">Quem Somos</a></li>
+<li><a href="cia-pe-de-pano.html">Cia Pé de Pano</a></li>
+<li><a href="agenda.html">Agenda</a></li>
+<li><a href="noticias.html">Notícias</a></li>
+<li><a href="projetos.html">Projetos</a></li>
+<li><a href="apoie.html">Apoie</a></li>
+<li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+
+    <section class="page-hero">
+      <div class="container">
+        <p class="kicker">Área da equipe</p>
+        <h1>Gerador de eventos</h1>
+        <p>Ferramenta interna: preencha os campos e copie o texto gerado para colar no arquivo data/eventos.json no GitHub. Nada é publicado por aqui — o evento só vai ao ar depois do commit no repositório.</p>
+      </div>
+    </section>
+
+    <section class="secao linho">
+      <div class="container" style="max-width:760px">
+        <span class="olho">Passo 1 — preencher</span>
+        <h2 class="secao-titulo">Dados do evento</h2>
+        <form id="gerador-evento" class="form-grid" novalidate>
+          <div class="campo">
+            <label for="g-data">Data *</label>
+            <input type="date" id="g-data" required />
+          </div>
+          <div class="campo">
+            <label for="g-titulo">Título *</label>
+            <input type="text" id="g-titulo" required placeholder="Ex.: Espetáculo Chico Rei" />
+          </div>
+          <div class="campo">
+            <label for="g-local">Local</label>
+            <input type="text" id="g-local" placeholder="Ex.: Praça de Matozinhos (MG)" />
+          </div>
+          <div class="campo">
+            <label for="g-imagem">Imagem (caminho do arquivo enviado)</label>
+            <input type="text" id="g-imagem" placeholder="assets/img/agenda/chico-rei.jpg" />
+          </div>
+          <div class="campo">
+            <label for="g-link">Link (ingressos / inscrição)</label>
+            <input type="url" id="g-link" placeholder="https://..." />
+          </div>
+          <div class="campo">
+            <label for="g-descricao">Descrição</label>
+            <textarea id="g-descricao" placeholder="Breve descrição do evento (opcional)."></textarea>
+          </div>
+          <button type="submit" class="btn btn-terra">Gerar texto do evento</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="secao areia">
+      <div class="container" style="max-width:760px">
+        <span class="olho">Passo 2 — copiar e colar no GitHub</span>
+        <h2 class="secao-titulo">Texto gerado</h2>
+        <p class="secao-intro">Copie o bloco abaixo e cole dentro dos colchetes
+        <code>[ ]</code> do arquivo <strong>data/eventos.json</strong>. Se já houver
+        outros eventos, coloque uma <strong>vírgula</strong> entre eles.</p>
+        <pre id="evento-saida" class="saida-codigo" aria-live="polite">— preencha o formulário acima e clique em “Gerar”. —</pre>
+        <div style="display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1rem">
+          <button type="button" class="btn btn-verde" id="copiar-evento">Copiar texto</button>
+          <a class="btn btn-primario" href="https://github.com/thyfanixs/quintal-das-pretas/edit/main/data/eventos.json" target="_blank" rel="noopener">Abrir eventos.json no GitHub</a>
+        </div>
+        <p class="secao-intro" style="margin-top:1.4rem;font-size:.9rem">
+          Guia completo em <code>data/COMO-ADICIONAR-EVENTOS.md</code>.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="grafismo" aria-hidden="true"></div>
+  <footer class="rodape">
+    <div class="container">
+      <div class="rodape-grid">
+        <div>
+          <div class="rodape-marca">
+            <img src="assets/img/emblema.svg" alt="" width="46" height="53" />
+            <div>
+              <strong>Quintal das Pretas</strong>
+              <span>Ponto de Cultura</span>
+            </div>
+          </div>
+          <p>Associação cultural e Ponto de Cultura em Matozinhos, Minas Gerais.
+          Cultura, memória e identidade afro-brasileira por meio da arte, da
+          educação e da valorização dos saberes populares.</p>
+        </div>
+        <div>
+          <h4>Navegue</h4>
+          <ul>
+            <li><a href="quem-somos.html">Quem Somos</a></li>
+            <li><a href="cia-pe-de-pano.html">Cia Pé de Pano</a></li>
+            <li><a href="agenda.html">Agenda</a></li>
+            <li><a href="projetos.html">Projetos</a></li>
+            <li><a href="apoie.html">Apoie</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Conecte-se</h4>
+          <ul>
+            <li><a href="contato.html">Fale conosco</a></li>
+            <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="https://youtube.com" target="_blank" rel="noopener">YouTube</a></li>
+            <li><a href="mailto:contato@quintaldaspretas.com.br">contato@quintaldaspretas.com.br</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="rodape-bottom">
+        <span>© <span class="js-ano">2026</span> Quintal das Pretas. Todos os direitos reservados.</span>
+        <span>Feito com axé no interior de Minas Gerais.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

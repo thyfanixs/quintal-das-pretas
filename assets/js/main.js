@@ -84,6 +84,47 @@
       });
   }
 
+  /* ----- Gerador de evento (área da equipe) ----- */
+  var gerador = document.getElementById("gerador-evento");
+  if (gerador) {
+    var saida = document.getElementById("evento-saida");
+    var pegar = function (id) {
+      var el = document.getElementById(id);
+      return el ? el.value.trim() : "";
+    };
+    gerador.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var data = pegar("g-data");
+      var titulo = pegar("g-titulo");
+      if (!data || !titulo) {
+        saida.textContent = "Preencha pelo menos a Data e o Título.";
+        return;
+      }
+      var ev = { data: data, titulo: titulo };
+      var local = pegar("g-local");      if (local) ev.local = local;
+      var imagem = pegar("g-imagem");    if (imagem) ev.imagem = imagem;
+      var link = pegar("g-link");        if (link) ev.link = link;
+      var descricao = pegar("g-descricao"); if (descricao) ev.descricao = descricao;
+      // JSON.stringify cuida do escape de aspas/caracteres especiais
+      saida.textContent = JSON.stringify(ev, null, 2);
+    });
+
+    var btnCopiar = document.getElementById("copiar-evento");
+    if (btnCopiar) {
+      btnCopiar.addEventListener("click", function () {
+        var txt = saida ? saida.textContent : "";
+        var ok = function () {
+          var orig = btnCopiar.textContent;
+          btnCopiar.textContent = "Copiado! ✓";
+          setTimeout(function () { btnCopiar.textContent = orig; }, 2000);
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(txt).then(ok, ok);
+        } else { ok(); }
+      });
+    }
+  }
+
   /* ----- Formulário de contato (placeholder, sem back-end) ----- */
   var form = document.getElementById("form-contato");
   if (form) {

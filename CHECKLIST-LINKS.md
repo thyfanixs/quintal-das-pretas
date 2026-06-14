@@ -2,6 +2,27 @@
 
 > Gerado por `check_links.py`. ✅ = ok · ❌ = quebrado · 🌐 = externo (conferir manualmente)
 
+## adicionar-evento.html
+- ✅ `assets/img/emblema.svg`
+- 🌐 `https://fonts.googleapis.com` — externo (placeholder, conferir)
+- 🌐 `https://fonts.gstatic.com` — externo (placeholder, conferir)
+- 🌐 `https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,900&family=Mulish:wght@400;500;600;700;800&display=swap` — externo (placeholder, conferir)
+- ✅ `assets/css/style.css`
+- ✅ `#conteudo` — âncora encontrada
+- ✅ `index.html`
+- ✅ `quem-somos.html`
+- ✅ `cia-pe-de-pano.html`
+- ✅ `agenda.html`
+- ✅ `noticias.html`
+- ✅ `projetos.html`
+- ✅ `apoie.html`
+- ✅ `contato.html`
+- 🌐 `https://github.com/thyfanixs/quintal-das-pretas/edit/main/data/eventos.json` — externo (placeholder, conferir)
+- 🌐 `https://instagram.com` — externo (placeholder, conferir)
+- 🌐 `https://youtube.com` — externo (placeholder, conferir)
+- ✉️ `mailto:contato@quintaldaspretas.com.br`
+- ✅ `assets/js/main.js`
+
 ## agenda.html
 - ✅ `assets/img/emblema.svg`
 - 🌐 `https://fonts.googleapis.com` — externo (placeholder, conferir)
@@ -219,9 +240,9 @@
 
 ## Resumo
 
-- Links internos/assets/âncoras válidos: **137**
+- Links internos/assets/âncoras válidos: **149**
 - Quebrados: **0**
 - Botões placeholder `#` (destino a definir): **14** (noticias.html: 7, projetos.html: 7)
 - Recursos externos OK (Google Fonts): **3**
-- Redes sociais a definir (URL real): **2** (https://instagram.com, https://youtube.com)
+- Redes sociais a definir (URL real): **3** (https://github.com/thyfanixs/quintal-das-pretas/edit/main/data/eventos.json, https://instagram.com, https://youtube.com)
 - E-mails: mailto:contato@quintaldaspretas.com.br

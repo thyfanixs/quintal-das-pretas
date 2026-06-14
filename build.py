@@ -740,6 +740,76 @@ def page_contato():
     )
 
 
+# ---------------------------------------------------------------------------
+# PAINEL — gerador de evento (página NÃO listada no menu)
+# ---------------------------------------------------------------------------
+def page_painel():
+    conteudo = page_hero(
+        "Área da equipe",
+        "Gerador de eventos",
+        "Ferramenta interna: preencha os campos e copie o texto gerado para colar "
+        "no arquivo data/eventos.json no GitHub. Nada é publicado por aqui — o evento "
+        "só vai ao ar depois do commit no repositório.",
+    ) + """
+    <section class="secao linho">
+      <div class="container" style="max-width:760px">
+        <span class="olho">Passo 1 — preencher</span>
+        <h2 class="secao-titulo">Dados do evento</h2>
+        <form id="gerador-evento" class="form-grid" novalidate>
+          <div class="campo">
+            <label for="g-data">Data *</label>
+            <input type="date" id="g-data" required />
+          </div>
+          <div class="campo">
+            <label for="g-titulo">Título *</label>
+            <input type="text" id="g-titulo" required placeholder="Ex.: Espetáculo Chico Rei" />
+          </div>
+          <div class="campo">
+            <label for="g-local">Local</label>
+            <input type="text" id="g-local" placeholder="Ex.: Praça de Matozinhos (MG)" />
+          </div>
+          <div class="campo">
+            <label for="g-imagem">Imagem (caminho do arquivo enviado)</label>
+            <input type="text" id="g-imagem" placeholder="assets/img/agenda/chico-rei.jpg" />
+          </div>
+          <div class="campo">
+            <label for="g-link">Link (ingressos / inscrição)</label>
+            <input type="url" id="g-link" placeholder="https://..." />
+          </div>
+          <div class="campo">
+            <label for="g-descricao">Descrição</label>
+            <textarea id="g-descricao" placeholder="Breve descrição do evento (opcional)."></textarea>
+          </div>
+          <button type="submit" class="btn btn-terra">Gerar texto do evento</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="secao areia">
+      <div class="container" style="max-width:760px">
+        <span class="olho">Passo 2 — copiar e colar no GitHub</span>
+        <h2 class="secao-titulo">Texto gerado</h2>
+        <p class="secao-intro">Copie o bloco abaixo e cole dentro dos colchetes
+        <code>[ ]</code> do arquivo <strong>data/eventos.json</strong>. Se já houver
+        outros eventos, coloque uma <strong>vírgula</strong> entre eles.</p>
+        <pre id="evento-saida" class="saida-codigo" aria-live="polite">— preencha o formulário acima e clique em “Gerar”. —</pre>
+        <div style="display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1rem">
+          <button type="button" class="btn btn-verde" id="copiar-evento">Copiar texto</button>
+          <a class="btn btn-primario" href="https://github.com/thyfanixs/quintal-das-pretas/edit/main/data/eventos.json" target="_blank" rel="noopener">Abrir eventos.json no GitHub</a>
+        </div>
+        <p class="secao-intro" style="margin-top:1.4rem;font-size:.9rem">
+          Guia completo em <code>data/COMO-ADICIONAR-EVENTOS.md</code>.</p>
+      </div>
+    </section>
+"""
+    return layout(
+        "Área da equipe",
+        "Ferramenta interna para gerar eventos da agenda.",
+        "",  # não corresponde a nenhuma aba do menu
+        conteudo,
+    )
+
+
 PAGINAS = {
     "index.html": page_home,
     "quem-somos.html": page_quem_somos,
@@ -749,6 +819,7 @@ PAGINAS = {
     "projetos.html": page_projetos,
     "apoie.html": page_apoie,
     "contato.html": page_contato,
+    "adicionar-evento.html": page_painel,  # página interna, fora do menu
 }
 
 
