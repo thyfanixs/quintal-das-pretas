@@ -117,8 +117,9 @@ def layout(titulo, descricao, ativo, conteudo):
               <span>Ponto de Cultura</span>
             </div>
           </div>
-          <p>Espaço de cultura, ancestralidade e arte no interior de Minas Gerais
-          — entre Pedro Leopoldo e Matozinhos. {LOREM_CURTO}</p>
+          <p>Associação cultural e Ponto de Cultura em Matozinhos, Minas Gerais.
+          Cultura, memória e identidade afro-brasileira por meio da arte, da
+          educação e da valorização dos saberes populares.</p>
         </div>
         <div>
           <h4>Navegue</h4>
@@ -242,10 +243,36 @@ def page_hero(kicker, titulo, texto):
 # QUEM SOMOS
 # ---------------------------------------------------------------------------
 def page_quem_somos():
+    p1 = ("O Quintal das Pretas é uma associação cultural sediada em Matozinhos, "
+          "Minas Gerais, que atua na promoção da cultura, da memória, da identidade "
+          "afro-brasileira e do desenvolvimento comunitário por meio da arte, da "
+          "educação e da valorização dos saberes populares. Com trajetória construída "
+          "ao longo de mais de duas décadas, a instituição se consolidou como um espaço "
+          "de encontro, criação, formação e fortalecimento de vínculos entre artistas, "
+          "mestres da cultura popular e a comunidade.")
+    p2 = ("Reconhecido como Ponto de Cultura pelo Programa Viva Cultura do Ministério "
+          "da Cultura em 2024, o Quintal das Pretas mantém uma programação contínua e "
+          "acessível, oferecendo apresentações artísticas, oficinas, rodas de conversa, "
+          "ações formativas e atividades voltadas à preservação da memória e das "
+          "tradições mineiras. O espaço abriga iniciativas que promovem a diversidade "
+          "cultural e o acesso democrático aos bens culturais.")
+    p3 = ("Entre suas principais realizações está a atuação da Cia Pé de Pano, coletivo "
+          "de teatro com 30 anos de existência, responsável pela criação e circulação de "
+          "espetáculos que dialogam com a história, a oralidade e a cultura popular de "
+          "Minas Gerais, como <em>Chico Rei</em> e <em>Caminho da Boiada</em>. Por meio "
+          "de suas ações, o Quintal das Pretas reafirma seu compromisso com a "
+          "transformação social, a valorização das identidades culturais e a construção "
+          "de um território mais criativo, inclusivo e participativo.")
+
     valores = [
-        ("Ancestralidade", LOREM_CURTO),
-        ("Acolhimento", LOREM_CURTO),
-        ("Arte & Território", LOREM_CURTO),
+        ("Memória & Ancestralidade",
+         "Preservação da memória, das tradições mineiras e da identidade afro-brasileira."),
+        ("Arte & Formação",
+         "Apresentações, oficinas, rodas de conversa e ações formativas com acesso "
+         "democrático aos bens culturais."),
+        ("Comunidade & Transformação",
+         "Fortalecimento de vínculos e construção de um território mais criativo, "
+         "inclusivo e participativo."),
     ]
     valores_html = "\n".join(
         f'<div class="valor-card"><h3>{t}</h3><p>{d}</p></div>'
@@ -256,28 +283,32 @@ def page_quem_somos():
     )
     conteudo = page_hero(
         "Quem Somos",
-        "Nossa história começa na terra",
-        LOREM_MEDIO,
+        "Cultura, memória e identidade afro-brasileira",
+        "Associação cultural sediada em Matozinhos (MG) — Ponto de Cultura reconhecido "
+        "pelo Programa Viva Cultura do Ministério da Cultura (2024).",
     ) + f"""
     <section class="secao linho">
       <div class="container">
         <div class="split">
           <div>
             <span class="olho">Nossa história</span>
-            <h2 class="secao-titulo">Raízes no interior de Minas</h2>
-            <p>{LOREM_LONGO}</p>
-            <p>{LOREM_MEDIO}</p>
+            <h2 class="secao-titulo">Mais de duas décadas no interior de Minas</h2>
+            <p>{p1}</p>
+            <p>{p2}</p>
           </div>
           {foto_ph("Foto do espaço / quintal", "", "🏡")}
         </div>
+        <p style="margin-top:1.6rem">{p3}</p>
       </div>
     </section>
 
     <section class="secao areia">
       <div class="container">
-        <span class="olho">Missão & Valores</span>
+        <span class="olho">Missão &amp; Valores</span>
         <h2 class="secao-titulo">O que nos move</h2>
-        <p class="secao-intro">{LOREM_MEDIO}</p>
+        <p class="secao-intro">Promover a cultura, a memória, a identidade afro-brasileira
+        e o desenvolvimento comunitário por meio da arte, da educação e da valorização
+        dos saberes populares.</p>
         <div class="grid grid-3">
 {valores_html}
         </div>
@@ -288,7 +319,8 @@ def page_quem_somos():
       <div class="container">
         <span class="olho">Idealizadoras</span>
         <h2 class="secao-titulo">As mãos que cultivam o quintal</h2>
-        <p class="secao-intro">{LOREM_MEDIO}</p>
+        <p class="secao-intro">Conheça as pessoas que constroem o Quintal das Pretas
+        — artistas, mestres da cultura popular e a comunidade.</p>
         <div class="grid grid-3">
 {idealizadoras}
         </div>
@@ -297,7 +329,8 @@ def page_quem_somos():
 """
     return layout(
         "Quem Somos",
-        "A história, a missão e os valores do Quintal das Pretas.",
+        "O Quintal das Pretas é uma associação cultural de Matozinhos (MG), Ponto de "
+        "Cultura (MINC, 2024), que promove cultura, memória e identidade afro-brasileira.",
         "quem-somos.html",
         conteudo,
     )
