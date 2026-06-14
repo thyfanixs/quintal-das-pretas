@@ -340,9 +340,9 @@ def page_quem_somos():
 # CIA PÉ DE PANO
 # ---------------------------------------------------------------------------
 def galeria_cia():
-    """Monta a galeria da Cia a partir de assets/img/cia/.
-    Basta colocar as fotos (.jpg/.jpeg/.png/.webp) nessa pasta e rodar build.py.
-    O nome do arquivo vira a legenda (troque _ por espaço). Sem fotos -> placeholders."""
+    """Monta a galeria da Cia a partir das fotos em assets/img/cia/.
+    Basta colocar as fotos (.jpg/.jpeg/.png/.webp) na pasta e rodar build.py.
+    Sem fotos -> placeholders. Grade limpa de imagens (sem legenda)."""
     pasta = os.path.join(BASE, "assets", "img", "cia")
     exts = (".jpg", ".jpeg", ".png", ".webp", ".avif")
     fotos = []
@@ -355,15 +355,10 @@ def galeria_cia():
         return "\n".join(foto_ph(f"Espetáculo {i}", "", "🎭") for i in range(1, 7))
 
     itens = []
-    for nome in fotos:
-        base = os.path.splitext(nome)[0]
-        base = re.sub(r"^\d+[\s._-]+", "", base)           # remove prefixo de ordem (01-, 02_ ...)
-        base = base.replace("_", " ").replace("-", " ").strip()
-        legenda = base[:1].upper() + base[1:] if base else "Espetáculo"
+    for i, nome in enumerate(fotos, start=1):
         itens.append(
-            f'<figure class="card">'
-            f'<img src="assets/img/cia/{nome}" alt="Cia Pé de Pano — {legenda}" loading="lazy" />'
-            f'<figcaption class="card-corpo"><h3>{legenda}</h3></figcaption>'
+            f'<figure class="card foto-cena">'
+            f'<img src="assets/img/cia/{nome}" alt="Cia Pé de Pano em cena — foto {i}" loading="lazy" />'
             f'</figure>'
         )
     return "\n".join(itens)
@@ -414,10 +409,12 @@ def page_cia():
       <div class="container">
         <span class="olho">Portfólio cênico</span>
         <h2 class="secao-titulo">Galeria de espetáculos</h2>
-        <p class="secao-intro">{LOREM_CURTO}</p>
+        <p class="secao-intro">Registros dos espetáculos da Cia Pé de Pano nos palcos
+        e nas ruas do interior de Minas Gerais.</p>
         <div class="grid grid-3">
 {galeria}
         </div>
+        <p class="credito-fotos">Fotos: Lucas Rocha</p>
       </div>
     </section>
 """

@@ -62,6 +62,47 @@
 - ✅ `projetos.html`
 - ✅ `apoie.html`
 - ✅ `contato.html`
+- ✅ `assets/img/cia/cia-01.jpg`
+- ✅ `assets/img/cia/cia-02.jpg`
+- ✅ `assets/img/cia/cia-03.jpg`
+- ✅ `assets/img/cia/cia-04.jpg`
+- ✅ `assets/img/cia/cia-05.jpg`
+- ✅ `assets/img/cia/cia-06.jpg`
+- ✅ `assets/img/cia/cia-07.jpg`
+- ✅ `assets/img/cia/cia-08.jpg`
+- ✅ `assets/img/cia/cia-09.jpg`
+- ✅ `assets/img/cia/cia-10.jpg`
+- ✅ `assets/img/cia/cia-11.jpg`
+- ✅ `assets/img/cia/cia-12.jpg`
+- ✅ `assets/img/cia/cia-13.jpg`
+- ✅ `assets/img/cia/cia-14.jpg`
+- ✅ `assets/img/cia/cia-15.jpg`
+- ✅ `assets/img/cia/cia-16.jpg`
+- ✅ `assets/img/cia/cia-17.jpg`
+- ✅ `assets/img/cia/cia-18.jpg`
+- ✅ `assets/img/cia/cia-19.jpg`
+- ✅ `assets/img/cia/cia-20.jpg`
+- ✅ `assets/img/cia/cia-21.jpg`
+- ✅ `assets/img/cia/cia-22.jpg`
+- ✅ `assets/img/cia/cia-23.jpg`
+- ✅ `assets/img/cia/cia-24.jpg`
+- ✅ `assets/img/cia/cia-25.jpg`
+- ✅ `assets/img/cia/cia-26.jpg`
+- ✅ `assets/img/cia/cia-27.jpg`
+- ✅ `assets/img/cia/cia-28.jpg`
+- ✅ `assets/img/cia/cia-29.jpg`
+- ✅ `assets/img/cia/cia-30.jpg`
+- ✅ `assets/img/cia/cia-31.jpg`
+- ✅ `assets/img/cia/cia-32.jpg`
+- ✅ `assets/img/cia/cia-33.jpg`
+- ✅ `assets/img/cia/cia-34.jpg`
+- ✅ `assets/img/cia/cia-35.jpg`
+- ✅ `assets/img/cia/cia-36.jpg`
+- ✅ `assets/img/cia/cia-37.jpg`
+- ✅ `assets/img/cia/cia-38.jpg`
+- ✅ `assets/img/cia/cia-39.jpg`
+- ✅ `assets/img/cia/cia-40.jpg`
+- ✅ `assets/img/cia/cia-41.jpg`
 - 🌐 `https://instagram.com` — externo (placeholder, conferir)
 - 🌐 `https://youtube.com` — externo (placeholder, conferir)
 - ✉️ `mailto:contato@quintaldaspretas.com.br`
@@ -183,7 +224,7 @@
 
 ## Resumo
 
-- Links internos/assets/âncoras válidos: **96**
+- Links internos/assets/âncoras válidos: **137**
 - Quebrados: **0**
 - Botões placeholder `#` (destino a definir): **19** (agenda.html: 5, noticias.html: 7, projetos.html: 7)
 - Recursos externos OK (Google Fonts): **3**
