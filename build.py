@@ -211,7 +211,11 @@ def page_home():
         <div class="destaque-30">
           <div class="numero">30</div>
           <h2>anos de teatro no interior de Minas Gerais</h2>
-          <p>{LOREM_MEDIO}</p>
+          <p>O trabalho da companhia nasce da vivência cultural do interior mineiro e do
+          compromisso com um fazer teatral autoral genuíno, acessível e voltado para a
+          formação de público. Suas produções transitam entre o teatro, a música e a
+          oralidade, promovendo experiências poéticas que conectam arte, patrimônio cultural
+          e identidade.</p>
           <p><a class="btn btn-primario" href="cia-pe-de-pano.html">Cia Pé de Pano</a></p>
         </div>
       </div>
@@ -395,7 +399,11 @@ def page_cia():
         <div class="destaque-30">
           <div class="numero">30</div>
           <h2>anos de teatro no interior de Minas Gerais</h2>
-          <p>{LOREM_LONGO}</p>
+          <p>O trabalho da companhia nasce da vivência cultural do interior mineiro e do
+          compromisso com um fazer teatral autoral genuíno, acessível e voltado para a
+          formação de público. Suas produções transitam entre o teatro, a música e a
+          oralidade, promovendo experiências poéticas que conectam arte, patrimônio cultural
+          e identidade.</p>
         </div>
       </div>
     </section>
