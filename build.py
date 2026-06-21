@@ -191,7 +191,7 @@ def page_home():
     conteudo = f"""
     <section class="home-hero">
       <div class="container">
-        <p class="kicker">Pedro Leopoldo · Matozinhos · Minas Gerais</p>
+        <p class="kicker">Matozinhos · Minas Gerais</p>
         <h1>Onde a ancestralidade vira chão, roda e arte</h1>
         <p>Somos chão de terra batida, axé e palco. Em Matozinhos, o Quintal das Pretas
         mantém viva a memória afro-brasileira pela arte, pela educação e pela ancestralidade,
@@ -983,7 +983,7 @@ def page_contato():
             </div>
             <div class="info-item">
               <span class="icone" aria-hidden="true">📍</span>
-              <div><strong>Região</strong><br />Matozinhos e Pedro Leopoldo, Minas Gerais</div>
+              <div><strong>Região</strong><br />Matozinhos, Minas Gerais</div>
             </div>
             <div class="info-item">
               <span class="icone" aria-hidden="true">🔗</span>
@@ -995,7 +995,7 @@ def page_contato():
                 </span>
               </div>
             </div>
-            <div class="mapa-ph" role="img" aria-label="Placeholder de mapa de localização da região de Pedro Leopoldo e Matozinhos">
+            <div class="mapa-ph" role="img" aria-label="Placeholder de mapa de localização em Matozinhos, Minas Gerais">
               🗺️ Mapa de localização<br />(integração futura — Google Maps)
             </div>
           </div>
