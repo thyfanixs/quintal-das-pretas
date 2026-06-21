@@ -357,7 +357,7 @@ def page_quem_somos():
         <p class="secao-intro">Conheça as pessoas que constroem o Quintal das Pretas, dia
         após dia, com arte, afeto e saberes populares.</p>
         <div class="idealizadoras-foto">
-          {imagem_ou_ph("idealizadoras", "Foto das idealizadoras", "largo", "👩🏾‍🎨")}
+          {imagem_ou_ph("idealizadoras", "Foto das idealizadoras", "natural", "👩🏾‍🎨")}
         </div>
         <div class="grid grid-2">
 {idealizadoras}

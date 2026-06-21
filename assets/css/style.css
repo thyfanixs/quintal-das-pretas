@@ -333,7 +333,8 @@ h1, h2, h3, h4 {
 }
 .foto-real.largo { aspect-ratio: 16 / 9; }
 .foto-real.alto { aspect-ratio: 3 / 4; }
-.idealizadoras-foto { margin-bottom: 1.8rem; }
+.foto-real.natural { aspect-ratio: auto; height: auto; }
+.idealizadoras-foto { max-width: 560px; margin: 0 auto 1.8rem; }
 
 /* Cartões de pessoa (idealizadoras) */
 .pessoa-card {
