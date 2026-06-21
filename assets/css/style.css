@@ -232,52 +232,78 @@ h1, h2, h3, h4 {
 
 /* ---------- Botões ---------- */
 .btn {
+  --btn-contorno: var(--marrom);
+  --btn-detalhe: var(--mostarda);
   position: relative;
-  overflow: hidden;
+  isolation: isolate;
   display: inline-flex; align-items: center; gap: .5rem;
-  font-family: var(--fonte-corpo);
+  min-height: 48px;
+  font-family: var(--fonte-titulo);
   font-weight: 800;
-  font-size: .96rem;
-  padding: .8rem 1.5rem;
-  border-radius: 999px;
-  border: 2px solid transparent;
+  font-size: 1rem;
+  letter-spacing: .015em;
+  line-height: 1.15;
+  padding: .78rem 1.35rem .82rem 1.05rem;
+  border-radius: 1.45rem 1.45rem 1.45rem .48rem;
+  border: 2px solid var(--btn-contorno);
   cursor: pointer;
-  box-shadow: 0 4px 0 0 rgba(86,52,30,.16);
-  transition: transform .2s ease, box-shadow .25s ease, background .25s ease, color .25s ease;
+  box-shadow: 5px 5px 0 var(--btn-contorno);
+  transition: transform .2s cubic-bezier(.2,.8,.2,1), box-shadow .2s ease,
+              background .25s ease, color .25s ease;
 }
-/* varredura de luz no hover */
+/* pequeno sol/estrela: gesto gráfico inspirado em cartaz e estandarte popular */
+.btn::before {
+  content: "✦";
+  flex: none;
+  width: 1.65rem; height: 1.65rem;
+  display: grid; place-items: center;
+  border-radius: 50% 50% 50% 18%;
+  border: 1.5px solid currentColor;
+  background: var(--btn-detalhe);
+  color: var(--preto-quente);
+  font-family: var(--fonte-corpo);
+  font-size: .8rem;
+  line-height: 1;
+  transition: transform .28s cubic-bezier(.2,.8,.2,1);
+}
+/* faixa de ritmo — como costura, pintura e grafismo de estandarte */
 .btn::after {
   content: "";
-  position: absolute; inset: 0;
+  position: absolute;
+  left: 3.2rem; right: .9rem; bottom: .32rem;
+  height: 3px;
   pointer-events: none;
-  background: linear-gradient(120deg, transparent 30%, rgba(255,255,255,.4) 50%, transparent 70%);
-  transform: translateX(-130%);
-  transition: transform .6s ease;
+  background: repeating-linear-gradient(90deg,
+    var(--btn-detalhe) 0 8px, transparent 8px 12px);
+  opacity: .72;
+  transition: background-position .35s ease, opacity .2s ease;
 }
 .btn:hover {
   text-decoration: none;
-  transform: translateY(-3px) scale(1.03);
-  box-shadow: 0 10px 22px -8px rgba(86,52,30,.5);
+  transform: translate(-2px, -3px) rotate(-.7deg);
+  box-shadow: 8px 8px 0 var(--btn-contorno);
 }
-.btn:hover::after { transform: translateX(130%); }
-.btn:active { transform: translateY(-1px) scale(.99); }
+.btn:hover::before { transform: rotate(45deg) scale(1.1); }
+.btn:hover::after { background-position: 20px 0; opacity: 1; }
+.btn:active { transform: translate(3px, 3px) rotate(0); box-shadow: 2px 2px 0 var(--btn-contorno); }
 
-.btn-primario { background: var(--mostarda); color: var(--preto-quente); }
+.btn-primario { --btn-detalhe: var(--linho); background: var(--mostarda); color: var(--preto-quente); }
 .btn-primario:hover { background: var(--ouro); }
-.btn-secundario { background: transparent; color: var(--branco-quente); border-color: var(--mostarda); box-shadow: none; }
-.btn-secundario:hover { background: rgba(224,165,38,.18); }
-.btn-terra { background: var(--terracota); color: var(--branco-quente); }
+.btn-secundario { --btn-contorno: var(--mostarda); --btn-detalhe: var(--mostarda); background: rgba(42,28,18,.22); color: var(--branco-quente); }
+.btn-secundario:hover { background: rgba(224,165,38,.2); }
+.btn-secundario::before { color: var(--preto-quente); }
+.btn-terra { --btn-detalhe: var(--mostarda); background: var(--terracota); color: var(--branco-quente); }
 .btn-terra:hover { background: var(--terracota-escuro); }
-.btn-verde { background: var(--verde-folha); color: var(--branco-quente); }
+.btn-verde { --btn-contorno: var(--verde-escuro); --btn-detalhe: var(--mostarda); background: var(--verde-folha); color: var(--branco-quente); }
 .btn-verde:hover { background: var(--verde-escuro); }
-.btn-laranja { background: var(--laranja); color: #fff; }
+.btn-laranja { --btn-detalhe: var(--linho); background: var(--laranja); color: #fff; }
 .btn-laranja:hover { background: var(--laranja-escuro); }
 
 /* CTA com pulso de axé (atenção suave) */
 .btn-cta { animation: pulso-axe 2.6s ease-in-out infinite; }
 @keyframes pulso-axe {
-  0%, 100% { box-shadow: 0 4px 0 0 rgba(86,52,30,.16), 0 0 0 0 rgba(224,133,46,.5); }
-  50%      { box-shadow: 0 4px 0 0 rgba(86,52,30,.16), 0 0 0 12px rgba(224,133,46,0); }
+  0%, 100% { box-shadow: 5px 5px 0 var(--btn-contorno), 0 0 0 0 rgba(224,133,46,.52); }
+  50%      { box-shadow: 5px 5px 0 var(--btn-contorno), 0 0 0 12px rgba(224,133,46,0); }
 }
 
 /* seta que desliza em links de cartão */
@@ -799,6 +825,7 @@ figure.card { margin: 0; }
   .evento-corpo { flex-basis: 100%; }
   .agenda-vazia { grid-template-columns: 1fr; }
   .agenda-cena { min-height: 280px; }
+  .btn { max-width: 100%; padding-inline: .9rem 1.1rem; }
 }
 
 /* ---------- Marca no rodapé ---------- */
