@@ -602,7 +602,7 @@ def page_projetos():
         {
             "titulo": "Videocast Papo de Quintal",
             "status": "ativo",
-            "financiamento": "PNAB — Política Nacional Aldir Blanc (Matozinhos)",
+            "financiamento": "PNAB — Política Nacional Aldir Blanc (Estado de Minas Gerais)",
             "paragrafos": [
                 "O Papo de Quintal nasceu de uma ideia concebida em 2021 pelo Quintal das "
                 "Pretas, com o propósito de criar um espaço de diálogo, escuta e valorização "
@@ -625,8 +625,8 @@ def page_projetos():
             ],
         },
         {
-            "titulo": "Manutenção de Atividades Artístico-Culturais",
-            "status": "inicio",
+            "titulo": "Manutenção de Atividades Artístico-Culturais — FEC",
+            "status": "ativo",
             "financiamento": "Edital FEC 12/2025 — FAOP / SECULT-MG",
             "paragrafos": [
                 "O recurso foi adquirido via edital FEC 12/2025 para manutenção e ampliação da "
@@ -635,15 +635,12 @@ def page_projetos():
                 "com a elaboração dos projetos arquitetônicos e técnicos para oferecer melhorias "
                 "no espaço com mais segurança e acessibilidade para os beneficiários.",
             ],
-            "ficha": [
-                ("Termo de Compromisso", "FAOP/FOMENTO nº 128632284/2025"),
-                ("Edital", "FEC 12/2025 — FAOP-FEC 12/2025 (Manutenção de Atividades "
-                           "Artístico-Culturais de Organizações da Sociedade Civil)"),
-                ("Partes", "Associação Quintal das Pretas e SECULT, por intermédio da "
-                           "Fundação de Arte de Ouro Preto (FAOP)"),
-                ("Valor", "R$ 100.000,00"),
-                ("Assinatura", "03/12/2025"),
-                ("Vigência", "12 meses"),
+            "extratos": [
+                {"titulo": "Extrato de Termo de Compromisso", "texto": '''Termo de Compromisso FAOP/FOMENTO nº. 128632284/2025 celebrado entre a associação quintal das pretas e a Secretaria de Estado de Cultura e Turismo - SECULT, por intermédio da Fundação de Arte de Ouro Preto - FAOP
+Objeto: Constitui objeto do presente Termo de Compromisso do(a) BENEFICIÁRIO(A) cuja proposta foi aprovada em 17/11/2025 e classificada no Edital FEC 12/2025 – EDITAL FAOP-FEC 12/2025 – MANUTENÇÃO DE ATIVIDADES ARTÍSTICO-CULTURAIS DE ORGANIZAÇÕES DA SOCIEDADE CIVIL, na(s) categoria(s) prevista(s) no(s) inciso(s) I, II, III, IV, V, VI, VII, VIII, IX, X, XI, XII, XIII, XIV do art. 7º da Lei Estadual 24.462/2023.
+Valor: R$100.000,00
+Data da assinatura: 03/12/2025.
+Vigência: 12 meses.'''},
             ],
         },
         {
@@ -676,7 +673,18 @@ def page_projetos():
         },
         {
             "titulo": "Territórios do Axé — a Ancestralidade Viva em Pedro Leopoldo",
-            "status": "naoiniciou", "financiamento": "MINC", "aguardando": True,
+            "status": "inicio",
+            "financiamento": "Ministério da Cultura (MinC) — Lei 13.019/2014",
+            "extratos": [
+                {"titulo": "Extrato do Termo de Fomento — Ministério da Cultura (SEI 2885645) — Plataforma Transferegov.br nº 994283",
+                 "texto": '''Em cumprimento às orientações publicadas no site do MinC e ao art. 11, da Lei 13.019/2014 (in verbis) que trata “Da Transparência e do Controle” e do § 4º, inciso II,  do Art. 42 do Decreto 8.726/2016, serão disponibilizadas no site www.quintaldaspretas.com.br e em rede social da Associação Quintal das Pretas (@quintaldaspretas as informações relativas às parcerias celebradas com a Administração Pública.
+O objeto do presente Termo de Fomento é a execução do projeto “Territórios do Axé – A Ancestralidade Viva em Pedro Leopoldo”, através ações de promoção das culturas tradicionais e populares”, visando a consecução de finalidade de interesse público e recíproco, conforme especificações estabelecidas no plano de trabalho.
+Parceria - Ministério da Cultura/Secretária de Cidadania e Diversidade Cultural, representada pela Secretária de Cidadania e Diversidade Cultural, Sra. Márcia Helena Gonçalves e Associação Quintal das Pretas, CNPJ 05.769.374/0001-90, representada por sua Presidente, Sra. Giovane Ferreira da Cruz.
+Valor total: R$ 300.000,00 (trezentos mil reais)
+Prazo de vigência: 12 meses (prazo prorrogado para 10/06/2027)
+Data da assinatura: 18/05/2026
+Prestação de Contas: Em até 90 dias após a vigência'''},
+            ],
         },
         {
             "titulo": "Arte da Terra: Formação Artística no Quintal das Pretas",
@@ -684,7 +692,28 @@ def page_projetos():
         },
         {
             "titulo": "Manutenção de Programação Artística",
-            "status": "naoiniciou", "financiamento": "Prefeitura de Matozinhos", "aguardando": True,
+            "status": "inicio",
+            "financiamento": "Município de Matozinhos — Emendas Impositivas EI 13/2026 e EI 14/2026",
+            "extratos": [
+                {"titulo": "Extrato — Termo de Fomento de Emenda Impositiva nº EI. 13/2026",
+                 "texto": '''DECORRENTE DE PROCESSO DE EXCEÇÃO DE CHAMAMENTO PÚBLICO Nº 13/2026, DA SECRETARIA MUNICIPAL DE CULTURA, ESPORTE, TURISMO E LAZER, que resultou na publicação do EXTRATO DE JUSTIFICATIVA DE EXCEÇÃO DE CHAMAMENTO PÚBLICO DE CHAMAMENTO PÚBLICO (fundamentado art. 29, da Lei Federal nº 13.019/14 e Decreto Municipal nº 3.006/16).
+Fundamento legal para publicação do extrato: Art.41 §1º do Decreto 3006/2016.
+Objeto: Constitui o Termo de Fomento nº 13/2026 apoio na execução do Plano de Trabalho “Manutenção da programação artística do Ponto de Cultura Quintal das Pretas - promoção de oficinas artísticas-culturais e rodas de conversa”.
+Parceria - Município de Matozinhos, com interveniência Secretaria Municipal de Cultura, Esporte, Turismo e Lazer, representada pelo Secretário Municipal Walice Carvalho dos Santos e a Associação Quintal das Pretas, CNPJ 05.769.374/0001-90, representada por sua Presidente, Sra. Giovane Ferreira da Cruz.
+Valor total: R$ 20.000,00 (vinte mil reais)
+Prazo de vigência: 31 de dezembro de 2026
+Data da assinatura: 02/06/2026
+Prestação de Contas: Em até 30 dias após a vigência'''},
+                {"titulo": "Extrato — Termo de Fomento de Emenda Impositiva nº EI. 14/2026",
+                 "texto": '''DECORRENTE DE PROCESSO DE EXCEÇÃO DE CHAMAMENTO PÚBLICO Nº 14/2026, DA SECRETARIA MUNICIPAL DE CULTURA, ESPORTE, TURISMO E LAZER, que resultou na publicação do EXTRATO DE JUSTIFICATIVA DE EXCEÇÃO DE CHAMAMENTO PÚBLICO DE CHAMAMENTO PÚBLICO (fundamentado art. 29, da Lei Federal nº 13.019/14 e Decreto Municipal nº 3.006/16).
+Fundamento legal para publicação do extrato: Art.41 §1º do Decreto 3006/2016.
+Objeto: Constitui o Termo de Fomento nº 14/2026 apoio na execução do Plano de Trabalho “Manutenção da programação artística do Ponto de Cultura Quintal das Pretas - promoção de rodas de conversa com fazedores de cultura e representantes políticos do município”.
+Parceria - Município de Matozinhos, com interveniência Secretaria Municipal de Cultura, Esporte, Turismo e Lazer, representada pelo Secretário Municipal Walice Carvalho dos Santos e a Associação Quintal das Pretas, CNPJ 05.769.374/0001-90, representada por sua Presidente, Sra. Giovane Ferreira da Cruz.
+Valor total: R$ 6.000,00 (seis mil reais)
+Prazo de vigência: 31 de dezembro de 2026
+Data da assinatura: 02/06/2026
+Prestação de Contas: Em até 30 dias após a vigência'''},
+            ],
         },
         {
             "titulo": "Escola Livre de Teatro",
@@ -700,19 +729,21 @@ def page_projetos():
                 f'{fin}</div>')
 
     def bloco_detalhado(p):
-        paras = "\n".join(f"<p>{par}</p>" for par in p["paragrafos"])
-        ficha = ""
-        if p.get("ficha"):
+        paras = "\n".join(f"<p>{par}</p>" for par in p.get("paragrafos", []))
+        extratos = ""
+        for ex in p.get("extratos", []):
+            # texto reproduzido VERBATIM (sem alteração): cada linha vira um parágrafo
             linhas = "\n".join(
-                f"<div><dt>{rot}</dt><dd>{val}</dd></div>" for rot, val in p["ficha"]
+                f"<p>{ln}</p>" for ln in ex["texto"].split("\n") if ln.strip()
             )
-            ficha = f'<dl class="ficha">\n{linhas}\n</dl>'
+            extratos += (f'<div class="extrato"><h4>{ex["titulo"]}</h4>'
+                         f'<div class="extrato-texto">{linhas}</div></div>')
         return f"""<article class="projeto-detalhe card">
           <div class="card-corpo">
             {tags_html(p)}
             <h3>{p["titulo"]}</h3>
             {paras}
-            {ficha}
+            {extratos}
           </div>
         </article>"""
 
@@ -738,8 +769,8 @@ def page_projetos():
         if not do_grupo:
             continue
         classe_grupo = STATUS[status][0]
-        detalhados = [p for p in do_grupo if p.get("paragrafos")]
-        compactos = [p for p in do_grupo if not p.get("paragrafos")]
+        detalhados = [p for p in do_grupo if p.get("paragrafos") or p.get("extratos")]
+        compactos = [p for p in do_grupo if not (p.get("paragrafos") or p.get("extratos"))]
         partes = [bloco_detalhado(p) for p in detalhados]
         if compactos:
             cards = "\n".join(card_compacto(p) for p in compactos)
@@ -753,8 +784,13 @@ def page_projetos():
 
     conteudo = page_hero(
         "Projetos",
-        "O que cultivamos hoje",
-        "Conheça os projetos do Quintal das Pretas, organizados pela fase atual de cada um.",
+        "Onde a criação ganha forma",
+        "Nossos projetos são sementes de encontros, ideias e transformações que florescem no "
+        "Quintal. Cada iniciativa nasce do desejo de fortalecer vínculos, valorizar narrativas "
+        "e abrir caminhos para novas possibilidades de expressão artística e social. Aqui, o "
+        "fazer coletivo é central, e cada projeto se constrói no diálogo entre pessoas, "
+        "territórios e saberes, gerando experiências que inspiram, acolhem e deixam marcas "
+        "duradouras.",
     ) + f"""
     <section class="secao linho">
       <div class="container">
