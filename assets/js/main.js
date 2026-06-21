@@ -84,6 +84,61 @@
       });
   }
 
+  /* ----- Notícias dinâmicas (lê data/noticias.json; sem rebuild) ----- */
+  var listaNot = document.getElementById("noticias-lista");
+  if (listaNot) {
+    var statusNot = document.getElementById("noticias-status");
+    var MESES_N = ["jan", "fev", "mar", "abr", "mai", "jun",
+                   "jul", "ago", "set", "out", "nov", "dez"];
+    var fonteNot = listaNot.getAttribute("data-fonte") || "data/noticias.json";
+    var escN = function (s) {
+      return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
+        return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+      });
+    };
+    var linkOkN = function (u) {
+      return /^(https?:\/\/|\/|[\w./-]+$)/i.test(u || "") && !/^javascript:/i.test(u || "");
+    };
+    var dataExtenso = function (iso) {
+      var m = /^(\d{4})-(\d{2})-(\d{2})/.exec(iso || "");
+      if (!m) return escN(iso);
+      return parseInt(m[3], 10) + " " + MESES_N[+m[2] - 1] + " " + m[1];
+    };
+
+    fetch(fonteNot, { cache: "no-store" })
+      .then(function (r) { if (!r.ok) throw new Error("http"); return r.json(); })
+      .then(function (posts) {
+        if (!Array.isArray(posts)) posts = [];
+        posts = posts.slice().sort(function (a, b) {
+          return String(b.data || "").localeCompare(String(a.data || ""));
+        });
+        if (!posts.length) {
+          if (statusNot) statusNot.textContent =
+            "Em breve, novidades do Quintal. Acompanhe nossas redes sociais!";
+          return;
+        }
+        listaNot.innerHTML = posts.map(function (p) {
+          var img = p.imagem
+            ? '<img src="' + escN(p.imagem) + '" alt="' + escN(p.titulo || "") +
+              '" loading="lazy" />' : "";
+          var data = p.data ? '<span class="card-data">' + dataExtenso(p.data) + "</span>" : "";
+          var resumo = p.resumo ? '<p class="card-resumo">' + escN(p.resumo) + "</p>" : "";
+          var link = (p.link && linkOkN(p.link))
+            ? '<a href="' + escN(p.link) + '" target="_blank" rel="noopener">Ler mais →</a>' : "";
+          return '<article class="card">' + img +
+            '<div class="card-corpo">' + data +
+            "<h3>" + escN(p.titulo || "") + "</h3>" + resumo + link +
+            "</div></article>";
+        }).join("");
+        listaNot.hidden = false;
+        if (statusNot) statusNot.hidden = true;
+      })
+      .catch(function () {
+        if (statusNot) statusNot.textContent =
+          "Não foi possível carregar as notícias agora. Tente novamente mais tarde.";
+      });
+  }
+
   /* ----- Gerador de evento (área da equipe) ----- */
   var gerador = document.getElementById("gerador-evento");
   if (gerador) {

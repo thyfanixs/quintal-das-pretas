@@ -47,7 +47,7 @@
       <div class="container">
         <p class="kicker">Notícias</p>
         <h1>Novidades do quintal</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
+        <p>Acompanhe as histórias, parcerias e conquistas que florescem no Quintal das Pretas.</p>
       </div>
     </section>
 
@@ -55,66 +55,14 @@
       <div class="container">
         <span class="olho">Feed</span>
         <h2 class="secao-titulo">Últimas notícias</h2>
-        <p class="secao-intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis nisl eget urna luctus tincidunt non a sapien.</p>
-        <div class="grid grid-3">
-<article class="card">
-          <div class="foto-ph largo" role="img" aria-label="Placeholder de imagem: Imagem de destaque"><span><span class="icone">🖼️</span>Imagem de destaque</span></div>
-          <div class="card-corpo">
-            <span class="card-data">10 jun 2026</span>
-            <h3>Quintal celebra nova temporada</h3>
-            <p class="card-resumo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis nisl eget urna luctus tincidunt non a sapien.</p>
-            <a href="#">Ler mais →</a>
-          </div>
-        </article>
-<article class="card">
-          <div class="foto-ph largo" role="img" aria-label="Placeholder de imagem: Imagem de destaque"><span><span class="icone">🖼️</span>Imagem de destaque</span></div>
-          <div class="card-corpo">
-            <span class="card-data">28 mai 2026</span>
-            <h3>Bastidores de um espetáculo ancestral</h3>
-            <p class="card-resumo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis nisl eget urna luctus tincidunt non a sapien.</p>
-            <a href="#">Ler mais →</a>
-          </div>
-        </article>
-<article class="card">
-          <div class="foto-ph largo" role="img" aria-label="Placeholder de imagem: Imagem de destaque"><span><span class="icone">🖼️</span>Imagem de destaque</span></div>
-          <div class="card-corpo">
-            <span class="card-data">15 mai 2026</span>
-            <h3>Papo de Quintal estreia novo episódio</h3>
-            <p class="card-resumo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis nisl eget urna luctus tincidunt non a sapien.</p>
-            <a href="#">Ler mais →</a>
-          </div>
-        </article>
-<article class="card">
-          <div class="foto-ph largo" role="img" aria-label="Placeholder de imagem: Imagem de destaque"><span><span class="icone">🖼️</span>Imagem de destaque</span></div>
-          <div class="card-corpo">
-            <span class="card-data">02 mai 2026</span>
-            <h3>Oficinas formam novos artistas</h3>
-            <p class="card-resumo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis nisl eget urna luctus tincidunt non a sapien.</p>
-            <a href="#">Ler mais →</a>
-          </div>
-        </article>
-<article class="card">
-          <div class="foto-ph largo" role="img" aria-label="Placeholder de imagem: Imagem de destaque"><span><span class="icone">🖼️</span>Imagem de destaque</span></div>
-          <div class="card-corpo">
-            <span class="card-data">20 abr 2026</span>
-            <h3>Encontro de mestras e mestres</h3>
-            <p class="card-resumo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis nisl eget urna luctus tincidunt non a sapien.</p>
-            <a href="#">Ler mais →</a>
-          </div>
-        </article>
-<article class="card">
-          <div class="foto-ph largo" role="img" aria-label="Placeholder de imagem: Imagem de destaque"><span><span class="icone">🖼️</span>Imagem de destaque</span></div>
-          <div class="card-corpo">
-            <span class="card-data">08 abr 2026</span>
-            <h3>Memórias do interior de Minas</h3>
-            <p class="card-resumo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis nisl eget urna luctus tincidunt non a sapien.</p>
-            <a href="#">Ler mais →</a>
-          </div>
-        </article>
-        </div>
-        <p style="text-align:center;margin-top:2rem;">
-          <a class="btn btn-verde" href="#">Carregar mais</a>
-        </p>
+        <p class="secao-intro">O Quintal se renova para acolher ainda mais histórias. O Quintal segue crescendo, criando e transformando. É com esse espírito que fortalecemos parcerias e construímos novos caminhos, ampliando nossa rede de afeto, cultura e transformação social. Cada nova colaboração representa uma oportunidade de desenvolver projetos que valorizam a diversidade, promovem o diálogo e dão visibilidade a vozes e narrativas que merecem ser ouvidas. Juntos, seguimos semeando ideias, compartilhando saberes e cultivando iniciativas capazes de gerar impacto positivo em nossa comunidade.</p>
+
+        <!-- O mosaico é montado a partir de data/noticias.json.
+             Para publicar uma notícia, edite esse arquivo (veja data/COMO-ADICIONAR-NOTICIAS.md). -->
+        <div class="grid grid-3" id="noticias-lista" data-fonte="data/noticias.json" hidden></div>
+        <p class="secao-intro" id="noticias-status">Carregando notícias…</p>
+        <noscript><p class="secao-intro">Ative o JavaScript para ver as notícias,
+        ou acompanhe nossas redes sociais.</p></noscript>
       </div>
     </section>
 

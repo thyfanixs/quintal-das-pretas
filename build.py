@@ -545,42 +545,31 @@ def page_agenda():
 # NOTÍCIAS
 # ---------------------------------------------------------------------------
 def page_noticias():
-    noticias = [
-        ("Quintal celebra nova temporada", "10 jun 2026"),
-        ("Bastidores de um espetáculo ancestral", "28 mai 2026"),
-        ("Papo de Quintal estreia novo episódio", "15 mai 2026"),
-        ("Oficinas formam novos artistas", "02 mai 2026"),
-        ("Encontro de mestras e mestres", "20 abr 2026"),
-        ("Memórias do interior de Minas", "08 abr 2026"),
-    ]
-    cards = "\n".join(
-        f"""<article class="card">
-          {foto_ph("Imagem de destaque", "largo", "🖼️")}
-          <div class="card-corpo">
-            <span class="card-data">{data}</span>
-            <h3>{titulo}</h3>
-            <p class="card-resumo">{LOREM_CURTO}</p>
-            <a href="#">Ler mais →</a>
-          </div>
-        </article>"""
-        for titulo, data in noticias
-    )
+    intro = ("O Quintal se renova para acolher ainda mais histórias. O Quintal segue "
+             "crescendo, criando e transformando. É com esse espírito que fortalecemos "
+             "parcerias e construímos novos caminhos, ampliando nossa rede de afeto, cultura "
+             "e transformação social. Cada nova colaboração representa uma oportunidade de "
+             "desenvolver projetos que valorizam a diversidade, promovem o diálogo e dão "
+             "visibilidade a vozes e narrativas que merecem ser ouvidas. Juntos, seguimos "
+             "semeando ideias, compartilhando saberes e cultivando iniciativas capazes de "
+             "gerar impacto positivo em nossa comunidade.")
     conteudo = page_hero(
         "Notícias",
         "Novidades do quintal",
-        LOREM_MEDIO,
+        "Acompanhe as histórias, parcerias e conquistas que florescem no Quintal das Pretas.",
     ) + f"""
     <section class="secao linho">
       <div class="container">
         <span class="olho">Feed</span>
         <h2 class="secao-titulo">Últimas notícias</h2>
-        <p class="secao-intro">{LOREM_CURTO}</p>
-        <div class="grid grid-3">
-{cards}
-        </div>
-        <p style="text-align:center;margin-top:2rem;">
-          <a class="btn btn-verde" href="#">Carregar mais</a>
-        </p>
+        <p class="secao-intro">{intro}</p>
+
+        <!-- O mosaico é montado a partir de data/noticias.json.
+             Para publicar uma notícia, edite esse arquivo (veja data/COMO-ADICIONAR-NOTICIAS.md). -->
+        <div class="grid grid-3" id="noticias-lista" data-fonte="data/noticias.json" hidden></div>
+        <p class="secao-intro" id="noticias-status">Carregando notícias…</p>
+        <noscript><p class="secao-intro">Ative o JavaScript para ver as notícias,
+        ou acompanhe nossas redes sociais.</p></noscript>
       </div>
     </section>
 """

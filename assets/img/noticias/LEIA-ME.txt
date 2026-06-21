@@ -1,0 +1,4 @@
+Imagens de destaque das notícias (.jpg/.png/.webp).
+Referencie no campo "imagem" de data/noticias.json, ex.:
+  "imagem": "assets/img/noticias/parceria.jpg"
+Recomendado: ~1200px no lado maior, comprimida (< 300 KB).

@@ -191,13 +191,6 @@
 - ✅ `projetos.html`
 - ✅ `apoie.html`
 - ✅ `contato.html`
-- ⚠️ `#` — botão placeholder (destino a definir)
-- ⚠️ `#` — botão placeholder (destino a definir)
-- ⚠️ `#` — botão placeholder (destino a definir)
-- ⚠️ `#` — botão placeholder (destino a definir)
-- ⚠️ `#` — botão placeholder (destino a definir)
-- ⚠️ `#` — botão placeholder (destino a definir)
-- ⚠️ `#` — botão placeholder (destino a definir)
 - 🌐 `https://instagram.com/quintaldaspretas` — externo (placeholder, conferir)
 - 🌐 `https://instagram.com/ciapedepano_oficial` — externo (placeholder, conferir)
 - 🌐 `https://www.youtube.com/@ciapedepano_matozinhos1996` — externo (placeholder, conferir)
@@ -251,7 +244,7 @@
 
 - Links internos/assets/âncoras válidos: **156**
 - Quebrados: **0**
-- Botões placeholder `#` (destino a definir): **7** (noticias.html: 7)
+- Botões placeholder `#` (destino a definir): **0** (nenhum)
 - Recursos externos OK (Google Fonts): **3**
 - Redes sociais a definir (URL real): **4** (https://github.com/thyfanixs/quintal-das-pretas/edit/main/data/eventos.json, https://instagram.com/ciapedepano_oficial, https://instagram.com/quintaldaspretas, https://www.youtube.com/@ciapedepano_matozinhos1996)
 - E-mails: mailto:quintaldaspretas2015@gmail.com
