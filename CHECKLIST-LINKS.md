@@ -255,6 +255,7 @@
 - ✅ `projetos.html`
 - ✅ `apoie.html`
 - ✅ `contato.html`
+- ✅ `assets/img/quem-somos/logo-horizontal-web.png`
 - ✅ `assets/img/quem-somos/idealizadoras.jpg`
 - 🌐 `https://instagram.com/quintaldaspretas` — externo (placeholder, conferir)
 - 🌐 `https://instagram.com/ciapedepano_oficial` — externo (placeholder, conferir)
@@ -264,7 +265,7 @@
 
 ## Resumo
 
-- Links internos/assets/âncoras válidos: **169**
+- Links internos/assets/âncoras válidos: **170**
 - Quebrados: **0**
 - Botões placeholder `#` (destino a definir): **0** (nenhum)
 - Recursos externos OK (Google Fonts): **3**

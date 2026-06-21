@@ -343,7 +343,11 @@ def page_quem_somos():
             <p>{p1}</p>
             <p>{p2}</p>
           </div>
-          {imagem_ou_ph("espaco", "Foto do espaço / quintal", "", "🏡")}
+          <figure class="quem-somos-logo">
+            <img src="assets/img/quem-somos/logo-horizontal-web.png"
+                 alt="Quintal das Pretas — Ponto de Cultura"
+                 loading="lazy" />
+          </figure>
         </div>
         <p style="margin-top:1.6rem">{p3}</p>
       </div>
