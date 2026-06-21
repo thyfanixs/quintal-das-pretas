@@ -324,6 +324,37 @@ h1, h2, h3, h4 {
 }
 .foto-ph.alto { aspect-ratio: 3 / 4; }
 .foto-ph.largo { aspect-ratio: 16 / 9; }
+
+/* Fotos reais (quando enviadas) */
+.foto-real {
+  width: 100%; border-radius: var(--raio);
+  object-fit: cover; aspect-ratio: 4 / 3;
+  box-shadow: var(--sombra-suave);
+}
+.foto-real.largo { aspect-ratio: 16 / 9; }
+.foto-real.alto { aspect-ratio: 3 / 4; }
+.idealizadoras-foto { margin-bottom: 1.8rem; }
+
+/* Cartões de pessoa (idealizadoras) */
+.pessoa-card {
+  display: flex; align-items: center; gap: 1rem;
+  background: var(--branco-quente);
+  border-radius: var(--raio); padding: 1.1rem 1.3rem;
+  border-left: 5px solid var(--mostarda);
+  box-shadow: var(--sombra-suave);
+}
+.pessoa-card:nth-child(2) { border-left-color: var(--terracota); }
+.pessoa-card:nth-child(3) { border-left-color: var(--verde-folha); }
+.pessoa-card:nth-child(4) { border-left-color: var(--laranja); }
+.pessoa-avatar {
+  flex: none; width: 56px; height: 56px; border-radius: 50%;
+  display: grid; place-items: center;
+  background: radial-gradient(circle at 35% 30%, var(--mostarda), var(--terracota) 75%);
+  color: var(--branco-quente); font-family: var(--fonte-titulo);
+  font-weight: 800; font-size: 1.1rem;
+}
+.pessoa-card h3 { font-size: 1.15rem; }
+.pessoa-card p { color: #4a3d2f; font-size: .92rem; }
 .foto-ph .icone { font-size: 1.6rem; display: block; margin-bottom: .3rem; }
 
 /* ---------- Grids utilitários ---------- */

@@ -1,0 +1,8 @@
+Fotos da página Quem Somos. Suba aqui com estes nomes exatos:
+
+- idealizadoras.jpg  -> foto (única) das idealizadoras
+- espaco.jpg         -> foto do espaço / quintal (opcional)
+
+Formatos aceitos: .jpg .jpeg .png .webp
+Recomendado: ~1600px no lado maior, comprimida (< 400 KB).
+Depois de subir, a foto aparece no lugar do placeholder (eu regenero o site).

@@ -55,6 +55,17 @@ def foto_ph(rotulo, classe="", icone="📷"):
     )
 
 
+def imagem_ou_ph(base, rotulo, classe="", icone="📷", alt=None):
+    """Usa a foto real em assets/img/quem-somos/{base}.{ext} se existir;
+    caso contrário, mostra o placeholder. Rode build.py após subir a foto."""
+    for ext in (".jpg", ".jpeg", ".png", ".webp"):
+        rel = f"assets/img/quem-somos/{base}{ext}"
+        if os.path.exists(os.path.join(BASE, rel)):
+            return (f'<img class="foto-real {classe}" src="{rel}" '
+                    f'alt="{alt or rotulo}" loading="lazy" />')
+    return foto_ph(rotulo, classe, icone)
+
+
 def nav_html(ativo):
     itens = []
     for arquivo, rotulo in NAV:
@@ -289,8 +300,21 @@ def page_quem_somos():
         f'<div class="valor-card"><h3>{t}</h3><p>{d}</p></div>'
         for t, d in valores
     )
+    equipe = [
+        ("Ita Ferreira", "Atriz e Diretora Artística da Cia Pé de Pano"),
+        ("Adriana Ferreira", "Produtora Cultural"),
+        ("Valéria Ferreira", "Artesã e Quitandeira"),
+        ("Renilde Ferreira", "Cozinheira e Quitandeira"),
+    ]
+    def iniciais(nome):
+        partes = nome.split()
+        return (partes[0][0] + partes[-1][0]).upper()
     idealizadoras = "\n".join(
-        foto_ph(f"Idealizadora {i}", "alto", "👩🏾‍🎨") for i in range(1, 5)
+        f"""<div class="pessoa-card">
+          <span class="pessoa-avatar" aria-hidden="true">{iniciais(nome)}</span>
+          <div><h3>{nome}</h3><p>{funcao}</p></div>
+        </div>"""
+        for nome, funcao in equipe
     )
     conteudo = page_hero(
         "Quem Somos",
@@ -307,7 +331,7 @@ def page_quem_somos():
             <p>{p1}</p>
             <p>{p2}</p>
           </div>
-          {foto_ph("Foto do espaço / quintal", "", "🏡")}
+          {imagem_ou_ph("espaco", "Foto do espaço / quintal", "", "🏡")}
         </div>
         <p style="margin-top:1.6rem">{p3}</p>
       </div>
@@ -330,9 +354,12 @@ def page_quem_somos():
       <div class="container">
         <span class="olho">Idealizadoras</span>
         <h2 class="secao-titulo">As mãos que cultivam o quintal</h2>
-        <p class="secao-intro">Conheça as pessoas que constroem o Quintal das Pretas
-        — artistas, mestres da cultura popular e a comunidade.</p>
-        <div class="grid grid-3">
+        <p class="secao-intro">Conheça as pessoas que constroem o Quintal das Pretas, dia
+        após dia, com arte, afeto e saberes populares.</p>
+        <div class="idealizadoras-foto">
+          {imagem_ou_ph("idealizadoras", "Foto das idealizadoras", "largo", "👩🏾‍🎨")}
+        </div>
+        <div class="grid grid-2">
 {idealizadoras}
         </div>
       </div>
