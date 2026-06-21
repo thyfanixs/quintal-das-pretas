@@ -66,6 +66,17 @@ def imagem_ou_ph(base, rotulo, classe="", icone="📷", alt=None):
     return foto_ph(rotulo, classe, icone)
 
 
+def imagem_arquivo(rel_base, rotulo, classe="", icone="📷", alt=None):
+    """Usa a foto real em assets/img/{rel_base}.{ext} se existir; senão, placeholder.
+    Caminho fora de assets/img/cia/ para não entrar na galeria da Cia."""
+    for ext in (".jpg", ".jpeg", ".png", ".webp"):
+        rel = f"assets/img/{rel_base}{ext}"
+        if os.path.exists(os.path.join(BASE, rel)):
+            return (f'<img class="foto-real {classe}" src="{rel}" '
+                    f'alt="{alt or rotulo}" loading="lazy" />')
+    return foto_ph(rotulo, classe, icone)
+
+
 def nav_html(ativo):
     itens = []
     for arquivo, rotulo in NAV:
@@ -478,6 +489,10 @@ def page_cia():
           <p>A Cia Pé de Pano segue desenvolvendo projetos que fortalecem as tradições
           populares, promovem o encontro entre gerações e ampliam o alcance da cultura mineira
           dentro e fora do estado.</p>
+        </div>
+        <div class="cia-destaque-img">
+          {imagem_arquivo("cia-destaque", "Foto da Cia Pé de Pano", "natural", "🎭",
+                          "Cia Pé de Pano")}
         </div>
       </div>
     </section>
