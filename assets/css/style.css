@@ -759,6 +759,7 @@ figure.card { margin: 0; }
 }
 .campo textarea { min-height: 140px; resize: vertical; }
 .contato-info { display: flex; flex-direction: column; gap: 1.1rem; }
+.contato-ctas { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: .4rem; }
 .info-item { display: flex; gap: .8rem; align-items: flex-start; }
 .info-item .icone { font-size: 1.3rem; }
 .redes a {
