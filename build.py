@@ -81,7 +81,7 @@ def layout(titulo, descricao, ativo, conteudo):
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self'; connect-src 'self' https://formsubmit.co; base-uri 'self'; form-action 'self' https://formsubmit.co" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self'; connect-src 'self' https://formsubmit.co; frame-src https://www.google.com https://maps.google.com; base-uri 'self'; form-action 'self' https://formsubmit.co" />
   <title>{titulo} · {SITE_NOME}</title>
   <meta name="description" content="{descricao}" />
   <link rel="icon" type="image/svg+xml" href="assets/img/emblema.svg" />
@@ -983,7 +983,7 @@ def page_contato():
             </div>
             <div class="info-item">
               <span class="icone" aria-hidden="true">📍</span>
-              <div><strong>Região</strong><br />Matozinhos, Minas Gerais</div>
+              <div><strong>Endereço</strong><br />Rua Dona Balá, 32, Floresta, Matozinhos, MG</div>
             </div>
             <div class="info-item">
               <span class="icone" aria-hidden="true">🔗</span>
@@ -995,9 +995,9 @@ def page_contato():
                 </span>
               </div>
             </div>
-            <div class="mapa-ph" role="img" aria-label="Placeholder de mapa de localização em Matozinhos, Minas Gerais">
-              🗺️ Mapa de localização<br />(integração futura — Google Maps)
-            </div>
+            <iframe class="mapa" title="Mapa: Rua Dona Balá, 32, Floresta, Matozinhos - MG"
+              src="https://maps.google.com/maps?q=Rua%20Dona%20Bal%C3%A1%2C%2032%2C%20Floresta%2C%20Matozinhos%20-%20MG&z=16&output=embed"
+              loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
       </div>
