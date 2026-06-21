@@ -181,7 +181,10 @@ def page_home():
       <div class="container">
         <p class="kicker">Pedro Leopoldo · Matozinhos · Minas Gerais</p>
         <h1>Onde a ancestralidade vira chão, roda e arte</h1>
-        <p>{LOREM_MEDIO}</p>
+        <p>Somos chão de terra batida, axé e palco. Em Matozinhos, o Quintal das Pretas
+        mantém viva a memória afro-brasileira pela arte, pela educação e pela ancestralidade,
+        fazendo de cada cena, cada tambor e cada encontro um ato de pertencimento, acolhimento
+        e transformação.</p>
         <div class="hero-ctas">
           <a class="btn btn-primario" href="projetos.html">Conheça os projetos</a>
           <a class="btn btn-secundario" href="apoie.html">Apoie o Quintal</a>
