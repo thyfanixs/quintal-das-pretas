@@ -236,7 +236,8 @@ def page_home():
     <section class="faixa-cta">
       <div class="container">
         <h2>Esse quintal é nosso</h2>
-        <p>{LOREM_CURTO}</p>
+        <p>Cultura se faz junto. Apoie, participe e ajude a manter viva a arte, a memória e a
+        ancestralidade no coração de Minas.</p>
         <a class="btn btn-terra btn-cta" href="apoie.html">Quero apoiar</a>
       </div>
     </section>
@@ -828,10 +829,24 @@ Prestação de Contas: Em até 30 dias após a vigência'''},
 # ---------------------------------------------------------------------------
 def page_apoie():
     formas = [
-        ("📜", "Leis de Incentivo à Cultura", LOREM_MEDIO, "Quero incentivar"),
-        ("💸", "Doação direta (PIX)", LOREM_CURTO, "Doar via PIX"),
-        ("🤝", "Parcerias corporativas", LOREM_MEDIO, "Seja parceiro"),
-        ("🙌", "Voluntariado", LOREM_CURTO, "Ser voluntárie"),
+        ("📜", "Leis de Incentivo à Cultura",
+         "Empresas e pessoas podem destinar parte do imposto devido a projetos do Quintal "
+         "das Pretas por meio das leis de incentivo à cultura. É uma forma de fortalecer a "
+         "arte sem custo adicional, transformando tributo em formação, espetáculos e memória. "
+         "Fale com a gente para conhecer os projetos aptos a captar.", "Quero incentivar"),
+        ("💸", "Doação direta (PIX)",
+         "Em breve você poderá apoiar diretamente, com qualquer valor, via PIX. Cada doação "
+         "ajuda a manter oficinas, espetáculos e encontros gratuitos para a comunidade. A "
+         "chave será divulgada aqui em breve.", "Falar conosco"),
+        ("🤝", "Parcerias corporativas",
+         "Sua empresa ou instituição pode se tornar parceira do Quintal, apoiando projetos, "
+         "eventos e a manutenção do espaço. Construímos parcerias sob medida, com "
+         "contrapartidas e visibilidade, sempre alinhadas a valores de diversidade e impacto "
+         "social.", "Seja parceiro"),
+        ("🙌", "Voluntariado",
+         "Doar tempo e talento também transforma. Seja na produção de eventos, nas oficinas, "
+         "na comunicação ou no cuidado com o espaço, há sempre lugar para mais mãos no "
+         "quintal. Venha somar.", "Ser voluntárie"),
     ]
     cards = "\n".join(
         f"""<div class="apoio-card">
@@ -845,13 +860,16 @@ def page_apoie():
     conteudo = page_hero(
         "Apoie",
         "Faça parte dessa roda",
-        LOREM_MEDIO,
+        "Sua contribuição mantém viva uma cultura que é de todos. Apoie o Quintal das Pretas "
+        "e ajude a semear arte, memória e transformação na nossa comunidade.",
     ) + f"""
     <section class="secao linho">
       <div class="container">
         <span class="olho">Como apoiar</span>
         <h2 class="secao-titulo">Cada gesto rega o quintal</h2>
-        <p class="secao-intro">{LOREM_MEDIO}</p>
+        <p class="secao-intro">Manter um Ponto de Cultura vivo é um trabalho coletivo. Toda a
+        nossa programação é gratuita e aberta à comunidade, e só existe graças a quem acredita
+        e caminha junto. Há muitas formas de fazer parte: escolha a sua.</p>
         <div class="grid grid-2">
 {cards}
         </div>
@@ -869,7 +887,8 @@ def page_apoie():
     <section class="faixa-cta">
       <div class="container">
         <h2>Seu apoio sustenta a cultura</h2>
-        <p>{LOREM_CURTO}</p>
+        <p>Cada gesto, grande ou pequeno, ajuda a manter o Quintal das Pretas de portas
+        abertas para toda a comunidade.</p>
         <a class="btn btn-terra btn-cta" href="contato.html">Falar com a equipe</a>
       </div>
     </section>
