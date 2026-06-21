@@ -376,23 +376,43 @@ def galeria_cia():
 
 def page_cia():
     galeria = galeria_cia()
-    marcos = [
-        ("1995", "Fundação da companhia", LOREM_CURTO),
-        ("2005", "Primeira turnê pelo interior", LOREM_CURTO),
-        ("2015", "Reconhecimento regional", LOREM_CURTO),
-        ("2025", "Celebração de 30 anos", LOREM_CURTO),
+    espetaculos = [
+        ("Infantil", "Povo de um Lugar",
+         "Voltado ao público infantil, aborda temas ligados ao patrimônio cultural e à "
+         "memória. A montagem circulou por diversos municípios mineiros, com apresentações "
+         "em escolas, espaços culturais e projetos de formação de plateia."),
+        ("Conto cênico-musical", "Caminho da Boiada",
+         "Inspirado na histórica viagem realizada por João Guimarães Rosa em 1952, ao lado "
+         "de uma comitiva de vaqueiros pelo sertão mineiro. Percorreu festivais, festas "
+         "literárias, escolas, ruas, praças e celebrações rurais, com destaque para a "
+         "apresentação no Grande Teatro do Palácio das Artes, em Belo Horizonte."),
+        ("Conto cênico-musical", "Ciclos",
+         "Inspirado na obra de Agripa Vasconcelos, revisita diferentes períodos da história "
+         "de Minas Gerais por meio de personagens e acontecimentos marcantes da formação "
+         "cultural e social do estado. Reafirma o compromisso da Cia com a pesquisa "
+         "histórica, a preservação da memória e a valorização das narrativas populares."),
+        ("Em montagem · 2025", "Chico Rei",
+         "Inspirado na obra do escritor matozinhense Agripa Vasconcelos, celebra a trajetória "
+         "do Rei Galanga e as tradições do Congado mineiro, num mergulho na ancestralidade "
+         "afro-brasileira. Em sua primeira experiência em festival competitivo, recebeu sete "
+         "premiações, incluindo melhor espetáculo, direção e dramaturgia, além de outras seis "
+         "indicações no 9º Festival Internacional de Teatro de Guaranésia (MG), em abril de 2026."),
     ]
-    marcos_html = "\n".join(
-        f"""<li class="evento">
-          <div class="evento-data"><span class="evento-dia">{ano}</span></div>
-          <div class="evento-corpo"><h3>{titulo}</h3><p class="card-resumo">{desc}</p></div>
-        </li>"""
-        for ano, titulo, desc in marcos
+    espetaculos_html = "\n".join(
+        f"""<article class="card">
+          <div class="card-corpo">
+            <span class="card-data">{tema}</span>
+            <h3>{nome}</h3>
+            <p class="card-resumo">{desc}</p>
+          </div>
+        </article>"""
+        for tema, nome, desc in espetaculos
     )
     conteudo = page_hero(
         "Cia Pé de Pano",
-        "Companhia de teatro",
-        LOREM_MEDIO,
+        "Teatro autoral, música e oralidade",
+        "Há três décadas, a Cia Pé de Pano leva ao palco a cultura, a memória e as "
+        "narrativas populares do interior de Minas Gerais.",
     ) + f"""
     <section class="secao linho">
       <div class="container">
@@ -410,12 +430,26 @@ def page_cia():
 
     <section class="secao areia">
       <div class="container">
-        <span class="olho">Histórico do grupo</span>
-        <h2 class="secao-titulo">Uma trajetória em cena</h2>
-        <p class="secao-intro">{LOREM_MEDIO}</p>
-        <ul class="timeline">
-{marcos_html}
-        </ul>
+        <span class="olho">Trajetória</span>
+        <h2 class="secao-titulo">Histórico e repertório</h2>
+        <p class="secao-intro">Desde 2015, a Cia Pé de Pano é residente do Ponto de Cultura
+        Quintal das Pretas, espaço dedicado à criação artística, realização de oficinas,
+        ensaios, ações formativas e fortalecimento da produção cultural comunitária.</p>
+
+        <h3 class="sub-titulo">Principais espetáculos</h3>
+        <div class="grid grid-2">
+{espetaculos_html}
+        </div>
+
+        <div class="bloco-texto">
+          <p>A relevância artística e cultural da Cia Pé de Pano foi reconhecida por meio de
+          homenagens, certificados e moções de congratulação concedidas por instituições
+          culturais e órgãos públicos, reafirmando sua contribuição para o fortalecimento das
+          artes cênicas, da cultura popular e da memória mineira.</p>
+          <p>A Cia Pé de Pano segue desenvolvendo projetos que fortalecem as tradições
+          populares, promovem o encontro entre gerações e ampliam o alcance da cultura mineira
+          dentro e fora do estado.</p>
+        </div>
       </div>
     </section>
 

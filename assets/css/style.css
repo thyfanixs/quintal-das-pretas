@@ -298,6 +298,13 @@ h1, h2, h3, h4 {
   font-size: .74rem; font-weight: 800; color: var(--terracota);
   margin-bottom: .6rem; display: block;
 }
+.sub-titulo {
+  font-size: 1.35rem; margin: 2.2rem 0 1.1rem;
+  color: var(--verde-escuro);
+}
+.bloco-texto { max-width: 72ch; margin-top: 1.8rem; }
+.bloco-texto p { color: #43382b; }
+.bloco-texto p + p { margin-top: .9rem; }
 
 /* ---------- Placeholders de imagem ---------- */
 .foto-ph {
