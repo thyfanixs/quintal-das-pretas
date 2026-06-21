@@ -23,6 +23,7 @@
   var listaAgenda = document.getElementById("agenda-lista");
   if (listaAgenda) {
     var statusAg = document.getElementById("agenda-status");
+    var agendaVazia = document.getElementById("agenda-vazia");
     var MESES = ["JAN", "FEV", "MAR", "ABR", "MAI", "JUN",
                  "JUL", "AGO", "SET", "OUT", "NOV", "DEZ"];
     var fonte = listaAgenda.getAttribute("data-fonte") || "data/eventos.json";
@@ -52,10 +53,11 @@
           .sort(function (a, b) { return a._d - b._d; });
 
         if (!proximos.length) {
-          if (statusAg) statusAg.textContent =
-            "Em breve, novos eventos. Acompanhe nossas redes sociais!";
+          if (statusAg) statusAg.hidden = true;
+          if (agendaVazia) agendaVazia.hidden = false;
           return;
         }
+        if (agendaVazia) agendaVazia.hidden = true;
         listaAgenda.innerHTML = proximos.map(function (e) {
           var dia = ("0" + e._d.getDate()).slice(-2);
           var mes = MESES[e._d.getMonth()];
@@ -79,6 +81,7 @@
         if (statusAg) statusAg.hidden = true;
       })
       .catch(function () {
+        if (agendaVazia) agendaVazia.hidden = true;
         if (statusAg) statusAg.textContent =
           "Não foi possível carregar a agenda agora. Tente novamente mais tarde.";
       });

@@ -467,6 +467,97 @@ figure.card { margin: 0; }
 .evento-local::before { content: "📍 "; }
 .evento-corpo .btn { margin-top: .8rem; }
 
+/* Estado vazio da agenda — o quintal segue vivo entre um encontro e outro */
+.agenda-vazia {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: minmax(280px, .9fr) minmax(280px, 1.1fr);
+  align-items: center;
+  overflow: hidden;
+  border: 1px solid rgba(138,61,30,.2);
+  border-radius: var(--raio-grande);
+  background: var(--branco-quente);
+  box-shadow: var(--sombra-suave);
+}
+.agenda-vazia[hidden] { display: none; }
+.agenda-cena {
+  position: relative;
+  min-height: 330px;
+  overflow: hidden;
+  background:
+    linear-gradient(180deg, #e9b956 0 48%, #c96e38 48% 49%, #a94c29 49% 100%);
+}
+.agenda-cena::before {
+  content: "";
+  position: absolute; inset: auto -10% -95px;
+  height: 185px; border-radius: 50%;
+  background: #7f3a23;
+  box-shadow: inset 0 18px 0 rgba(86,52,30,.15);
+}
+.agenda-sol {
+  position: absolute; width: 92px; height: 92px; border-radius: 50%;
+  top: 46px; right: 54px; background: var(--linho); opacity: .72;
+  animation: agenda-respira 4s ease-in-out infinite;
+}
+.agenda-cordao {
+  position: absolute; z-index: 2; left: -4%; right: -4%; top: 55px;
+  height: 45px; border-top: 3px solid var(--preto-quente);
+  border-radius: 50%; transform: rotate(-2deg);
+}
+.agenda-luz {
+  position: absolute; z-index: 3; top: 63px; width: 13px; height: 17px;
+  border-radius: 50% 50% 45% 45%; background: #fff1ae;
+  box-shadow: 0 0 18px 7px rgba(255,224,114,.55);
+  transform-origin: 50% -16px; animation: agenda-luz 2.7s ease-in-out infinite;
+}
+.agenda-luz::before { content: ""; position: absolute; left: 5px; bottom: 14px; width: 2px; height: 17px; background: var(--preto-quente); }
+.luz-1 { left: 15%; animation-delay: -.4s; }
+.luz-2 { left: 38%; animation-delay: -1.1s; }
+.luz-3 { left: 62%; animation-delay: -.7s; }
+.luz-4 { left: 84%; animation-delay: -1.7s; }
+.agenda-banco {
+  position: absolute; z-index: 3; left: 18%; right: 18%; bottom: 65px;
+  height: 21px; border-radius: 8px; background: var(--preto-quente);
+  box-shadow: 18px 34px 0 -7px var(--preto-quente), -18px 34px 0 -7px var(--preto-quente);
+}
+.agenda-tambor {
+  position: absolute; z-index: 5; left: 50%; bottom: 59px;
+  width: 84px; height: 94px; transform: translateX(-50%);
+  border-radius: 14px 14px 25px 25px;
+  background: repeating-linear-gradient(100deg, var(--mostarda) 0 12px, var(--terracota) 12px 24px);
+  border: 5px solid var(--preto-quente);
+  animation: agenda-tambor .9s ease-in-out infinite;
+}
+.agenda-tambor::before {
+  content: ""; position: absolute; left: -8px; right: -8px; top: -12px;
+  height: 24px; border-radius: 50%; background: var(--linho); border: 5px solid var(--preto-quente);
+}
+.agenda-tambor i { position: absolute; left: 8px; right: 8px; top: 24px; bottom: 10px; border: 3px solid rgba(30,24,19,.55); transform: skew(-8deg); }
+.agenda-ritmo {
+  position: absolute; z-index: 4; left: 50%; bottom: 150px;
+  width: 52px; height: 26px; border: 4px solid var(--linho); border-bottom: 0;
+  border-radius: 52px 52px 0 0; transform: translateX(-50%); opacity: 0;
+  animation: agenda-ritmo 2.1s ease-out infinite;
+}
+.ritmo-2 { animation-delay: .7s; }
+.ritmo-3 { animation-delay: 1.4s; }
+.agenda-folha {
+  position: absolute; z-index: 4; width: 24px; height: 14px;
+  border-radius: 100% 0 100% 0; background: var(--verde-folha);
+  animation: agenda-folha 6s linear infinite;
+}
+.folha-1 { top: -20px; left: 12%; }
+.folha-2 { top: -45px; left: 47%; animation-delay: -2s; transform: rotate(80deg); }
+.folha-3 { top: -30px; left: 78%; animation-delay: -4.2s; transform: rotate(150deg); }
+.agenda-vazia-texto { padding: clamp(2rem, 5vw, 3.4rem); }
+.agenda-vazia-texto h3 { font-size: clamp(1.7rem, 3vw, 2.35rem); margin: .45rem 0 .8rem; }
+.agenda-vazia-texto p { max-width: 50ch; color: #4a3d2f; margin-bottom: 1.35rem; }
+@keyframes agenda-respira { 50% { transform: scale(1.08); opacity: .9; } }
+@keyframes agenda-luz { 50% { transform: rotate(7deg); filter: brightness(1.12); } }
+@keyframes agenda-tambor { 50% { transform: translateX(-50%) scaleY(.97) translateY(2px); } }
+@keyframes agenda-ritmo { 0% { opacity: .8; transform: translateX(-50%) scale(.45); } 100% { opacity: 0; transform: translateX(-50%) scale(2.2); } }
+@keyframes agenda-folha { 0% { translate: 0 -20px; rotate: 0deg; } 100% { translate: 45px 390px; rotate: 420deg; } }
+
 /* ---------- Projetos ---------- */
 .status-grupo { margin-bottom: 2.6rem; }
 .status-grupo > h2 {
@@ -691,6 +782,8 @@ figure.card { margin: 0; }
   }
   .evento-img { width: 100%; aspect-ratio: 16 / 9; }
   .evento-corpo { flex-basis: 100%; }
+  .agenda-vazia { grid-template-columns: 1fr; }
+  .agenda-cena { min-height: 280px; }
 }
 
 /* ---------- Marca no rodapé ---------- */
