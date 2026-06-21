@@ -81,6 +81,7 @@
 - ✅ `projetos.html`
 - ✅ `apoie.html`
 - ✅ `contato.html`
+- ✅ `assets/img/cia-destaque.jpg`
 - ✅ `assets/img/cia/cia-01.jpg`
 - ✅ `assets/img/cia/cia-02.jpg`
 - ✅ `assets/img/cia/cia-03.jpg`
@@ -263,7 +264,7 @@
 
 ## Resumo
 
-- Links internos/assets/âncoras válidos: **168**
+- Links internos/assets/âncoras válidos: **169**
 - Quebrados: **0**
 - Botões placeholder `#` (destino a definir): **0** (nenhum)
 - Recursos externos OK (Google Fonts): **3**
