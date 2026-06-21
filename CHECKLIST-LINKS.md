@@ -18,9 +18,10 @@
 - ✅ `apoie.html`
 - ✅ `contato.html`
 - 🌐 `https://github.com/thyfanixs/quintal-das-pretas/edit/main/data/eventos.json` — externo (placeholder, conferir)
-- 🌐 `https://instagram.com` — externo (placeholder, conferir)
-- 🌐 `https://youtube.com` — externo (placeholder, conferir)
-- ✉️ `mailto:contato@quintaldaspretas.com.br`
+- 🌐 `https://instagram.com/quintaldaspretas` — externo (placeholder, conferir)
+- 🌐 `https://instagram.com/ciapedepano_oficial` — externo (placeholder, conferir)
+- 🌐 `https://www.youtube.com/@ciapedepano_matozinhos1996` — externo (placeholder, conferir)
+- ✉️ `mailto:quintaldaspretas2015@gmail.com`
 - ✅ `assets/js/main.js`
 
 ## agenda.html
@@ -38,9 +39,10 @@
 - ✅ `projetos.html`
 - ✅ `apoie.html`
 - ✅ `contato.html`
-- 🌐 `https://instagram.com` — externo (placeholder, conferir)
-- 🌐 `https://youtube.com` — externo (placeholder, conferir)
-- ✉️ `mailto:contato@quintaldaspretas.com.br`
+- 🌐 `https://instagram.com/quintaldaspretas` — externo (placeholder, conferir)
+- 🌐 `https://instagram.com/ciapedepano_oficial` — externo (placeholder, conferir)
+- 🌐 `https://www.youtube.com/@ciapedepano_matozinhos1996` — externo (placeholder, conferir)
+- ✉️ `mailto:quintaldaspretas2015@gmail.com`
 - ✅ `assets/js/main.js`
 
 ## apoie.html
@@ -58,9 +60,10 @@
 - ✅ `projetos.html`
 - ✅ `apoie.html`
 - ✅ `contato.html`
-- 🌐 `https://instagram.com` — externo (placeholder, conferir)
-- 🌐 `https://youtube.com` — externo (placeholder, conferir)
-- ✉️ `mailto:contato@quintaldaspretas.com.br`
+- 🌐 `https://instagram.com/quintaldaspretas` — externo (placeholder, conferir)
+- 🌐 `https://instagram.com/ciapedepano_oficial` — externo (placeholder, conferir)
+- 🌐 `https://www.youtube.com/@ciapedepano_matozinhos1996` — externo (placeholder, conferir)
+- ✉️ `mailto:quintaldaspretas2015@gmail.com`
 - ✅ `assets/js/main.js`
 
 ## cia-pe-de-pano.html
@@ -119,9 +122,10 @@
 - ✅ `assets/img/cia/cia-39.jpg`
 - ✅ `assets/img/cia/cia-40.jpg`
 - ✅ `assets/img/cia/cia-41.jpg`
-- 🌐 `https://instagram.com` — externo (placeholder, conferir)
-- 🌐 `https://youtube.com` — externo (placeholder, conferir)
-- ✉️ `mailto:contato@quintaldaspretas.com.br`
+- 🌐 `https://instagram.com/quintaldaspretas` — externo (placeholder, conferir)
+- 🌐 `https://instagram.com/ciapedepano_oficial` — externo (placeholder, conferir)
+- 🌐 `https://www.youtube.com/@ciapedepano_matozinhos1996` — externo (placeholder, conferir)
+- ✉️ `mailto:quintaldaspretas2015@gmail.com`
 - ✅ `assets/js/main.js`
 
 ## contato.html
@@ -139,9 +143,10 @@
 - ✅ `projetos.html`
 - ✅ `apoie.html`
 - ✅ `contato.html`
-- ✉️ `mailto:contato@quintaldaspretas.com.br`
-- 🌐 `https://instagram.com` — externo (placeholder, conferir)
-- 🌐 `https://youtube.com` — externo (placeholder, conferir)
+- ✉️ `mailto:quintaldaspretas2015@gmail.com`
+- 🌐 `https://instagram.com/quintaldaspretas` — externo (placeholder, conferir)
+- 🌐 `https://instagram.com/ciapedepano_oficial` — externo (placeholder, conferir)
+- 🌐 `https://www.youtube.com/@ciapedepano_matozinhos1996` — externo (placeholder, conferir)
 - ✅ `assets/js/main.js`
 
 ## index.html
@@ -165,9 +170,10 @@
 - ✅ `assets/img/home/noticias.svg`
 - ✅ `assets/img/home/projetos.svg`
 - ✅ `assets/img/home/apoie.svg`
-- 🌐 `https://instagram.com` — externo (placeholder, conferir)
-- 🌐 `https://youtube.com` — externo (placeholder, conferir)
-- ✉️ `mailto:contato@quintaldaspretas.com.br`
+- 🌐 `https://instagram.com/quintaldaspretas` — externo (placeholder, conferir)
+- 🌐 `https://instagram.com/ciapedepano_oficial` — externo (placeholder, conferir)
+- 🌐 `https://www.youtube.com/@ciapedepano_matozinhos1996` — externo (placeholder, conferir)
+- ✉️ `mailto:quintaldaspretas2015@gmail.com`
 - ✅ `assets/js/main.js`
 
 ## noticias.html
@@ -192,9 +198,10 @@
 - ⚠️ `#` — botão placeholder (destino a definir)
 - ⚠️ `#` — botão placeholder (destino a definir)
 - ⚠️ `#` — botão placeholder (destino a definir)
-- 🌐 `https://instagram.com` — externo (placeholder, conferir)
-- 🌐 `https://youtube.com` — externo (placeholder, conferir)
-- ✉️ `mailto:contato@quintaldaspretas.com.br`
+- 🌐 `https://instagram.com/quintaldaspretas` — externo (placeholder, conferir)
+- 🌐 `https://instagram.com/ciapedepano_oficial` — externo (placeholder, conferir)
+- 🌐 `https://www.youtube.com/@ciapedepano_matozinhos1996` — externo (placeholder, conferir)
+- ✉️ `mailto:quintaldaspretas2015@gmail.com`
 - ✅ `assets/js/main.js`
 
 ## projetos.html
@@ -212,9 +219,10 @@
 - ✅ `projetos.html`
 - ✅ `apoie.html`
 - ✅ `contato.html`
-- 🌐 `https://instagram.com` — externo (placeholder, conferir)
-- 🌐 `https://youtube.com` — externo (placeholder, conferir)
-- ✉️ `mailto:contato@quintaldaspretas.com.br`
+- 🌐 `https://instagram.com/quintaldaspretas` — externo (placeholder, conferir)
+- 🌐 `https://instagram.com/ciapedepano_oficial` — externo (placeholder, conferir)
+- 🌐 `https://www.youtube.com/@ciapedepano_matozinhos1996` — externo (placeholder, conferir)
+- ✉️ `mailto:quintaldaspretas2015@gmail.com`
 - ✅ `assets/js/main.js`
 
 ## quem-somos.html
@@ -232,9 +240,10 @@
 - ✅ `projetos.html`
 - ✅ `apoie.html`
 - ✅ `contato.html`
-- 🌐 `https://instagram.com` — externo (placeholder, conferir)
-- 🌐 `https://youtube.com` — externo (placeholder, conferir)
-- ✉️ `mailto:contato@quintaldaspretas.com.br`
+- 🌐 `https://instagram.com/quintaldaspretas` — externo (placeholder, conferir)
+- 🌐 `https://instagram.com/ciapedepano_oficial` — externo (placeholder, conferir)
+- 🌐 `https://www.youtube.com/@ciapedepano_matozinhos1996` — externo (placeholder, conferir)
+- ✉️ `mailto:quintaldaspretas2015@gmail.com`
 - ✅ `assets/js/main.js`
 
 ## Resumo
@@ -243,5 +252,5 @@
 - Quebrados: **0**
 - Botões placeholder `#` (destino a definir): **7** (noticias.html: 7)
 - Recursos externos OK (Google Fonts): **3**
-- Redes sociais a definir (URL real): **3** (https://github.com/thyfanixs/quintal-das-pretas/edit/main/data/eventos.json, https://instagram.com, https://youtube.com)
-- E-mails: mailto:contato@quintaldaspretas.com.br
+- Redes sociais a definir (URL real): **4** (https://github.com/thyfanixs/quintal-das-pretas/edit/main/data/eventos.json, https://instagram.com/ciapedepano_oficial, https://instagram.com/quintaldaspretas, https://www.youtube.com/@ciapedepano_matozinhos1996)
+- E-mails: mailto:quintaldaspretas2015@gmail.com

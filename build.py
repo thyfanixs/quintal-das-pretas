@@ -135,9 +135,10 @@ def layout(titulo, descricao, ativo, conteudo):
           <h4>Conecte-se</h4>
           <ul>
             <li><a href="contato.html">Fale conosco</a></li>
-            <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></li>
-            <li><a href="https://youtube.com" target="_blank" rel="noopener">YouTube</a></li>
-            <li><a href="mailto:contato@quintaldaspretas.com.br">contato@quintaldaspretas.com.br</a></li>
+            <li><a href="https://instagram.com/quintaldaspretas" target="_blank" rel="noopener">Instagram @quintaldaspretas</a></li>
+            <li><a href="https://instagram.com/ciapedepano_oficial" target="_blank" rel="noopener">Instagram @ciapedepano_oficial</a></li>
+            <li><a href="https://www.youtube.com/@ciapedepano_matozinhos1996" target="_blank" rel="noopener">YouTube</a></li>
+            <li><a href="mailto:quintaldaspretas2015@gmail.com">quintaldaspretas2015@gmail.com</a></li>
           </ul>
         </div>
       </div>
@@ -806,10 +807,9 @@ def page_apoie():
         <div class="pix-box">
           <div>
             <strong>Doação via PIX</strong><br />
-            <span class="pix-chave">contato@quintaldaspretas.com.br</span>
+            <span class="pix-chave">Indisponível no momento</span>
           </div>
-          <button type="button" class="btn btn-primario" id="copiar-pix"
-                  data-pix="contato@quintaldaspretas.com.br">Copiar chave PIX</button>
+          <span class="pix-aviso">Será liberado em breve 🌱</span>
         </div>
       </div>
     </section>
@@ -837,7 +837,8 @@ def page_contato():
     conteudo = page_hero(
         "Contato",
         "Vamos conversar",
-        LOREM_MEDIO,
+        "Fale com o Quintal das Pretas e a Cia Pé de Pano. Tire dúvidas, proponha parcerias "
+        "ou venha caminhar conosco nessa trajetória de arte, educação e transformação social.",
     ) + f"""
     <section class="secao linho">
       <div class="container">
@@ -874,18 +875,19 @@ def page_contato():
             <div class="info-item">
               <span class="icone" aria-hidden="true">✉️</span>
               <div><strong>E-mail institucional</strong><br />
-                <a href="mailto:contato@quintaldaspretas.com.br">contato@quintaldaspretas.com.br</a></div>
+                <a href="mailto:quintaldaspretas2015@gmail.com">quintaldaspretas2015@gmail.com</a></div>
             </div>
             <div class="info-item">
               <span class="icone" aria-hidden="true">📍</span>
-              <div><strong>Região</strong><br />Pedro Leopoldo e Matozinhos — Minas Gerais</div>
+              <div><strong>Região</strong><br />Matozinhos e Pedro Leopoldo, Minas Gerais</div>
             </div>
             <div class="info-item">
               <span class="icone" aria-hidden="true">🔗</span>
               <div><strong>Redes sociais</strong><br />
                 <span class="redes">
-                  <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
-                  <a href="https://youtube.com" target="_blank" rel="noopener">YouTube</a>
+                  <a href="https://instagram.com/quintaldaspretas" target="_blank" rel="noopener">@quintaldaspretas</a>
+                  <a href="https://instagram.com/ciapedepano_oficial" target="_blank" rel="noopener">@ciapedepano_oficial</a>
+                  <a href="https://www.youtube.com/@ciapedepano_matozinhos1996" target="_blank" rel="noopener">YouTube</a>
                 </span>
               </div>
             </div>

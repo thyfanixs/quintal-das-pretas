@@ -533,6 +533,11 @@ figure.card { margin: 0; }
   font-family: monospace; font-size: 1.05rem;
   background: rgba(255,255,255,.12); padding: .5rem .9rem; border-radius: 8px;
 }
+.pix-aviso {
+  font-weight: 800; font-size: .9rem;
+  background: rgba(255,255,255,.16); padding: .55rem 1rem; border-radius: 999px;
+  white-space: nowrap;
+}
 
 /* ---------- Contato ---------- */
 .form-grid { display: grid; gap: 1.1rem; }
