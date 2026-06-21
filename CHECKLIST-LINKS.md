@@ -164,12 +164,12 @@
 - ✅ `projetos.html`
 - ✅ `apoie.html`
 - ✅ `contato.html`
-- ✅ `assets/img/home/quem-somos.svg`
-- ✅ `assets/img/home/cia.svg`
-- ✅ `assets/img/home/agenda.svg`
-- ✅ `assets/img/home/noticias.svg`
-- ✅ `assets/img/home/projetos.svg`
-- ✅ `assets/img/home/apoie.svg`
+- ✅ `assets/img/home/quem-somos.jpg`
+- ✅ `assets/img/home/cia.jpg`
+- ✅ `assets/img/home/agenda.jpg`
+- ✅ `assets/img/home/noticias.jpg`
+- ✅ `assets/img/home/projetos.jpg`
+- ✅ `assets/img/home/apoie.jpg`
 - 🌐 `https://instagram.com/quintaldaspretas` — externo (placeholder, conferir)
 - 🌐 `https://instagram.com/ciapedepano_oficial` — externo (placeholder, conferir)
 - 🌐 `https://www.youtube.com/@ciapedepano_matozinhos1996` — externo (placeholder, conferir)

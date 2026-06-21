@@ -171,12 +171,12 @@ def layout(titulo, descricao, ativo, conteudo):
 # ---------------------------------------------------------------------------
 def page_home():
     atalhos = [
-        ("quem-somos.html", "Quem Somos", "Nossa história, missão e valores.", "quem-somos.svg"),
-        ("cia-pe-de-pano.html", "Cia Pé de Pano", "30 anos de teatro no interior de Minas.", "cia.svg"),
-        ("agenda.html", "Agenda", "Próximos espetáculos e encontros.", "agenda.svg"),
-        ("noticias.html", "Notícias", "Novidades do quintal.", "noticias.svg"),
-        ("projetos.html", "Projetos", "O que cultivamos hoje.", "projetos.svg"),
-        ("apoie.html", "Apoie", "Faça parte dessa roda.", "apoie.svg"),
+        ("quem-somos.html", "Quem Somos", "Nossa história, missão e valores.", "quem-somos.jpg"),
+        ("cia-pe-de-pano.html", "Cia Pé de Pano", "30 anos de teatro no interior de Minas.", "cia.jpg"),
+        ("agenda.html", "Agenda", "Próximos espetáculos e encontros.", "agenda.jpg"),
+        ("noticias.html", "Notícias", "Novidades do quintal.", "noticias.jpg"),
+        ("projetos.html", "Projetos", "O que cultivamos hoje.", "projetos.jpg"),
+        ("apoie.html", "Apoie", "Faça parte dessa roda.", "apoie.jpg"),
     ]
     cards = "\n".join(
         f"""<a class="card" href="{href}">
