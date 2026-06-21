@@ -159,6 +159,12 @@
 - ✅ `projetos.html`
 - ✅ `apoie.html`
 - ✅ `contato.html`
+- ✅ `assets/img/home/quem-somos.svg`
+- ✅ `assets/img/home/cia.svg`
+- ✅ `assets/img/home/agenda.svg`
+- ✅ `assets/img/home/noticias.svg`
+- ✅ `assets/img/home/projetos.svg`
+- ✅ `assets/img/home/apoie.svg`
 - 🌐 `https://instagram.com` — externo (placeholder, conferir)
 - 🌐 `https://youtube.com` — externo (placeholder, conferir)
 - ✉️ `mailto:contato@quintaldaspretas.com.br`
@@ -233,7 +239,7 @@
 
 ## Resumo
 
-- Links internos/assets/âncoras válidos: **149**
+- Links internos/assets/âncoras válidos: **155**
 - Quebrados: **0**
 - Botões placeholder `#` (destino a definir): **7** (noticias.html: 7)
 - Recursos externos OK (Google Fonts): **3**

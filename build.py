@@ -159,22 +159,22 @@ def layout(titulo, descricao, ativo, conteudo):
 # ---------------------------------------------------------------------------
 def page_home():
     atalhos = [
-        ("quem-somos.html", "Quem Somos", "Nossa história, missão e valores.", "🏡"),
-        ("cia-pe-de-pano.html", "Cia Pé de Pano", "30 anos de teatro no interior de Minas.", "🎭"),
-        ("agenda.html", "Agenda", "Próximos espetáculos e encontros.", "🗓️"),
-        ("noticias.html", "Notícias", "Novidades do quintal.", "📰"),
-        ("projetos.html", "Projetos", "O que cultivamos hoje.", "🌱"),
-        ("apoie.html", "Apoie", "Faça parte dessa roda.", "🤝"),
+        ("quem-somos.html", "Quem Somos", "Nossa história, missão e valores.", "quem-somos.svg"),
+        ("cia-pe-de-pano.html", "Cia Pé de Pano", "30 anos de teatro no interior de Minas.", "cia.svg"),
+        ("agenda.html", "Agenda", "Próximos espetáculos e encontros.", "agenda.svg"),
+        ("noticias.html", "Notícias", "Novidades do quintal.", "noticias.svg"),
+        ("projetos.html", "Projetos", "O que cultivamos hoje.", "projetos.svg"),
+        ("apoie.html", "Apoie", "Faça parte dessa roda.", "apoie.svg"),
     ]
     cards = "\n".join(
         f"""<a class="card" href="{href}">
-          {foto_ph(rotulo, 'largo', icone)}
+          <img src="assets/img/home/{img}" alt="" loading="lazy" />
           <div class="card-corpo">
             <h3>{rotulo}</h3>
             <p class="card-resumo">{desc}</p>
           </div>
         </a>"""
-        for href, rotulo, desc, icone in atalhos
+        for href, rotulo, desc, img in atalhos
     )
     conteudo = f"""
     <section class="home-hero">
@@ -196,7 +196,10 @@ def page_home():
       <div class="container">
         <span class="olho">Bem-vinde ao quintal</span>
         <h2 class="secao-titulo">Um terreiro de cultura e acolhimento</h2>
-        <p class="secao-intro">{LOREM_LONGO}</p>
+        <p class="secao-intro">Mais que um espaço, o Quintal das Pretas é ponto de encontro:
+        lugar de roda, de escuta e de criação onde artistas, mestres da cultura popular e a
+        comunidade se reúnem. Aqui a arte e a educação caminham juntas, fortalecendo a memória,
+        a identidade afro-brasileira e os laços que sustentam o nosso território.</p>
         <div class="grid grid-3">
 {cards}
         </div>
