@@ -81,7 +81,7 @@ def layout(titulo, descricao, ativo, conteudo):
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self'" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self'; connect-src 'self' https://formsubmit.co; base-uri 'self'; form-action 'self' https://formsubmit.co" />
   <title>{titulo} · {SITE_NOME}</title>
   <meta name="description" content="{descricao}" />
   <link rel="icon" type="image/svg+xml" href="assets/img/emblema.svg" />
@@ -898,7 +898,13 @@ def page_contato():
           <div>
             <span class="olho">Envie uma mensagem</span>
             <h2 class="secao-titulo">Fale com o quintal</h2>
-            <form id="form-contato" class="form-grid" novalidate>
+            <form id="form-contato" class="form-grid" novalidate
+                  action="https://formsubmit.co/quintaldaspretas2015@gmail.com" method="POST"
+                  data-ajax="https://formsubmit.co/ajax/quintaldaspretas2015@gmail.com">
+              <input type="hidden" name="_subject" value="Nova mensagem pelo site — Quintal das Pretas" />
+              <input type="hidden" name="_template" value="table" />
+              <input type="text" name="_honey" tabindex="-1" autocomplete="off"
+                     aria-hidden="true" style="position:absolute;left:-9999px" />
               <div class="campo">
                 <label for="nome">Nome</label>
                 <input type="text" id="nome" name="nome" required autocomplete="name" />

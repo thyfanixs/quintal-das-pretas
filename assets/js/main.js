@@ -180,18 +180,48 @@
     }
   }
 
-  /* ----- Formulário de contato (placeholder, sem back-end) ----- */
+  /* ----- Formulário de contato (envio via FormSubmit) ----- */
   var form = document.getElementById("form-contato");
   if (form) {
+    var aviso = document.getElementById("form-aviso");
+    var endpoint = form.getAttribute("data-ajax");
+    var mostrar = function (msg) {
+      if (aviso) { aviso.hidden = false; aviso.textContent = msg; }
+    };
     form.addEventListener("submit", function (e) {
+      // sem endpoint AJAX: deixa o envio nativo (action POST) acontecer
+      if (!endpoint || !window.fetch) return;
       e.preventDefault();
-      var aviso = document.getElementById("form-aviso");
-      if (aviso) {
-        aviso.hidden = false;
-        aviso.textContent =
-          "Axé! Recebemos sua mensagem (demonstração). Em breve conectaremos o envio real.";
-      }
-      form.reset();
+      if (form._honey && form._honey.value) return; // bot preencheu o honeypot
+      var btn = form.querySelector('button[type="submit"]');
+      if (btn) { btn.disabled = true; btn.dataset.txt = btn.textContent; btn.textContent = "Enviando…"; }
+      fetch(endpoint, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "Accept": "application/json" },
+        body: JSON.stringify({
+          nome: form.nome.value, email: form.email.value,
+          assunto: form.assunto.value, mensagem: form.mensagem.value,
+          _subject: "Nova mensagem pelo site — Quintal das Pretas"
+        })
+      })
+        .then(function (r) { return r.json().catch(function () { return {}; }); })
+        .then(function (d) {
+          var ok = d && (d.success === "true" || d.success === true);
+          if (ok) {
+            mostrar("Axé! Mensagem enviada. Em breve retornaremos. 🌿");
+            form.reset();
+          } else {
+            mostrar(d && d.message
+              ? d.message
+              : "Mensagem registrada. Se for o primeiro envio, confirme a ativação no e-mail da instituição.");
+          }
+        })
+        .catch(function () {
+          mostrar("Não foi possível enviar agora. Tente novamente ou escreva para quintaldaspretas2015@gmail.com.");
+        })
+        .finally(function () {
+          if (btn) { btn.disabled = false; btn.textContent = btn.dataset.txt || "Enviar mensagem"; }
+        });
     });
   }
 
