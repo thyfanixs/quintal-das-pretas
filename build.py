@@ -155,7 +155,7 @@ def layout(titulo, descricao, ativo, conteudo):
       </div>
       <div class="rodape-bottom">
         <span>© <span class="js-ano">2026</span> {SITE_NOME}. Todos os direitos reservados.</span>
-        <span>Feito com axé no interior de Minas Gerais.</span>
+        <span>Feito com carinho no interior de Minas Gerais.</span>
       </div>
     </div>
   </footer>
@@ -922,6 +922,7 @@ def page_contato():
               <input type="hidden" name="_subject" value="Nova mensagem pelo site — Quintal das Pretas" />
               <input type="hidden" name="_template" value="table" />
               <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_next" value="https://thyfanixs.github.io/quintal-das-pretas/obrigado.html" />
               <input type="text" name="_honey" tabindex="-1" autocomplete="off"
                      aria-hidden="true" style="position:absolute;left:-9999px" />
               <div class="campo">
@@ -1054,6 +1055,31 @@ def page_painel():
     )
 
 
+def page_obrigado():
+    conteudo = """
+    <section class="secao linho">
+      <div class="container" style="max-width:680px;text-align:center;padding-block:2rem">
+        <div class="obrigado-selo" aria-hidden="true">🌱</div>
+        <span class="olho" style="display:block">Recebemos sua mensagem</span>
+        <h1 class="secao-titulo">Obrigado por falar com o Quintal das Pretas</h1>
+        <p class="secao-intro" style="margin-inline:auto">Sua mensagem foi enviada com
+        sucesso. Em breve a nossa equipe entrará em contato. Seguimos juntos, cultivando
+        cultura, memória e afeto.</p>
+        <p style="margin-top:1.6rem">
+          <a class="btn btn-terra" href="index.html">Voltar ao início</a>
+          <a class="btn btn-verde" href="agenda.html">Ver a agenda</a>
+        </p>
+      </div>
+    </section>
+"""
+    return layout(
+        "Mensagem enviada",
+        "Obrigado por entrar em contato com o Quintal das Pretas.",
+        "",  # fora do menu
+        conteudo,
+    )
+
+
 PAGINAS = {
     "index.html": page_home,
     "quem-somos.html": page_quem_somos,
@@ -1064,6 +1090,7 @@ PAGINAS = {
     "apoie.html": page_apoie,
     "contato.html": page_contato,
     "adicionar-evento.html": page_painel,  # página interna, fora do menu
+    "obrigado.html": page_obrigado,        # destino do formulário, fora do menu
 }
 
 

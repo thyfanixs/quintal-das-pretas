@@ -628,6 +628,15 @@ figure.card { margin: 0; }
   min-height: 280px; color: var(--verde-escuro); font-weight: 700; padding: 1rem;
 }
 
+/* ---------- Página de agradecimento ---------- */
+.obrigado-selo {
+  width: 96px; height: 96px; margin: 0 auto 1.2rem;
+  border-radius: 50%; display: grid; place-items: center;
+  font-size: 2.8rem;
+  background: radial-gradient(circle at 35% 30%, var(--mostarda), var(--terracota) 75%);
+  box-shadow: var(--sombra-quente);
+}
+
 /* ---------- Listas com marcador-folha ---------- */
 .lista-folha { list-style: none; padding: 0; display: grid; gap: .6rem; }
 .lista-folha li { position: relative; padding-left: 1.6rem; }

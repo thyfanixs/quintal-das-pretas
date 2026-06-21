@@ -208,7 +208,7 @@
         .then(function (d) {
           var ok = d && (d.success === "true" || d.success === true);
           if (ok) {
-            mostrar("Axé! Mensagem enviada. Em breve retornaremos. 🌿");
+            mostrar("Mensagem enviada! Em breve retornaremos. 🌿");
             form.reset();
           } else {
             mostrar(d && d.message

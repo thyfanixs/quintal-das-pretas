@@ -197,6 +197,27 @@
 - ✉️ `mailto:quintaldaspretas2015@gmail.com`
 - ✅ `assets/js/main.js`
 
+## obrigado.html
+- ✅ `assets/img/emblema.svg`
+- 🌐 `https://fonts.googleapis.com` — externo (placeholder, conferir)
+- 🌐 `https://fonts.gstatic.com` — externo (placeholder, conferir)
+- 🌐 `https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,900&family=Mulish:wght@400;500;600;700;800&display=swap` — externo (placeholder, conferir)
+- ✅ `assets/css/style.css`
+- ✅ `#conteudo` — âncora encontrada
+- ✅ `index.html`
+- ✅ `quem-somos.html`
+- ✅ `cia-pe-de-pano.html`
+- ✅ `agenda.html`
+- ✅ `noticias.html`
+- ✅ `projetos.html`
+- ✅ `apoie.html`
+- ✅ `contato.html`
+- 🌐 `https://instagram.com/quintaldaspretas` — externo (placeholder, conferir)
+- 🌐 `https://instagram.com/ciapedepano_oficial` — externo (placeholder, conferir)
+- 🌐 `https://www.youtube.com/@ciapedepano_matozinhos1996` — externo (placeholder, conferir)
+- ✉️ `mailto:quintaldaspretas2015@gmail.com`
+- ✅ `assets/js/main.js`
+
 ## projetos.html
 - ✅ `assets/img/emblema.svg`
 - 🌐 `https://fonts.googleapis.com` — externo (placeholder, conferir)
@@ -242,7 +263,7 @@
 
 ## Resumo
 
-- Links internos/assets/âncoras válidos: **156**
+- Links internos/assets/âncoras válidos: **168**
 - Quebrados: **0**
 - Botões placeholder `#` (destino a definir): **0** (nenhum)
 - Recursos externos OK (Google Fonts): **3**
