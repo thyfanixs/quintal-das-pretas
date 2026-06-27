@@ -91,7 +91,6 @@ e divisões por subtítulos:
 | Manutenção de Programação Artística | Prefeitura de Matozinhos | Ainda não iniciou |
 | Cia Pé de Pano — 30 anos de teatro no interior de Minas Gerais | FEC/2025 | No início |
 | Videocast Papo de Quintal | — | Ativo / Em andamento |
-| Escola Livre de Teatro | — | Ainda não iniciou |
 | Quintal Aprendiz | — | Finalizando / Fase de conclusão |
 
 **Convenção de cores das tags de status:**

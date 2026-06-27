@@ -761,10 +761,6 @@ Data da assinatura: 02/06/2026
 Prestação de Contas: Em até 30 dias após a vigência'''},
             ],
         },
-        {
-            "titulo": "Escola Livre de Teatro",
-            "status": "naoiniciou", "financiamento": None, "em_breve": True,
-        },
     ]
 
     def tags_html(p):

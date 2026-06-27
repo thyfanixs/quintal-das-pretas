@@ -48,7 +48,7 @@
 - ⬜ Decidir se as notícias terão **página individual** (post aberto) ou só o card. (Hoje só card.)
 
 ## 5. Projetos  *(área central)*
-Os **7 projetos** já estão estruturados e agrupados por status. Falta o conteúdo de cada um:
+Os **6 projetos** já estão estruturados e agrupados por status. Falta o conteúdo de cada um:
 - 🟥 ⬜ **Descrição** de cada projeto (texto) — hoje todos com Lorem Ipsum.
 - ⬜ **Imagem** de cada projeto.
 - ⬜ **Link "Saiba mais"** de cada projeto (hoje aponta para `#`) — abrir página própria, PDF ou edital?
@@ -60,7 +60,6 @@ Os **7 projetos** já estão estruturados e agrupados por status. Falta o conte�
   | Manutenção de Programação Artística | Prefeitura de Matozinhos | Ainda não iniciou |
   | Cia Pé de Pano — 30 anos | FEC/2025 | No início |
   | Videocast Papo de Quintal | — | Ativo / Em andamento |
-  | Escola Livre de Teatro | — | Ainda não iniciou |
   | Quintal Aprendiz | — | Finalizando / Conclusão |
 - ⬜ **Videocast Papo de Quintal**: link do YouTube/Spotify para incorporar episódios?
 - ⬜ Logos dos financiadores (MINC, FUNARTE, Prefeitura de Matozinhos, FEC) se quiserem exibir.
