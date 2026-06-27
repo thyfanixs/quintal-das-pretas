@@ -1,0 +1,4 @@
+Adicione aqui as fotos do espetáculo Ciclos.
+
+Formatos aceitos: .jpg, .jpeg, .png, .webp e .avif.
+Use prefixos 01-, 02-, 03-... para definir a ordem.

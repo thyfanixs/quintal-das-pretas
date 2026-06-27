@@ -1,15 +1,20 @@
-GALERIA DA CIA PÉ DE PANO
-=========================
+ACERVO DA CIA PÉ DE PANO
+========================
 
-Coloque aqui as fotos dos espetáculos (baixadas do Google Drive).
+Cada espetáculo tem sua própria pasta:
 
-- Formatos aceitos: .jpg .jpeg .png .webp .avif
-- O nome do arquivo vira a LEGENDA na galeria.
-  Ex.: "Auto-de-Natal-2024.jpg"  ->  "Auto de Natal 2024"
-- Para a ORDEM, use prefixos numéricos: 01-..., 02-..., 03-...
-- Recomendado: ~1600px no lado maior, comprimidas para web (< 400 KB cada).
+- chico-rei/
+- povo-de-um-lugar/
+- caminho-da-boiada/
+- ciclos/
 
-Depois de adicionar as fotos, rode:  python3 build.py
-(ou me avise que eu regenero e publico).
+Para adicionar uma galeria:
 
-Se a pasta ficar só com este arquivo, a galeria mostra placeholders.
+1. Coloque as fotos dentro da pasta do espetáculo.
+2. Use formatos .jpg, .jpeg, .png, .webp ou .avif.
+3. Para controlar a ordem, comece os nomes com números: 01-, 02-, 03-...
+4. Prefira imagens com cerca de 1600 px no lado maior e menos de 400 KB.
+5. Rode: python3 build.py
+
+Pastas sem fotos continuam visíveis no site como álbuns preparados para receber
+novos registros.

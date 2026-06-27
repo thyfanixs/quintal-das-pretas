@@ -394,6 +394,150 @@ h1, h2, h3, h4 {
 }
 .cia-destaque-img { max-width: 820px; margin: 1.8rem auto 0; }
 
+/* ---------- Acervo por espetáculo da Cia Pé de Pano ---------- */
+.albuns-cia {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.15rem;
+  align-items: stretch;
+  margin-top: 2.2rem;
+}
+.album-pasta {
+  position: relative;
+  appearance: none;
+  min-width: 0;
+  padding: 0;
+  overflow: visible;
+  text-align: left;
+  color: var(--preto-quente);
+  background: var(--mostarda);
+  border: 2px solid var(--marrom);
+  border-radius: .55rem 1.2rem 1.2rem 1.2rem;
+  box-shadow: 6px 6px 0 rgba(86,52,30,.22);
+  cursor: pointer;
+  font: inherit;
+  transition: transform .22s ease, box-shadow .22s ease, background .22s ease;
+}
+.album-pasta-aba {
+  position: absolute;
+  left: -2px;
+  top: -15px;
+  width: 48%;
+  height: 17px;
+  z-index: 0;
+  background: var(--mostarda);
+  border: 2px solid var(--marrom);
+  border-bottom: 0;
+  border-radius: .65rem .65rem 0 0;
+}
+.album-capa {
+  position: relative;
+  z-index: 1;
+  display: block;
+  margin: 10px 10px 0;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  border-radius: .7rem;
+  background: var(--terracota-escuro);
+  border: 2px solid rgba(86,52,30,.55);
+}
+.album-capa img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .4s ease;
+}
+.album-sem-capa {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  color: var(--branco-quente);
+  background:
+    radial-gradient(circle at 75% 25%, rgba(224,165,38,.48), transparent 30%),
+    repeating-linear-gradient(45deg, rgba(255,255,255,.06) 0 5px, transparent 5px 15px),
+    var(--verde-escuro);
+}
+.album-sem-capa i {
+  width: 72px;
+  height: 72px;
+  display: grid;
+  place-items: center;
+  border: 2px dashed var(--mostarda);
+  border-radius: 50%;
+  font-style: normal;
+  font-size: 2rem;
+}
+.album-info {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 132px;
+  padding: 1rem;
+  background: var(--mostarda);
+  border-radius: 0 0 1rem 1rem;
+}
+.album-info strong {
+  font-family: var(--fonte-titulo);
+  font-size: 1.2rem;
+  line-height: 1.15;
+}
+.album-info small { margin-top: .35rem; line-height: 1.35; }
+.album-info em {
+  margin-top: auto;
+  padding-top: .75rem;
+  color: var(--terracota-escuro);
+  font-size: .76rem;
+  font-style: normal;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+.album-pasta:hover {
+  transform: translateY(-5px) rotate(-.5deg);
+  box-shadow: 9px 10px 0 rgba(86,52,30,.26);
+}
+.album-pasta:hover .album-capa img { transform: scale(1.045); }
+.album-pasta.ativo {
+  background: var(--terracota);
+  box-shadow: 7px 7px 0 var(--marrom);
+}
+.album-pasta.ativo .album-pasta-aba { background: var(--terracota); }
+.album-pasta.ativo .album-info { background: var(--terracota); color: var(--branco-quente); }
+.album-pasta.ativo .album-info em { color: var(--mostarda); }
+.album-pasta:focus-visible { outline-offset: 6px; }
+
+.albuns-conteudo { margin-top: 2.5rem; }
+.album-painel[hidden] { display: none; }
+.album-painel { animation: album-abre .36s ease both; }
+.album-painel-cabecalho {
+  margin-bottom: 1.2rem;
+  padding-bottom: .8rem;
+  border-bottom: 3px solid var(--mostarda);
+}
+.album-painel-cabecalho h3 { font-size: clamp(1.6rem, 4vw, 2.2rem); }
+.album-vazio {
+  min-height: 220px;
+  padding: clamp(1.5rem, 5vw, 3rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  border: 2px dashed var(--terracota);
+  border-radius: var(--raio-grande);
+  background:
+    repeating-linear-gradient(45deg, rgba(224,165,38,.08) 0 6px, transparent 6px 18px),
+    var(--branco-quente);
+}
+.album-vazio > span { font-size: clamp(2.5rem, 8vw, 4.5rem); }
+.album-vazio h3 { font-size: 1.4rem; margin-bottom: .35rem; }
+.album-vazio p { max-width: 48ch; color: #4a3d2f; }
+@keyframes album-abre {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: none; }
+}
+
 /* Cartões de pessoa (idealizadoras) */
 .pessoa-card {
   display: flex; align-items: center; gap: 1rem;
@@ -847,6 +991,7 @@ figure.card { margin: 0; }
 }
 @media (max-width: 760px) {
   .grid-2, .grid-3, .split { grid-template-columns: 1fr; }
+  .albuns-cia { grid-template-columns: repeat(2, 1fr); gap: 1.6rem 1rem; }
   .rodape-grid { grid-template-columns: 1fr; }
   .evento { flex-wrap: wrap; }
   .evento-data {
@@ -859,6 +1004,11 @@ figure.card { margin: 0; }
   .agenda-cena { min-height: 280px; }
   .btn { max-width: 100%; padding-inline: .9rem 1.1rem; }
   .quem-somos-logo { min-height: 245px; }
+}
+@media (max-width: 460px) {
+  .albuns-cia { grid-template-columns: 1fr; }
+  .album-info { min-height: 112px; }
+  .album-vazio { align-items: flex-start; flex-direction: column; }
 }
 
 /* ---------- Marca no rodapé ---------- */

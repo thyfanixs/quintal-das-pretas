@@ -394,28 +394,86 @@ def page_quem_somos():
 # CIA PÉ DE PANO
 # ---------------------------------------------------------------------------
 def galeria_cia():
-    """Monta a galeria da Cia a partir das fotos em assets/img/cia/.
-    Basta colocar as fotos (.jpg/.jpeg/.png/.webp) na pasta e rodar build.py.
-    Sem fotos -> placeholders. Grade limpa de imagens (sem legenda)."""
-    pasta = os.path.join(BASE, "assets", "img", "cia")
+    """Monta um acervo por espetáculo a partir das subpastas em assets/img/cia/."""
+    albuns = [
+        ("chico-rei", "Chico Rei", "Teatro musical · desde 2025"),
+        ("povo-de-um-lugar", "Povo de um Lugar", "Espetáculo infantil"),
+        ("caminho-da-boiada", "Caminho da Boiada", "Conto cênico-musical"),
+        ("ciclos", "Ciclos", "Conto cênico-musical"),
+    ]
     exts = (".jpg", ".jpeg", ".png", ".webp", ".avif")
-    fotos = []
-    if os.path.isdir(pasta):
+    botoes = []
+    paineis = []
+
+    for indice, (slug, titulo, subtitulo) in enumerate(albuns):
+        pasta = os.path.join(BASE, "assets", "img", "cia", slug)
         fotos = sorted(
             f for f in os.listdir(pasta)
             if f.lower().endswith(exts) and not f.startswith(".")
-        )
-    if not fotos:
-        return "\n".join(foto_ph(f"Espetáculo {i}", "", "🎭") for i in range(1, 7))
+        ) if os.path.isdir(pasta) else []
 
-    itens = []
-    for i, nome in enumerate(fotos, start=1):
-        itens.append(
-            f'<figure class="card foto-cena">'
-            f'<img src="assets/img/cia/{nome}" alt="Cia Pé de Pano em cena — foto {i}" loading="lazy" />'
-            f'</figure>'
+        selecionado = indice == 0
+        estado = "true" if selecionado else "false"
+        capa = (
+            f'<img src="assets/img/cia/{slug}/{fotos[0]}" alt="" loading="lazy" />'
+            if fotos else
+            '<span class="album-sem-capa" aria-hidden="true"><i>🎭</i></span>'
         )
-    return "\n".join(itens)
+        quantidade = f"{len(fotos)} fotos" if fotos else "Pasta pronta para receber fotos"
+        botoes.append(
+            f"""<button class="album-pasta{' ativo' if selecionado else ''}" type="button"
+                    role="tab" aria-selected="{estado}" aria-controls="album-{slug}"
+                    data-album-target="album-{slug}">
+              <span class="album-pasta-aba" aria-hidden="true"></span>
+              <span class="album-capa">{capa}</span>
+              <span class="album-info">
+                <strong>{titulo}</strong>
+                <small>{subtitulo}</small>
+                <em>{quantidade}</em>
+              </span>
+            </button>"""
+        )
+
+        if fotos:
+            itens = "\n".join(
+                f'<figure class="card foto-cena">'
+                f'<img src="assets/img/cia/{slug}/{nome}" '
+                f'alt="{titulo} — foto {i}" loading="lazy" />'
+                f'</figure>'
+                for i, nome in enumerate(fotos, start=1)
+            )
+            conteudo = (
+                f'<div class="grid grid-3">\n{itens}\n</div>'
+                + ('<p class="credito-fotos">Fotos: Lucas Rocha</p>'
+                   if slug == "chico-rei" else "")
+            )
+        else:
+            conteudo = f"""<div class="album-vazio">
+              <span aria-hidden="true">🎭</span>
+              <div>
+                <h3>Esta pasta está pronta</h3>
+                <p>Os registros de <strong>{titulo}</strong> aparecerão aqui quando as
+                fotos forem adicionadas ao acervo.</p>
+              </div>
+            </div>"""
+
+        paineis.append(
+            f"""<section class="album-painel" id="album-{slug}" role="tabpanel"
+                     aria-label="Galeria de {titulo}"{' hidden' if not selecionado else ''}>
+              <div class="album-painel-cabecalho">
+                <span class="olho">Espetáculo</span>
+                <h3>{titulo}</h3>
+              </div>
+              {conteudo}
+            </section>"""
+        )
+
+    return f"""<div class="albuns-cia" role="tablist" aria-label="Espetáculos da Cia Pé de Pano">
+{''.join(botoes)}
+    </div>
+    <div class="albuns-conteudo">
+{''.join(paineis)}
+    </div>"""
 
 
 def page_cia():
@@ -505,12 +563,9 @@ def page_cia():
       <div class="container">
         <span class="olho">Portfólio cênico</span>
         <h2 class="secao-titulo">Galeria de espetáculos</h2>
-        <p class="secao-intro">Registros dos espetáculos da Cia Pé de Pano nos palcos
-        e nas ruas do interior de Minas Gerais.</p>
-        <div class="grid grid-3">
+        <p class="secao-intro">Abra uma pasta para conhecer os registros de cada espetáculo
+        da Cia Pé de Pano nos palcos e nas ruas do interior de Minas Gerais.</p>
 {galeria}
-        </div>
-        <p class="credito-fotos">Fotos: Lucas Rocha</p>
       </div>
     </section>
 """

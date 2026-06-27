@@ -87,6 +87,27 @@
       });
   }
 
+  /* ----- Álbuns da Cia Pé de Pano ----- */
+  var botoesAlbum = document.querySelectorAll("[data-album-target]");
+  if (botoesAlbum.length) {
+    var paineisAlbum = document.querySelectorAll(".album-painel");
+    botoesAlbum.forEach(function (botao) {
+      botao.addEventListener("click", function () {
+        var alvo = botao.getAttribute("data-album-target");
+
+        botoesAlbum.forEach(function (item) {
+          var ativo = item === botao;
+          item.classList.toggle("ativo", ativo);
+          item.setAttribute("aria-selected", ativo ? "true" : "false");
+        });
+
+        paineisAlbum.forEach(function (painel) {
+          painel.hidden = painel.id !== alvo;
+        });
+      });
+    });
+  }
+
   /* ----- Notícias dinâmicas (lê data/noticias.json; sem rebuild) ----- */
   var listaNot = document.getElementById("noticias-lista");
   if (listaNot) {
