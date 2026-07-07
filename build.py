@@ -789,7 +789,17 @@ Prestação de Contas: Em até 90 dias após a vigência'''},
         },
         {
             "titulo": "Arte da Terra: Formação Artística no Quintal das Pretas",
-            "status": "naoiniciou", "financiamento": "FUNARTE", "aguardando": True,
+            "status": "inicio",
+            "financiamento": "FUNARTE — Termo de Fomento nº 057/2026 · Transferegov.br nº 999233",
+            "extratos": [
+                {"titulo": "Extrato do TERMO DE FOMENTO/FUNARTE Nº 057/2026 – TRANSFEREGOV.BR N° 999233",
+                 "texto": '''Objeto: O objeto do presente Termo de Fomento Nº 999233 – Emenda Parlamentar nº 202643660021 destinada pela Deputada Federal Duda Salabert, é a execução do projeto “Arte da Terra - Formação Artística no Quintal das Pretas: Oficinas formativas e ações de mediação cultural nas linguagens de artes visuais e teatro” visando à consecução de finalidade de interesse público e recíproco, conforme especificações estabelecidas no plano de trabalho.
+Parceria - FUNDAÇÃO NACIONAL DE ARTES – FUNARTE, CNPJ 26.963.660/0002-42, neste ato representada pelo seu Presidente - Substituto, Marcos Teixeira Campos e ASSOCIAÇÃO QUINTAL DAS PRETAS, CNPJ 05.769.374/0001-90, representada pela sua Presidente – Giovane Ferreira da Cruz.
+Valor total: R$ 200.000,00 (duzentos mil reais)
+Prazo de vigência: 04 de julho de 2026 a 30 de junho de 2027
+Data da assinatura: 02/07/2026
+Prestação de Contas: Em até 90 dias após a vigência'''},
+            ],
         },
         {
             "titulo": "Manutenção de Programação Artística",
