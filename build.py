@@ -261,13 +261,14 @@ def page_home():
     )
 
 
-def page_hero(kicker, titulo, texto):
+def page_hero(kicker, titulo, texto, texto_extra=None):
+    paragrafo_extra = f"\n        <p>{texto_extra}</p>" if texto_extra else ""
     return f"""
     <section class="page-hero">
       <div class="container">
         <p class="kicker">{kicker}</p>
         <h1>{titulo}</h1>
-        <p>{texto}</p>
+        <p>{texto}</p>{paragrafo_extra}
       </div>
     </section>
 """
@@ -891,13 +892,14 @@ Prestação de Contas: Em até 30 dias após a vigência'''},
 
     conteudo = page_hero(
         "Projetos",
-        "Onde a criação ganha forma",
-        "Nossos projetos são sementes de encontros, ideias e transformações que florescem no "
-        "Quintal. Cada iniciativa nasce do desejo de fortalecer vínculos, valorizar narrativas "
-        "e abrir caminhos para novas possibilidades de expressão artística e social. Aqui, o "
-        "fazer coletivo é central, e cada projeto se constrói no diálogo entre pessoas, "
-        "territórios e saberes, gerando experiências que inspiram, acolhem e deixam marcas "
-        "duradouras.",
+        "Compromisso com a transparência e o controle social",
+        "A Associação Quintal das Pretas acredita que a transparência é um princípio fundamental "
+        "para fortalecer a confiança da comunidade, dos parceiros e dos órgãos públicos.",
+        "Nesta página disponibilizaremos informações sobre nossa atuação institucional, projetos, "
+        "recursos públicos recebidos, prestação de contas e documentos relacionados às parcerias "
+        "firmadas com a Administração Pública, em conformidade com a Lei nº 13.019/2014 (Marco "
+        "Regulatório das Organizações da Sociedade Civil), Decreto nº 8.726/2016, Lei nº "
+        "12.527/2011",
     ) + f"""
     <section class="secao linho">
       <div class="container">
