@@ -1,1 +1,119 @@
-[]
+[
+  {
+    "id": "territorios-curso-teatro",
+    "data": "2026-08-27",
+    "titulo": "Territórios do Axé inicia curso de teatro no ITA",
+    "resumo": "A formação transforma memórias, vivências e histórias do território em criação cênica. As aulas acontecem às quintas-feiras, das 18h às 21h, no Instituto Terra Ancestral, em Pedro Leopoldo.",
+    "imagem": "assets/img/noticias/territorios-curso-teatro.jpg",
+    "conteudo": [
+      "O Territórios do Axé apresenta o Curso de Teatro, uma formação que parte das experiências, memórias e vivências do território para transformar histórias, trajetórias e observações em material cênico.",
+      "Mais do que aprender técnicas teatrais, o curso propõe um espaço coletivo de escuta, criação e afirmação de identidades historicamente silenciadas. Corpo, voz, oralidade, ancestralidade e cotidiano se encontram em uma formação que dialoga com a educação antirracista, a memória negra local e as expressões culturais afro-diaspóricas.",
+      "O teatro é trabalhado como espaço de elaboração simbólica, denúncia, afeto e construção de futuros possíveis, fortalecendo o protagonismo das participantes e ampliando a presença do teatro em espaços comunitários e públicos.",
+      "As aulas acontecem às quintas-feiras, das 18h às 21h, no ITA — Instituto Terra Ancestral, Rua Jornalista Nicolau Neto, 293, Bairro Portal das Acácias, em Pedro Leopoldo/MG. O projeto é realizado pelo Ministério da Cultura, com execução do Quintal das Pretas e do ITA Gerais, em parceria com o Grupo Afro-Brasileiro Ilê-Ifé."
+    ],
+    "galeria": [
+      { "imagem": "assets/img/noticias/territorios-curso-teatro.jpg", "alt": "Cartaz de divulgação do Curso de Teatro do Territórios do Axé" }
+    ]
+  },
+  {
+    "id": "territorios-oficinas-ile-ife",
+    "data": "2026-08-27",
+    "titulo": "Oficinas com o Grupo Afro-Brasileiro Ilê-Ifé",
+    "resumo": "O projeto Territórios do Axé oferece oficinas de figurino, dança, percussão, canto e costura, fortalecendo a cultura, a memória e os saberes afro-brasileiros em Pedro Leopoldo.",
+    "imagem": "assets/img/noticias/territorios-oficinas-ile-ife.jpg",
+    "conteudo": [
+      "O Territórios do Axé — A Ancestralidade Viva em Pedro Leopoldo é um projeto realizado pelo Quintal das Pretas, Instituto Terra Ancestral e Grupo Afro-Brasileiro Ilê-Ifé. A iniciativa nasce para fortalecer a cultura, a memória e os saberes afro-brasileiros por meio da arte, da formação e da valorização das tradições no território.",
+      "O cronograma inclui oficinas de figurino afro-brasileiro, dança afro-brasileira, figurino e adereços, percussão/bateria e canto/vocal. As atividades acontecem em Santo Antônio da Barra e no CEU — Centro de Artes e Esportes Unificados, em Pedro Leopoldo.",
+      "As inscrições são divulgadas no link da bio do Instagram do Quintal das Pretas."
+    ],
+    "galeria": [
+      { "imagem": "assets/img/noticias/territorios-oficinas-ile-ife.jpg", "alt": "Cartaz com o cronograma das oficinas do Territórios do Axé" }
+    ]
+  },
+  {
+    "id": "quintal-aprendiz",
+    "data": "2026-08-27",
+    "titulo": "Quintal Aprendiz conclui ciclo de atividades culturais",
+    "resumo": "Em parceria com a Prefeitura de Matozinhos, o projeto ofereceu gratuitamente oficinas de musicalização, teatro, circo, jogos teatrais e artesanato para diferentes gerações.",
+    "imagem": "assets/img/noticias/quintal-aprendiz-01.jpg",
+    "conteudo": [
+      "O Quintal das Pretas concluiu a execução das atividades do Termo de Fomento nº 54/2025, em parceria com a Prefeitura de Matozinhos, por meio do qual foi realizado o projeto Quintal Aprendiz.",
+      "Voltado à promoção da inclusão cultural e do acesso às artes para crianças, adolescentes, mulheres e pessoas idosas, o projeto ofereceu gratuitamente oficinas de musicalização infantil, teatro, artes circenses, jogos teatrais e artesanato. Também foi realizada uma palestra sobre saúde mental direcionada às mulheres da Oficina Contos e Cantos."
+    ],
+    "galeria": [
+      { "imagem": "assets/img/noticias/quintal-aprendiz-01.jpg", "alt": "Registro das atividades do projeto Quintal Aprendiz" },
+      { "imagem": "assets/img/noticias/quintal-aprendiz-02.jpg", "alt": "Registro das atividades do projeto Quintal Aprendiz" },
+      { "imagem": "assets/img/noticias/quintal-aprendiz-03.jpg", "alt": "Registro das atividades do projeto Quintal Aprendiz" },
+      { "imagem": "assets/img/noticias/quintal-aprendiz-04.jpg", "alt": "Registro das atividades do projeto Quintal Aprendiz" },
+      { "imagem": "assets/img/noticias/quintal-aprendiz-05.jpg", "alt": "Registro das atividades do projeto Quintal Aprendiz" },
+      { "imagem": "assets/img/noticias/quintal-aprendiz-06.jpg", "alt": "Registro das atividades do projeto Quintal Aprendiz" },
+      { "imagem": "assets/img/noticias/quintal-aprendiz-07.jpg", "alt": "Registro das atividades do projeto Quintal Aprendiz" },
+      { "imagem": "assets/img/noticias/quintal-aprendiz-08.jpg", "alt": "Registro das atividades do projeto Quintal Aprendiz" }
+    ]
+  },
+  {
+    "id": "territorios-festa-rosario",
+    "destaque": true,
+    "data": "2026-08-16",
+    "titulo": "Territórios do Axé apoia a Festa de Nossa Senhora do Rosário",
+    "resumo": "O projeto apoiou a celebração realizada em Vera Cruz de Minas, em Pedro Leopoldo, reconhecendo a tradição como memória viva, fé, pertencimento e continuidade.",
+    "imagem": "assets/img/noticias/territorios-festa-rosario-01.jpg",
+    "conteudo": [
+      "O projeto Territórios do Axé — A Ancestralidade Viva em Pedro Leopoldo apoiou a Festa de Nossa Senhora do Rosário, realizada em 16 de agosto, em Vera Cruz de Minas, Pedro Leopoldo/MG.",
+      "As Festas do Rosário são memória viva, fé e continuidade. A tradição é atravessada pela religiosidade negra, pela ancestralidade e pela força de comunidades que, geração após geração, mantêm vivos seus modos de celebrar, cantar, dançar, rezar, estar em coletivo e ressignificar territórios.",
+      "Entre a devoção e a alegria, a festa afirma uma história de re-existência. É patrimônio imaterial vivido no corpo, na música, nos encontros, nos gestos de fé e nos vínculos comunitários, onde o sagrado e a cultura caminham juntos.",
+      "A realização é da Guarda de Congo de Nossa Senhora do Rosário, ativa desde 1986. O apoio na produção foi do Quintal das Pretas e do ITA Gerais; o registro fotográfico é de Joviane Aiye."
+    ],
+    "galeria": [
+      { "imagem": "assets/img/noticias/territorios-festa-rosario-cartaz.jpg", "alt": "Cartaz de divulgação da Festa de Nossa Senhora do Rosário" },
+      { "imagem": "assets/img/noticias/territorios-festa-rosario-01.jpg", "alt": "Festa de Nossa Senhora do Rosário em Vera Cruz de Minas" },
+      { "imagem": "assets/img/noticias/territorios-festa-rosario-02.jpg", "alt": "Festa de Nossa Senhora do Rosário em Vera Cruz de Minas" },
+      { "imagem": "assets/img/noticias/territorios-festa-rosario-03.jpg", "alt": "Festa de Nossa Senhora do Rosário em Vera Cruz de Minas" },
+      { "imagem": "assets/img/noticias/territorios-festa-rosario-04.jpg", "alt": "Festa de Nossa Senhora do Rosário em Vera Cruz de Minas" },
+      { "imagem": "assets/img/noticias/territorios-festa-rosario-05.jpg", "alt": "Festa de Nossa Senhora do Rosário em Vera Cruz de Minas" },
+      { "imagem": "assets/img/noticias/territorios-festa-rosario-06.jpg", "alt": "Festa de Nossa Senhora do Rosário em Vera Cruz de Minas" },
+      { "imagem": "assets/img/noticias/territorios-festa-rosario-07.jpg", "alt": "Festa de Nossa Senhora do Rosário em Vera Cruz de Minas" }
+    ]
+  },
+  {
+    "id": "candombe-mocambeiro",
+    "data": "2026-08-16",
+    "titulo": "Cia Pé de Pano participa do Candombe em Mocambeiro",
+    "resumo": "Durante a tradicional feijoada do Candombe Filhos de Nossa Senhora do Rosário, o grupo participou de uma oficina de cantos e danças do Reinado e homenageou a tradição com a canção “Meus Filhos”.",
+    "imagem": "assets/img/noticias/candombe-mocambeiro-01.jpg",
+    "conteudo": [
+      "No dia 16 de agosto, a Cia Pé de Pano esteve em Mocambeiro para participar da tradicional feijoada do Candombe Filhos de Nossa Senhora do Rosário, manifestação que celebra 109 anos de existência.",
+      "Como parte de sua pesquisa sobre a cultura popular e os elementos que inspiram suas criações cênicas, o grupo participou da Oficina de Cantos e Danças do Reinado, em um encontro marcado pela troca, pela escuta e pelo reconhecimento dos saberes que sustentam essa tradição.",
+      "Durante a vivência, os artistas conheceram mais sobre a história dos instrumentos, suas funções dentro do Candombe e os cantos que acompanham essa manifestação cultural.",
+      "No encerramento da atividade, momentos antes de o cortejo seguir em direção à igreja, Miriam Bruno interpretou “Meus Filhos”, composição que integra a trilha sonora do espetáculo Chico Rei, em uma homenagem ao Candombe Filhos de Nossa Senhora do Rosário.",
+      "A experiência reafirma a importância de aprender com quem mantém a tradição viva, compartilhar saberes e reconhecer a cultura popular como fonte permanente de criação e memória."
+    ],
+    "galeria": [
+      { "imagem": "assets/img/noticias/candombe-mocambeiro-01.jpg", "alt": "Candombe Filhos de Nossa Senhora do Rosário em Mocambeiro" },
+      { "imagem": "assets/img/noticias/candombe-mocambeiro-02.jpg", "alt": "Candombe Filhos de Nossa Senhora do Rosário em Mocambeiro" },
+      { "imagem": "assets/img/noticias/candombe-mocambeiro-03.jpg", "alt": "Candombe Filhos de Nossa Senhora do Rosário em Mocambeiro" }
+    ]
+  },
+  {
+    "id": "fec-primeiro-semestre",
+    "data": "2026-08-27",
+    "titulo": "Primeiro semestre do FEC fortalece as atividades do Quintal",
+    "resumo": "O projeto de manutenção reuniu oficinas, apresentações do espetáculo Chico Rei, contação de histórias em escolas e o início do projeto arquitetônico de melhorias na sede.",
+    "imagem": "assets/img/noticias/fec-01.jpg",
+    "conteudo": [
+      "O primeiro semestre de execução do projeto de Manutenção das Atividades do Quintal das Pretas, realizado com recursos do Fundo Estadual de Cultura (FEC.2025.2512.0157), foi marcado por ações de formação, valorização da cultura popular e fortalecimento do Quintal como espaço de encontro e transformação social.",
+      "Entre as atividades desenvolvidas, destacam-se a Oficina Cantos e Contos, voltada para mulheres, a Oficina de Circo para crianças e adolescentes, apresentações do espetáculo Chico Rei e ações de contação de histórias em escolas públicas.",
+      "O período também incluiu o início do projeto arquitetônico para melhorias na sede do Quintal das Pretas, garantindo mais acessibilidade e melhores condições para o atendimento da comunidade.",
+      "As ações reafirmam o compromisso com o acesso gratuito à cultura, a formação artística e a preservação das tradições populares mineiras. No segundo semestre, novas oficinas, apresentações e atividades culturais darão continuidade às metas do projeto."
+    ],
+    "galeria": [
+      { "imagem": "assets/img/noticias/fec-01.jpg", "alt": "Atividade do projeto de manutenção do Quintal das Pretas" },
+      { "imagem": "assets/img/noticias/fec-02.jpg", "alt": "Atividade do projeto de manutenção do Quintal das Pretas" },
+      { "imagem": "assets/img/noticias/fec-03.jpg", "alt": "Atividade do projeto de manutenção do Quintal das Pretas" },
+      { "imagem": "assets/img/noticias/fec-04.jpg", "alt": "Atividade do projeto de manutenção do Quintal das Pretas" },
+      { "imagem": "assets/img/noticias/fec-05.jpg", "alt": "Atividade do projeto de manutenção do Quintal das Pretas" },
+      { "imagem": "assets/img/noticias/fec-06.jpg", "alt": "Atividade do projeto de manutenção do Quintal das Pretas" },
+      { "imagem": "assets/img/noticias/fec-07.jpg", "alt": "Atividade do projeto de manutenção do Quintal das Pretas" }
+    ]
+  }
+]

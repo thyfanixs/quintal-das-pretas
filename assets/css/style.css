@@ -602,6 +602,40 @@ figure.card { margin: 0; }
 .card-data { font-size: .8rem; color: var(--verde-folha); font-weight: 700; text-transform: uppercase; letter-spacing: .08em; }
 .card-resumo { color: #4a3d2f; flex: 1; }
 
+/* ---------- Notícias: detalhe e galeria ---------- */
+.noticia-artigo { max-width: 1120px; }
+.noticia-cabecalho { max-width: 74ch; margin-bottom: 1.5rem; padding: 1.5rem 1.65rem; border-left: 6px solid var(--mostarda); border-radius: 0 var(--raio) var(--raio) 0; background: var(--branco-quente); box-shadow: var(--sombra-suave); }
+.noticia-cabecalho h2 { margin-top: .3rem; font-size: clamp(1.8rem, 4vw, 2.5rem); }
+.noticia-cabecalho p { margin-top: .5rem; color: #4a3d2f; font-size: 1.05rem; }
+.noticia-texto { max-width: 74ch; }
+.noticia-texto p { color: #43382b; font-size: 1.08rem; line-height: 1.8; }
+.noticia-texto p + p { margin-top: 1.15rem; }
+.noticia-galeria { margin-top: clamp(2.6rem, 6vw, 4rem); }
+.noticia-foto { margin: 0; overflow: hidden; border: 1px solid var(--argila-clara); border-radius: var(--raio); background: var(--branco-quente); box-shadow: var(--sombra-suave); }
+.noticia-foto a { display: block; }
+.noticia-foto img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; transition: transform .35s ease; }
+.noticia-foto:hover img { transform: scale(1.035); }
+.noticia-foto a:focus-visible { display: block; outline-offset: -4px; }
+.noticia-voltar { margin-top: -1.4rem; }
+
+.noticias-lista { display: grid; grid-template-columns: 1fr; gap: 1.45rem; }
+.noticias-lista .card { display: block; }
+.noticia-card-link { display: grid; grid-template-columns: minmax(250px, 34%) 1fr; height: 100%; color: inherit; text-decoration: none; }
+.noticia-card-link > img { width: 100%; height: 100%; min-height: 235px; aspect-ratio: auto; object-fit: cover; }
+.noticias-lista .card-corpo { padding: clamp(1.35rem, 3vw, 2rem); }
+.noticia-card-cta { margin-top: .45rem; color: var(--terracota-escuro); font-weight: 800; }
+.noticia-card-link:hover .noticia-card-cta { color: var(--laranja-escuro); }
+.noticia-card-link:focus-visible { outline: 4px solid var(--mostarda); outline-offset: -4px; }
+.noticias-lista > .noticia-detalhe-area {
+  margin-top: -.75rem;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  border: 2px solid var(--argila-clara);
+  border-top: 6px solid var(--mostarda);
+  border-radius: var(--raio);
+  background: rgba(255, 252, 244, .72);
+}
+.noticias-lista > .noticia-detalhe-area .noticia-voltar { margin-top: 1.5rem; }
+
 /* Cartões de valor (Quem Somos) */
 .valor-card {
   background: var(--branco-quente);
@@ -991,6 +1025,8 @@ figure.card { margin: 0; }
 }
 @media (max-width: 760px) {
   .grid-2, .grid-3, .split { grid-template-columns: 1fr; }
+  .noticia-card-link { grid-template-columns: 1fr; }
+  .noticia-card-link > img { min-height: 0; height: auto; aspect-ratio: 4 / 3; }
   .albuns-cia { grid-template-columns: repeat(2, 1fr); gap: 1.6rem 1rem; }
   .rodape-grid { grid-template-columns: 1fr; }
   .evento { flex-wrap: wrap; }

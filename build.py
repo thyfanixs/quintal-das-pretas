@@ -99,7 +99,7 @@ def layout(titulo, descricao, ativo, conteudo):
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,900&family=Mulish:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/style.css?v=20260827-noticias-v7" />
 </head>
 <body>
   <a href="#conteudo" class="sr-only">Pular para o conteúdo</a>
@@ -171,7 +171,7 @@ def layout(titulo, descricao, ativo, conteudo):
     </div>
   </footer>
 
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js?v=20260827-noticias-v7"></script>
 </body>
 </html>
 """
@@ -668,10 +668,15 @@ def page_noticias():
 
         <!-- O mosaico é montado a partir de data/noticias.json.
              Para publicar uma notícia, edite esse arquivo (veja data/COMO-ADICIONAR-NOTICIAS.md). -->
-        <div class="grid grid-3" id="noticias-lista" data-fonte="data/noticias.json" hidden></div>
+        <div class="noticias-lista" id="noticias-lista" data-fonte="data/noticias.json" hidden></div>
         <p class="secao-intro" id="noticias-status">Carregando notícias…</p>
         <noscript><p class="secao-intro">Ative o JavaScript para ver as notícias,
         ou acompanhe nossas redes sociais.</p></noscript>
+
+        <section class="noticia-detalhe-area" id="noticia-detalhe"
+                 data-fonte="data/noticias.json" hidden>
+          <p class="secao-intro" id="noticia-status">Carregando notícia…</p>
+        </section>
       </div>
     </section>
 """

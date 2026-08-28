@@ -109,6 +109,7 @@
   }
 
   /* ----- Notícias dinâmicas (lê data/noticias.json; sem rebuild) ----- */
+  var abrirDetalheNoticia = null;
   var listaNot = document.getElementById("noticias-lista");
   if (listaNot) {
     var statusNot = document.getElementById("noticias-status");
@@ -134,6 +135,7 @@
       .then(function (posts) {
         if (!Array.isArray(posts)) posts = [];
         posts = posts.slice().sort(function (a, b) {
+          if (!!a.destaque !== !!b.destaque) return a.destaque ? -1 : 1;
           return String(b.data || "").localeCompare(String(a.data || ""));
         });
         if (!posts.length) {
@@ -147,13 +149,31 @@
               '" loading="lazy" />' : "";
           var data = p.data ? '<span class="card-data">' + dataExtenso(p.data) + "</span>" : "";
           var resumo = p.resumo ? '<p class="card-resumo">' + escN(p.resumo) + "</p>" : "";
-          var link = (p.link && linkOkN(p.link))
-            ? '<a href="' + escN(p.link) + '" target="_blank" rel="noopener">Ler mais →</a>' : "";
-          return '<article class="card">' + img +
+          var href = p.id
+            ? "#noticia-detalhe"
+            : (p.link && linkOkN(p.link) ? p.link : "");
+          var abre = p.id
+            ? '<span class="noticia-card-cta">Abrir notícia →</span>'
+            : "";
+          var atributos = p.id
+            ? ' data-noticia="' + escN(p.id) + '"'
+            : ' target="_blank" rel="noopener"';
+          return '<article class="card noticia-card"><a class="noticia-card-link" href="' +
+            escN(href) + '"' + atributos + ">" + img +
             '<div class="card-corpo">' + data +
-            "<h3>" + escN(p.titulo || "") + "</h3>" + resumo + link +
-            "</div></article>";
+            "<h3>" + escN(p.titulo || "") + "</h3>" + resumo + abre +
+            "</div></a></article>";
         }).join("");
+        listaNot.querySelectorAll("[data-noticia]").forEach(function (link) {
+          link.addEventListener("click", function (evento) {
+            evento.preventDefault();
+            var id = link.getAttribute("data-noticia");
+            var post = posts.filter(function (item) { return item.id === id; })[0];
+            if (post && abrirDetalheNoticia) {
+              abrirDetalheNoticia(post, true, link.closest("article"));
+            }
+          });
+        });
         listaNot.hidden = false;
         if (statusNot) statusNot.hidden = true;
       })
@@ -161,6 +181,109 @@
         if (statusNot) statusNot.textContent =
           "Não foi possível carregar as notícias agora. Tente novamente mais tarde.";
       });
+  }
+
+  /* ----- Detalhe de notícia e galeria (lê data/noticias.json) ----- */
+  var detalheNot = document.getElementById("noticia-detalhe");
+  if (detalheNot) {
+    var statusDetalhe = document.getElementById("noticia-status");
+    var tituloDetalhe = document.getElementById("noticia-titulo");
+    var resumoDetalhe = document.getElementById("noticia-resumo");
+    var dataDetalhe = document.getElementById("noticia-data");
+    var fonteDetalhe = detalheNot.getAttribute("data-fonte") || "data/noticias.json";
+    var idNoticia = new URLSearchParams(window.location.search).get("noticia");
+    var detalheNaLista = !!document.getElementById("noticias-lista");
+    var escDetalhe = function (s) {
+      return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
+        return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+      });
+    };
+    var dataDetalheExtenso = function (iso) {
+      var meses = ["jan", "fev", "mar", "abr", "mai", "jun",
+                   "jul", "ago", "set", "out", "nov", "dez"];
+      var m = /^(\d{4})-(\d{2})-(\d{2})/.exec(iso || "");
+      return m ? parseInt(m[3], 10) + " " + meses[+m[2] - 1] + " " + m[1] : "Notícia";
+    };
+
+    abrirDetalheNoticia = function (post, rolar, cardReferencia) {
+      if (detalheNaLista && cardReferencia) {
+        listaNot.querySelectorAll("[data-noticia]").forEach(function (item) {
+          item.setAttribute("aria-expanded", "false");
+        });
+        var linkAtivo = cardReferencia.querySelector("[data-noticia]");
+        if (linkAtivo) linkAtivo.setAttribute("aria-expanded", "true");
+        cardReferencia.insertAdjacentElement("afterend", detalheNot);
+      }
+      if (tituloDetalhe) tituloDetalhe.textContent = post.titulo || "Notícia";
+      if (resumoDetalhe) resumoDetalhe.textContent = post.resumo || "";
+      if (dataDetalhe) dataDetalhe.textContent = dataDetalheExtenso(post.data);
+
+      var texto = Array.isArray(post.conteudo) ? post.conteudo : [];
+      var paragrafo = texto.map(function (item) {
+        return "<p>" + escDetalhe(item) + "</p>";
+      }).join("");
+      var cabecalho = detalheNaLista
+        ? '<header class="noticia-cabecalho">' +
+          '<span class="card-data">' + escDetalhe(dataDetalheExtenso(post.data)) + "</span>" +
+          "<h2>" + escDetalhe(post.titulo || "Notícia") + "</h2>" +
+          (post.resumo ? '<p>' + escDetalhe(post.resumo) + "</p>" : "") +
+          "</header>" : "";
+      var galeria = Array.isArray(post.galeria) ? post.galeria : [];
+      var fotos = galeria.map(function (foto, indice) {
+        if (!foto || !foto.imagem) return "";
+        var alt = foto.alt || ((post.titulo || "Notícia") + " — imagem " + (indice + 1));
+        return '<figure class="noticia-foto">' +
+          '<a href="' + escDetalhe(foto.imagem) + '" target="_blank" rel="noopener" ' +
+          'aria-label="Abrir imagem em tamanho maior: ' + escDetalhe(alt) + '">' +
+          '<img src="' + escDetalhe(foto.imagem) + '" alt="' + escDetalhe(alt) + '" loading="lazy" />' +
+          "</a></figure>";
+      }).join("");
+      detalheNot.innerHTML = '<article class="noticia-artigo">' +
+        cabecalho + '<div class="noticia-texto">' + paragrafo + "</div>" +
+        (fotos ? '<section class="noticia-galeria" aria-label="Galeria de imagens">' +
+          '<div class="grid grid-3">' + fotos + "</div></section>" : "") +
+        (detalheNaLista ? '<p class="noticia-voltar"><button class="btn btn-secundario noticia-fechar" type="button">Fechar notícia</button></p>' : "") +
+        "</article>";
+      detalheNot.hidden = false;
+      if (statusDetalhe) statusDetalhe.hidden = true;
+      var fecharDetalhe = detalheNot.querySelector(".noticia-fechar");
+      if (fecharDetalhe) {
+        fecharDetalhe.addEventListener("click", function () {
+          detalheNot.hidden = true;
+          var linkAberto = cardReferencia && cardReferencia.querySelector("[data-noticia]");
+          if (linkAberto) {
+            linkAberto.setAttribute("aria-expanded", "false");
+            linkAberto.focus();
+          }
+        });
+      }
+      if (rolar && detalheNaLista) {
+        setTimeout(function () { detalheNot.scrollIntoView({ behavior: "smooth", block: "start" }); }, 0);
+      }
+    };
+
+    if (!idNoticia) {
+      if (detalheNaLista) {
+        detalheNot.hidden = true;
+      } else if (statusDetalhe) {
+        statusDetalhe.textContent =
+          "Escolha uma notícia na página de notícias para ver todos os detalhes.";
+      }
+    } else {
+      fetch(fonteDetalhe, { cache: "no-store" })
+        .then(function (r) { if (!r.ok) throw new Error("http"); return r.json(); })
+        .then(function (posts) {
+          var post = Array.isArray(posts) ? posts.filter(function (p) {
+            return p.id === idNoticia;
+          })[0] : null;
+          if (!post) throw new Error("not-found");
+          abrirDetalheNoticia(post, detalheNaLista);
+        })
+        .catch(function () {
+          if (statusDetalhe) statusDetalhe.textContent =
+            "Não foi possível carregar esta notícia agora. Volte à página de notícias e tente novamente.";
+        });
+    }
   }
 
   /* ----- Gerador de evento (área da equipe) ----- */
