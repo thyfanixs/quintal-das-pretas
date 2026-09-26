@@ -781,11 +781,18 @@ Vigência: 12 meses.'''},
         {
             "titulo": "Territórios do Axé — a Ancestralidade Viva em Pedro Leopoldo",
             "status": "inicio",
-            "financiamento": "Ministério da Cultura (MinC) — Lei 13.019/2014",
+            "financiamento": "Ministério da Cultura/Secretaria de Cidadania e Diversidade Cultural",
+            "financiamento_sem_prefixo": True,
+            "informacoes_obrigatorias": [
+                "Territórios do Axé — A Ancestralidade Viva em Pedro Leopoldo.",
+                "Projeto realizado pelo Ministério da Cultura.",
+                "Emenda Parlamentar nº 43340006 | Termo de Fomento nº 994283",
+                "SEI 2885645 | Ano de execução: 2026.",
+            ],
             "extratos": [
                 {"titulo": "Extrato do Termo de Fomento — Ministério da Cultura (SEI 2885645) — Plataforma Transferegov.br nº 994283",
                  "texto": '''Em cumprimento às orientações publicadas no site do MinC e ao art. 11, da Lei 13.019/2014 (in verbis) que trata “Da Transparência e do Controle” e do § 4º, inciso II,  do Art. 42 do Decreto 8.726/2016, serão disponibilizadas no site www.quintaldaspretas.com.br e em rede social da Associação Quintal das Pretas (@quintaldaspretas as informações relativas às parcerias celebradas com a Administração Pública.
-O objeto do presente Termo de Fomento é a execução do projeto “Territórios do Axé – A Ancestralidade Viva em Pedro Leopoldo”, através ações de promoção das culturas tradicionais e populares”, visando a consecução de finalidade de interesse público e recíproco, conforme especificações estabelecidas no plano de trabalho.
+O objeto do presente Termo de Fomento nº 994283, Emenda nº43340006 destinada pela Deputada Federal Dandara, para a execução do projeto “Territórios do Axé – A Ancestralidade Viva em Pedro Leopoldo”, através ações de promoção das culturas tradicionais e populares”, visando a consecução de finalidade de interesse público e recíproco, conforme especificações estabelecidas no plano de trabalho.
 Parceria - Ministério da Cultura/Secretária de Cidadania e Diversidade Cultural, representada pela Secretária de Cidadania e Diversidade Cultural, Sra. Márcia Helena Gonçalves e Associação Quintal das Pretas, CNPJ 05.769.374/0001-90, representada por sua Presidente, Sra. Giovane Ferreira da Cruz.
 Valor total: R$ 300.000,00 (trezentos mil reais)
 Prazo de vigência: 12 meses (prazo prorrogado para 10/06/2027)
@@ -836,13 +843,24 @@ Prestação de Contas: Em até 30 dias após a vigência'''},
 
     def tags_html(p):
         _, classe_tag, status_label = STATUS[p["status"]]
-        fin = (f'<span class="tag tag-financiamento">Financiamento: {p["financiamento"]}</span>'
+        prefixo = "" if p.get("financiamento_sem_prefixo") else "Financiamento: "
+        fin = (f'<span class="tag tag-financiamento">{prefixo}{p["financiamento"]}</span>'
                if p.get("financiamento") else "")
         return (f'<div class="projeto-tags"><span class="tag {classe_tag}">{status_label}</span>'
                 f'{fin}</div>')
 
     def bloco_detalhado(p):
         paras = "\n".join(f"<p>{par}</p>" for par in p.get("paragrafos", []))
+        info_obrigatoria = ""
+        if p.get("informacoes_obrigatorias"):
+            linhas = "\n".join(
+                f"<p>{linha}</p>" for linha in p["informacoes_obrigatorias"]
+            )
+            info_obrigatoria = (
+                '<aside class="projeto-info-obrigatoria" '
+                'aria-label="Informações obrigatórias do projeto">'
+                f'{linhas}</aside>'
+            )
         extratos = ""
         for ex in p.get("extratos", []):
             # texto reproduzido VERBATIM (sem alteração): cada linha vira um parágrafo
@@ -851,12 +869,12 @@ Prestação de Contas: Em até 30 dias após a vigência'''},
             )
             extratos += (f'<div class="extrato"><h4>{ex["titulo"]}</h4>'
                          f'<div class="extrato-texto">{linhas}</div></div>')
+        conteudo = "\n".join(bloco for bloco in (paras, info_obrigatoria, extratos) if bloco)
         return f"""<article class="projeto-detalhe card">
           <div class="card-corpo">
             {tags_html(p)}
             <h3>{p["titulo"]}</h3>
-            {paras}
-            {extratos}
+            {conteudo}
           </div>
         </article>"""
 

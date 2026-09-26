@@ -842,6 +842,20 @@ figure.card { margin: 0; }
 .projeto-detalhe h3 { font-size: 1.5rem; }
 .projeto-detalhe p { color: #43382b; }
 
+.projeto-info-obrigatoria {
+  padding: 1rem 1.1rem;
+  border: 2px solid var(--mostarda);
+  border-radius: 14px;
+  background: #fff8df;
+  box-shadow: 4px 4px 0 rgba(101, 55, 22, .12);
+}
+.projeto-info-obrigatoria p {
+  margin: 0;
+  font-weight: 700;
+  line-height: 1.45;
+}
+.projeto-info-obrigatoria p + p { margin-top: .25rem; }
+
 /* Ficha técnica (extrato do termo) */
 .ficha {
   margin-top: .6rem;
