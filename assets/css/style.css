@@ -1095,3 +1095,4 @@ html.anima .reveal:nth-child(4) { transition-delay: .24s; }
   }
   .reveal { opacity: 1; transform: none; }
 }
+.noticia-botoes { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.6rem; }

@@ -1,5 +1,30 @@
 [
   {
+    "id": "edital-cotacao-previa-01-2026",
+    "data": "2026-11-10",
+    "titulo": "Edital de Cotação Prévia de Preços nº 01/2026 — Territórios do Axé",
+    "imagem": "assets/img/noticias/edital-cotacao-previa-01-2026.svg",
+    "resumo": "O Quintal das Pretas abre cotação para a compra de camisetas personalizadas e a contratação de spot em rádio de Pedro Leopoldo. As propostas podem ser enviadas por 15 dias corridos.",
+    "conteudo": [
+      "A Associação Quintal das Pretas torna pública a abertura do Edital Simplificado de Cotação Prévia de Preços nº 01/2026, vinculado ao projeto Territórios do Axé — A Ancestralidade Viva em Pedro Leopoldo. A contratação é custeada pelo Termo de Fomento nº 994283 (Emenda Parlamentar nº 43340006), com recursos da Secretaria de Cidadania e Diversidade Cultural do Ministério da Cultura (SCDC/MinC), via plataforma Transferegov.",
+      "Lote 01 — Camisetas personalizadas: fornecimento de camisetas com a arte do projeto, nos tamanhos P, M, G, GG e XG. Valor máximo de R$ 2.400,00. Participação restrita a fornecedores sediados em Pedro Leopoldo ou Matozinhos.",
+      "Lote 02 — Spot em rádio: veiculação de anúncio de 30 segundos entre 18h e 20h, durante 10 dias consecutivos. Valor máximo de R$ 300,00. Participação restrita a emissoras de rádio de Pedro Leopoldo.",
+      "Podem participar pessoas jurídicas com atividade compatível com o lote. É preciso enviar o Cartão CNPJ, as certidões negativas federal, estadual, municipal e trabalhista (CNDT) e a proposta de preços em papel timbrado, com valores, prazo de entrega ou cronograma de veiculação, dados bancários do CNPJ e assinatura do representante legal. O critério de seleção é o menor preço global por lote.",
+      "As propostas devem ser enviadas para emendaquintaldaspretas@gmail.com ou pelo formulário on-line, no prazo de 15 dias corridos a partir da publicação. No assunto do e-mail, informe: “Cotação Prévia de Preços – Edital Simplificado nº 01/2026 – Lote [01 e/ou 02] – [Nome da Empresa]”.",
+      "Dúvidas: emendaquintaldaspretas@gmail.com ou (31) 99576-0980. Leia o edital completo antes de enviar a proposta."
+    ],
+    "botoes": [
+      {
+        "rotulo": "Baixar o edital (PDF)",
+        "link": "assets/docs/edital-cotacao-previa-01-2026.pdf"
+      },
+      {
+        "rotulo": "Enviar proposta pelo formulário",
+        "link": "https://forms.gle/zFwq9iBtevJf8a4t5"
+      }
+    ]
+  },
+  {
     "id": "territorios-curso-teatro",
     "data": "2026-08-27",
     "titulo": "Territórios do Axé inicia curso de teatro no ITA",

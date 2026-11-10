@@ -228,6 +228,14 @@
           "<h2>" + escDetalhe(post.titulo || "Notícia") + "</h2>" +
           (post.resumo ? '<p>' + escDetalhe(post.resumo) + "</p>" : "") +
           "</header>" : "";
+      var botoes = (Array.isArray(post.botoes) ? post.botoes : []).filter(function (b) {
+        return b && b.link && b.rotulo &&
+          /^(https?:\/\/|mailto:|[\w./-]+$)/i.test(b.link);
+      }).map(function (b, i) {
+        return '<a class="btn ' + (i === 0 ? "btn-terra" : "btn-verde") + '" href="' +
+          escDetalhe(b.link) + '" target="_blank" rel="noopener">' + escDetalhe(b.rotulo) + "</a>";
+      }).join(" ");
+      if (botoes) paragrafo += '<p class="noticia-botoes">' + botoes + "</p>";
       var galeria = Array.isArray(post.galeria) ? post.galeria : [];
       var fotos = galeria.map(function (foto, indice) {
         if (!foto || !foto.imagem) return "";

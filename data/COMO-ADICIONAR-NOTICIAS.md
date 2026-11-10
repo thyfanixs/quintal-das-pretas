@@ -14,17 +14,33 @@ As mais recentes aparecem primeiro (ordenadas pela data).
 ```json
 [
   {
+    "id": "nova-parceria-cultural",
     "data": "2026-06-14",
     "titulo": "Quintal firma nova parceria cultural",
     "resumo": "Breve resumo da notícia que aparece no card.",
     "imagem": "assets/img/noticias/parceria.jpg",
-    "link": "https://link-da-materia-ou-post"
+    "conteudo": [
+      "Primeiro parágrafo do texto completo.",
+      "Segundo parágrafo."
+    ],
+    "galeria": [
+      { "imagem": "assets/img/noticias/parceria-01.jpg", "alt": "Descrição da foto" }
+    ],
+    "botoes": [
+      { "rotulo": "Baixar o documento (PDF)", "link": "assets/docs/documento.pdf" },
+      { "rotulo": "Fazer inscrição", "link": "https://forms.gle/..." }
+    ]
   }
 ]
 ```
 
 ## Regras
 - **`data`** (AAAA-MM-DD) e **`titulo`** são obrigatórios.
-- **`resumo`**, **`imagem`** e **`link`** são opcionais.
+- **`id`**: nome curto, sem espaços nem acentos (ex.: `nova-parceria-cultural`). Com ele, o
+  card abre a notícia completa no próprio site. Sem `id`, o card leva para o **`link`** externo.
+- **`resumo`**, **`imagem`**, **`conteudo`** (lista de parágrafos), **`galeria`** (fotos),
+  **`botoes`** (links em destaque no fim da notícia) e **`link`** são opcionais.
+- **`destaque`: true** fixa a notícia no topo da lista (use em uma notícia por vez).
+- PDFs e outros documentos ficam em **`assets/docs/`**.
 - Vírgula entre os blocos; nenhuma depois do último.
 - Em caso de erro, confira o JSON em https://jsonlint.com
